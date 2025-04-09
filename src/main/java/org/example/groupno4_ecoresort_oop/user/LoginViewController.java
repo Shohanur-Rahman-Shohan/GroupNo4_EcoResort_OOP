@@ -1,11 +1,9 @@
-package org.example.groupno4_ecoresort_oop;
+package org.example.groupno4_ecoresort_oop.user;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.stage.Stage;
-import org.example.groupno4_ecoresort_oop.shohan.Manager;
+import org.example.groupno4_ecoresort_oop.SceneSwitcher;
+import org.example.groupno4_ecoresort_oop.shohan.managers.Manager;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -58,6 +56,13 @@ public class LoginViewController
 
     @javafx.fxml.FXML
     public void signUp_OA(ActionEvent actionEvent) {
+
+        try {
+            SceneSwitcher.switchTo("user/SignUp");
+        } catch (Exception e) {
+        }
+
+
     }
 
 
@@ -75,6 +80,8 @@ public class LoginViewController
 
     @javafx.fxml.FXML
     public void loginContinue_OA(ActionEvent actionEvent) throws IOException {
+
+        /*
         String email = email_TF.getText();
         String password = password_PF.getText();
 
@@ -83,7 +90,7 @@ public class LoginViewController
         if (!isValidEmailAndPassword) {
             alert.setAlertType(Alert.AlertType.ERROR);
             alert.setHeaderText("Invalid Email or Password");
-            alert.setContentText("Please use valid email and password. Password must be longer than 6, and must contain a number");
+            alert.setContentText("Please use valid email and password. Password must be at least 5 digit, and must contain a number");
             alert.showAndWait();
             return;
         }
@@ -102,9 +109,11 @@ public class LoginViewController
         Scene scene = ((Button) actionEvent.getSource()).getScene();
         Stage stage = (Stage) scene.getWindow();
 
+        */
+
 
         try {
-            SceneSwitcher.switchTo("GMDashboard");
+            SceneSwitcher.switchTo("user/DashBoard");
         } catch (Exception e) {
         }
     }
