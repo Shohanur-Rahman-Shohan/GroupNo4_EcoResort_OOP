@@ -1,4 +1,4 @@
-package org.example.groupno4_ecoresort_oop.Arman;
+package org.example.groupno4_ecoresort_oop.Arman.controller;
 
 public class MTDashboardController
 {
