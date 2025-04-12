@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.Arman.controller.TourScheduleViewController">
+<AnchorPane prefHeight="718.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.Arman.controller.TourScheduleViewController">
    <children>
       <Label layoutX="232.0" layoutY="8.0" prefHeight="30.0" prefWidth="136.0" text="Tour Schedule">
          <font>
@@ -31,5 +37,114 @@
             </LinearGradient>
          </textFill>
       </Label>
+      <Label layoutX="24.0" layoutY="118.0" text="Guest Name:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="guestNameTextField" layoutX="105.0" layoutY="113.0" />
+      <ComboBox layoutX="105.0" layoutY="153.0" prefHeight="26.0" prefWidth="160.0" />
+      <Label layoutX="27.0" layoutY="158.0" text="Event Type:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="299.0" layoutY="158.0" text="Guest Type:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="374.0" layoutY="153.0" prefHeight="26.0" prefWidth="186.0" />
+      <TextField fx:id="guestNameTextField1" layoutX="105.0" layoutY="191.0" prefHeight="26.0" prefWidth="160.0" />
+      <Label layoutX="12.0" layoutY="196.0" text="Seats to Reserve:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <DatePicker layoutX="374.0" layoutY="114.0" />
+      <Label layoutX="325.0" layoutY="118.0" text="Date">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="595.0" prefHeight="40.0" prefWidth="94.0" text="Seats to Reserve:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button blendMode="MULTIPLY" layoutX="9.0" layoutY="224.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="636.0" style="-fx-background-color: lightBlue;" text="ADD">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Button>
+      <TableView layoutX="7.0" layoutY="260.0" prefHeight="200.0" prefWidth="642.0">
+        <columns>
+            <TableColumn prefWidth="58.0" text="GuestID" />
+          <TableColumn prefWidth="123.0" text="GuestName" />
+            <TableColumn prefWidth="131.0" text="GuestType" />
+            <TableColumn prefWidth="78.0" text="SeatReserve" />
+            <TableColumn prefWidth="64.0" text="EventType" />
+            <TableColumn prefWidth="90.0" text="Price" />
+            <TableColumn prefWidth="90.0" text="Date" />
+        </columns>
+      </TableView>
+      <Label layoutX="117.0" layoutY="460.0" prefHeight="30.0" prefWidth="136.0" text="Modify Section">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.5486935866983373" endY="0.9049881235154394" startX="0.5605700712589073" startY="0.42755344418052255">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2947368323802948" green="0.07017543911933899" blue="0.6315789222717285" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.42129629850387573" green="0.7781635522842407" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="38.0" layoutY="538.0" prefHeight="17.0" prefWidth="71.0" text="Event Type:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="125.0" layoutY="533.0" prefHeight="26.0" prefWidth="186.0" />
+      <Label layoutX="75.0" layoutY="572.0" prefHeight="17.0" prefWidth="26.0" text="Date">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <DatePicker layoutX="125.0" layoutY="567.0" />
+      <TextField fx:id="guestNameTextField11" layoutX="125.0" layoutY="609.0" prefHeight="26.0" prefWidth="186.0" />
+      <Button blendMode="MULTIPLY" layoutX="175.0" layoutY="677.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="136.0" style="-fx-background-color: lightBlue;" text="Modify">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="325.0" layoutY="196.0" text="Price:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="guestNameTextField12" layoutX="374.0" layoutY="191.0" prefHeight="26.0" prefWidth="186.0" />
+      <Label layoutX="73.0" layoutY="653.0" text="Price:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="guestNameTextField121" layoutX="125.0" layoutY="648.0" prefHeight="26.0" prefWidth="186.0" />
+      <Line endX="1.0" endY="220.0" layoutX="340.0" layoutY="475.0" startX="1.0" startY="-10.0" />
+      <Label layoutX="50.0" layoutY="503.0" text="Guest ID:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="guestNameTextField2" layoutX="125.0" layoutY="498.0" prefHeight="26.0" prefWidth="186.0" />
    </children>
 </AnchorPane>
