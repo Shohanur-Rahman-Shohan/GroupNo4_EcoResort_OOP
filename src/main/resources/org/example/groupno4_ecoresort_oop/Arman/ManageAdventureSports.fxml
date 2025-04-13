@@ -48,10 +48,7 @@
       <Label layoutX="81.0" layoutY="252.0" text="Schedule" />
       <TableView layoutX="16.0" layoutY="293.0" prefHeight="200.0" prefWidth="659.0">
         <columns>
-          <TableColumn prefWidth="117.499755859375" text="Category">
-               <graphic>
-                  <RadioButton mnemonicParsing="false" text="Aerial" />
-               </graphic></TableColumn>
+          <TableColumn prefWidth="117.499755859375" text="Category" />
             <TableColumn prefWidth="130.87542724609375" text="Max Capacity" />
           <TableColumn prefWidth="94.0002670288086" text="ActivityName" />
             <TableColumn prefWidth="137.93865966796875" text="Status" />

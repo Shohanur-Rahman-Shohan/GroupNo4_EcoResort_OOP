@@ -1,6 +1,6 @@
 package org.example.groupno4_ecoresort_oop.Arman.controller;
 
-public class ActivityBudgetViewController
+public class FeedbackAndSuccessRateController
 {
     @javafx.fxml.FXML
     public void initialize() {
