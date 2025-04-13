@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.Sadman.guestDashboard">
+   <children>
+      <Label fx:id="guestLabel" layoutX="322.0" layoutY="14.0" prefHeight="71.0" prefWidth="157.0" text="Guest" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="44.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.9238095238095239">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.10372807085514069" blue="0.14473684132099152" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.01461988314986229" green="0.6603313684463501" blue="0.7894737124443054" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button layoutX="156.0" layoutY="119.0" mnemonicParsing="false" onAction="#avaialbleRoomsOnAction" prefHeight="60.0" prefWidth="488.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 0.0% 100.0%, reflect, #c6aa1f 0.0%, #c6aa1f 0.6711%, #000000 0.6711%, #00bae4 100.0%);" text="Available Rooms" textFill="WHITE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" />
+         </effect>
+         <font>
+            <Font name="Arial Black" size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="157.0" layoutY="223.0" mnemonicParsing="false" onAction="#MakeReservationOnAction" prefHeight="60.0" prefWidth="488.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 0.0% 100.0%, reflect, #c6aa1f 0.0%, #c6aa1f 0.6711%, #000000 0.6711%, #00bae4 100.0%);" text="Make Reservation" textFill="WHITE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" />
+         </effect>
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="157.0" layoutY="323.0" mnemonicParsing="false" onAction="#modifyReservationOnAction" prefHeight="60.0" prefWidth="488.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 0.0% 100.0%, reflect, #c6aa1f 0.0%, #c6aa1f 0.6711%, #000000 0.6711%, #00bae4 100.0%);" text="Modify an Existing Reservation" textFill="WHITE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" />
+         </effect>
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="156.0" layoutY="430.0" mnemonicParsing="false" onAction="#feedbackOnAction" prefHeight="60.0" prefWidth="488.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 0.0% 100.0%, reflect, #c6aa1f 0.0%, #c6aa1f 0.6711%, #000000 0.6711%, #00bae4 100.0%);" text="Feedback" textFill="WHITE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" />
+         </effect>
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

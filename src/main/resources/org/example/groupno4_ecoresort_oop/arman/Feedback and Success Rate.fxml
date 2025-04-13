@@ -12,10 +12,9 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="633.0" prefWidth="612.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.arman.controller.FeedbackAndSuccessRateController">
    <children>
-      <Label layoutX="169.0" layoutY="22.0" prefHeight="30.0" prefWidth="239.0" text="Feedback and Succssful Rate">
+      <Label layoutX="169.0" layoutY="22.0" prefHeight="30.0" prefWidth="252.0" text="Feedback and Succssful Rate">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
