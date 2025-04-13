@@ -1,4 +1,6 @@
-package org.example.groupno4_ecoresort_oop.Arman.controller;
+package org.example.groupno4_ecoresort_oop.arman.controller;
+
+import javafx.event.Event;
 
 public class MTDashboardController
 {

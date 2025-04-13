@@ -12,10 +12,9 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="613.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.Arman.AssignTourGuideController">
+<AnchorPane prefHeight="613.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.arman.AssignTourGuideController">
    <children>
-      <Label layoutX="223.0" layoutY="6.0" prefHeight="66.0" prefWidth="163.0" text="Assign Tour Guide">
+      <Label layoutX="248.0" layoutY="6.0" prefHeight="66.0" prefWidth="163.0" text="Assign Tour Guide">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -46,13 +45,13 @@
       </TableView>
       <Label layoutX="123.0" layoutY="324.0" text="Tour ID:" />
       <TextField layoutX="205.0" layoutY="317.0" />
-      <Button layoutX="377.0" layoutY="318.0" mnemonicParsing="false" text="Load Available Guide" />
+      <Button layoutX="377.0" layoutY="318.0" mnemonicParsing="false" style="-fx-background-color: lightBlue;" text="Load Available Guide" />
       <Label layoutX="272.0" layoutY="381.0" prefHeight="31.0" prefWidth="115.0" text="Available Guides:">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
       <ComboBox layoutX="243.0" layoutY="428.0" prefHeight="26.0" prefWidth="178.0" />
-      <Button layoutX="310.0" layoutY="475.0" mnemonicParsing="false" text="Save" />
+      <Button layoutX="310.0" layoutY="475.0" mnemonicParsing="false" style="-fx-background-color: LightBlue;" text="Save" />
    </children>
 </AnchorPane>

@@ -11,7 +11,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="515.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.Arman.controller.UpdateTourAndPriceViewController">
+<AnchorPane prefHeight="515.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.arman.controller.UpdateTourAndPriceViewController">
    <children>
       <Label layoutX="210.0" layoutY="8.0" prefHeight="30.0" prefWidth="207.0" text="Update Tour and Price">
          <font>

@@ -8,7 +8,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="555.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.Arman.controller.ACDashboardController">
+<AnchorPane prefHeight="555.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.arman.controller.ACDashboardController">
    <children>
       <Label layoutX="169.0" prefHeight="63.0" prefWidth="267.0" text="Activity Coordinator Dashboard" wrapText="true">
          <textFill>

@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="535.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.Arman.controller.MTDashboardController">
+<AnchorPane prefHeight="535.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.arman.controller.MTDashboardController">
    <children>
       <Label layoutX="173.0" layoutY="10.0" prefHeight="63.0" prefWidth="328.0" text="Maintenance Technician Dashboard" wrapText="true">
          <textFill>
