@@ -13,10 +13,9 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="594.0" prefWidth="599.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.arman.controller.ManageRepairRequestController">
    <children>
-      <Label layoutX="187.0" layoutY="14.0" prefHeight="30.0" prefWidth="207.0" text="Manage Adventure Sports">
+      <Label layoutX="187.0" layoutY="14.0" prefHeight="30.0" prefWidth="207.0" text="Manage Repair Request">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -49,17 +48,20 @@
       <DatePicker layoutX="365.0" layoutY="84.0" prefHeight="26.0" prefWidth="150.0" />
       <TableView layoutX="14.0" layoutY="171.0" prefHeight="200.0" prefWidth="581.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="RequestID" />
-          <TableColumn prefWidth="84.0" text="Location" />
-            <TableColumn prefWidth="152.0" text="Type" />
-            <TableColumn prefWidth="129.0" text="Status" />
-            <TableColumn prefWidth="140.0" text="RequestDate" />
+          <TableColumn prefWidth="63.0" text="RequestID" />
+          <TableColumn prefWidth="74.0" text="Location" />
+            <TableColumn prefWidth="87.0" text="Type" />
+            <TableColumn prefWidth="95.0" text="Status" />
+            <TableColumn prefWidth="111.0" text="RequestDate" />
+            <TableColumn prefWidth="147.0" text="Emergency" />
         </columns>
       </TableView>
-      <Button layoutX="475.0" layoutY="125.0" mnemonicParsing="false" text="Add" />
+      <Button layoutX="545.0" layoutY="139.0" mnemonicParsing="false" text="Add" />
       <Button layoutX="293.0" layoutY="379.0" mnemonicParsing="false" text="update Status" />
       <Button layoutX="394.0" layoutY="379.0" mnemonicParsing="false" text="Delete Request" />
       <Label layoutX="24.0" layoutY="384.0" text="RequestID:" />
       <TextField layoutX="82.0" layoutY="55.0" prefHeight="26.0" prefWidth="160.0" />
+      <ComboBox layoutX="369.0" layoutY="117.0" prefWidth="150.0" />
+      <Label layoutX="291.0" layoutY="121.0" text="Emergency" />
    </children>
 </AnchorPane>
