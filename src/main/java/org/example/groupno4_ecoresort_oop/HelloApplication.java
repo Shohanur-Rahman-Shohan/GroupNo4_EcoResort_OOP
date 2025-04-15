@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.example.groupno4_ecoresort_oop.arman.ActivityCoordinator;
 import org.example.groupno4_ecoresort_oop.shohan.managers.Manager;
 import org.example.groupno4_ecoresort_oop.shohan.managers.GeneralManager;
 

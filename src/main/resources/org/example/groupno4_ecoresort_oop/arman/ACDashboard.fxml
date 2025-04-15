@@ -31,13 +31,13 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="196.0" layoutY="62.0" mnemonicParsing="false" onMouseClicked="#scheduleEcoTourButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Schedule Eco-Tour" textFill="WHITE" />
-      <Button layoutX="196.0" layoutY="119.0" mnemonicParsing="false" onMouseClicked="#modifyExistingTourButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Modify Existing Tour" textFill="WHITE" />
-      <Button layoutX="196.0" layoutY="171.0" mnemonicParsing="false" onMouseClicked="#updateTourAndPriceButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Update Tour and Price" textFill="WHITE" />
-      <Button layoutX="196.0" layoutY="226.0" mnemonicParsing="false" onMouseClicked="#manageBudgetSportsButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Manage Budget Sports" textFill="WHITE" />
-      <Button layoutX="196.0" layoutY="284.0" mnemonicParsing="false" onMouseClicked="#feedbackAndSuccessRateButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Feedback and Success Rate" textFill="WHITE" />
-      <Button layoutX="196.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#assignTourGuideButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Assign Tour Guide" textFill="WHITE" />
-      <Button layoutX="196.0" layoutY="398.0" mnemonicParsing="false" onMouseClicked="#trackGuestParticipationButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Track Guest Participation" textFill="WHITE" />
-      <Button layoutX="196.0" layoutY="454.0" mnemonicParsing="false" onMouseClicked="#resolveComplaintsButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Resolve Complaints" textFill="WHITE" />
+      <Button layoutX="196.0" layoutY="62.0" mnemonicParsing="false" onAction="#scheduleEcoTourButtonOnAction" onMouseClicked="#scheduleEcoTourButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Schedule Eco-Tour" textFill="WHITE" />
+      <Button layoutX="196.0" layoutY="119.0" mnemonicParsing="false" onAction="#modifyExistingTourButtonOnAction" onMouseClicked="#modifyExistingTourButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Modify Existing Tour" textFill="WHITE" />
+      <Button layoutX="196.0" layoutY="171.0" mnemonicParsing="false" onAction="#updateTourPriceButtonOnAction" onMouseClicked="#updateTourAndPriceButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Update Tour and Price" textFill="WHITE" />
+      <Button layoutX="196.0" layoutY="226.0" mnemonicParsing="false" onAction="#manageAdventureSportsButtonOnAction" onMouseClicked="#manageBudgetSportsButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Manage Adventure Sports" textFill="WHITE" />
+      <Button layoutX="196.0" layoutY="284.0" mnemonicParsing="false" onAction="#feedbackAndSuccessRateButtonOnAction" onMouseClicked="#feedbackAndSuccessRateButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Feedback and Success Rate" textFill="WHITE" />
+      <Button layoutX="196.0" layoutY="340.0" mnemonicParsing="false" onAction="#assignTourGuideButtonOnAction" onMouseClicked="#assignTourGuideButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Assign Tour Guide" textFill="WHITE" />
+      <Button layoutX="196.0" layoutY="398.0" mnemonicParsing="false" onAction="#trackGuestParticipationButtonOnAction" onMouseClicked="#trackGuestParticipationButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Track Guest Participation" textFill="WHITE" />
+      <Button layoutX="196.0" layoutY="454.0" mnemonicParsing="false" onAction="#resolveComplaintsButtonOnAction" onMouseClicked="#resolveComplaintsButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Resolve Complaints" textFill="WHITE" />
    </children>
 </AnchorPane>
