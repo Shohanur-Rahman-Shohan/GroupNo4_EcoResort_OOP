@@ -9,16 +9,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: rgb(230, 230, 250);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.Sadman.Guest.Payment">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: rgb(230, 230, 250);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.Sadman.PaymentController">
    <children>
       <Label layoutX="357.0" layoutY="14.0" text="Invoice">
          <font>
             <Font name="Century Gothic" size="24.0" />
          </font>
       </Label>
-      <TextField layoutX="75.0" layoutY="88.0" promptText="Reservation ID" />
-      <Button layoutX="283.0" layoutY="88.0" mnemonicParsing="false" text="load" />
+      <TextField fx:id="reservationIDTextField" layoutX="75.0" layoutY="88.0" promptText="Reservation ID" />
+      <Button layoutX="288.0" layoutY="88.0" mnemonicParsing="false" text="Search">
+         <font>
+            <Font name="Century Gothic Bold Italic" size="13.0" />
+         </font></Button>
       <TableView layoutX="-1.0" layoutY="430.0" prefHeight="200.0" prefWidth="802.0">
          <columns>
             <TableColumn prefWidth="149.0" text="Room ID" />

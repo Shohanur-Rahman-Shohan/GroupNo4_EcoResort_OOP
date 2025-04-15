@@ -1,7 +1,5 @@
 package org.example.groupno4_ecoresort_oop.Sadman;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -20,12 +18,17 @@ public class AvailableRooms
     @FXML
     private ComboBox<String> BfCB;
     @FXML
-    private ComboBox RmCB;
+    private ComboBox<String> RmCB;
 
     @FXML
     public void initialize() {
-        ObservableList<String> RmCB = FXCollections.observableArrayList("Single Room", "Double Room", "Suite");
+        RmCB.getItems().addAll("Single Room" , "Double Room", "Suite");
+        BfCB.getItems().addAll("King Size bed" , "Family Bed", "Two single beds");
+        VfCB.getItems().addAll("Sea View", "Garden View", "Pool View");
 
+        VfCB.setValue("Sea View");
+        RmCB.setValue("Single Room");
+        BfCB.setValue("Family Bed");
 
     }
 
@@ -52,5 +55,13 @@ public class AvailableRooms
 
     @FXML
     public void RmCBOnAction(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void BfCBCombobox(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void VfCombobox(ActionEvent actionEvent) {
     }
 }

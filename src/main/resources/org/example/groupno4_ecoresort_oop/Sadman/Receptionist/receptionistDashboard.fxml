@@ -7,15 +7,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: rgb(230, 230, 250);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.Sadman.Guest.ReceptionistDashboard">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: rgb(230, 230, 250);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.Sadman.ReceptionistDashboard">
    <children>
       <Label layoutX="329.0" layoutY="14.0" text="Receptionist">
          <font>
             <Font name="Century Gothic Bold" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="44.0" layoutY="93.0" mnemonicParsing="false" onAction="#avaialbleRoomsOnAction" prefHeight="31.0" prefWidth="285.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 0.0% 100.0%, reflect, #c6aa1f 0.0%, #c6aa1f 0.6711%, #000000 0.6711%, #00bae4 100.0%);" text="Check-In Management" textFill="WHITE">
+      <Button layoutX="258.0" layoutY="100.0" mnemonicParsing="false" onAction="#avaialbleRoomsOnAction" prefHeight="31.0" prefWidth="285.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 0.0% 100.0%, reflect, #c6aa1f 0.0%, #c6aa1f 0.6711%, #000000 0.6711%, #00bae4 100.0%);" text="Check-In Management" textFill="WHITE">
          <effect>
             <DropShadow blurType="GAUSSIAN" />
          </effect>
@@ -26,18 +25,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="44.0" layoutY="166.0" mnemonicParsing="false" onAction="#avaialbleRoomsOnAction" prefHeight="40.0" prefWidth="285.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 0.0% 100.0%, reflect, #c6aa1f 0.0%, #c6aa1f 0.6711%, #000000 0.6711%, #00bae4 100.0%);" text="Check-Out Management" textFill="WHITE">
-         <effect>
-            <DropShadow blurType="GAUSSIAN" />
-         </effect>
-         <font>
-            <Font name="Arial Black" size="19.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <Button layoutX="44.0" layoutY="252.0" mnemonicParsing="false" onAction="#avaialbleRoomsOnAction" prefHeight="40.0" prefWidth="285.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 0.0% 100.0%, reflect, #c6aa1f 0.0%, #c6aa1f 0.6711%, #000000 0.6711%, #00bae4 100.0%);" text="Check-Out Management" textFill="WHITE">
+      <Button layoutX="258.0" layoutY="189.0" mnemonicParsing="false" onAction="#avaialbleRoomsOnAction" prefHeight="40.0" prefWidth="285.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 0.0% 100.0%, reflect, #c6aa1f 0.0%, #c6aa1f 0.6711%, #000000 0.6711%, #00bae4 100.0%);" text="Check-Out Management" textFill="WHITE">
          <effect>
             <DropShadow blurType="GAUSSIAN" />
          </effect>
