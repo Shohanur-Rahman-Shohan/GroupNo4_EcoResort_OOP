@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.arman.controller.MonthlyReportController">
+   <children>
+      <Label layoutX="181.0" layoutY="10.0" prefHeight="35.0" prefWidth="239.0" text="Emergency Maintenance">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.5486935866983373" endY="0.9049881235154394" startX="0.5605700712589073" startY="0.42755344418052255">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2947368323802948" green="0.07017543911933899" blue="0.6315789222717285" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.42129629850387573" green="0.7781635522842407" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="24.0" layoutY="63.0" text="Select Month:" />
+      <PieChart layoutX="103.0" layoutY="136.0" prefHeight="250.0" prefWidth="395.0" />
+      <ComboBox layoutX="114.0" layoutY="59.0" prefWidth="150.0" />
+      <Label layoutX="294.0" layoutY="64.0" text="Select Year:" />
+      <ComboBox layoutX="367.0" layoutY="60.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
