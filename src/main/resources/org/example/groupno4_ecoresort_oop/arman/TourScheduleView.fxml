@@ -43,7 +43,7 @@
          </font>
       </Label>
       <TextField fx:id="guestNameTextField" layoutX="105.0" layoutY="113.0" />
-      <ComboBox fx:id="eventTypeCombobox" layoutX="105.0" layoutY="153.0" prefHeight="26.0" prefWidth="160.0" />
+      <ComboBox layoutX="105.0" layoutY="153.0" prefHeight="26.0" prefWidth="160.0" />
       <Label layoutX="27.0" layoutY="158.0" text="Event Type:">
          <font>
             <Font name="System Bold" size="13.0" />
@@ -54,14 +54,14 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <ComboBox fx:id="guestTypeCombobox" layoutX="374.0" layoutY="153.0" prefHeight="26.0" prefWidth="186.0" />
-      <TextField fx:id="seatToReserveTextField" layoutX="105.0" layoutY="191.0" prefHeight="26.0" prefWidth="160.0" />
+      <ComboBox layoutX="374.0" layoutY="153.0" prefHeight="26.0" prefWidth="186.0" />
+      <TextField fx:id="guestNameTextField1" layoutX="105.0" layoutY="191.0" prefHeight="26.0" prefWidth="160.0" />
       <Label layoutX="12.0" layoutY="196.0" text="Seats to Reserve:">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <DatePicker fx:id="dateDatePicker" layoutX="374.0" layoutY="114.0" />
+      <DatePicker layoutX="374.0" layoutY="114.0" />
       <Label layoutX="325.0" layoutY="118.0" text="Date">
          <font>
             <Font name="System Bold" size="13.0" />
@@ -72,20 +72,20 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Button blendMode="MULTIPLY" layoutX="9.0" layoutY="224.0" mnemonicParsing="false" onAction="#addButtonOnAction" prefHeight="26.0" prefWidth="636.0" style="-fx-background-color: lightBlue;" text="ADD">
+      <Button blendMode="MULTIPLY" layoutX="9.0" layoutY="224.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="636.0" style="-fx-background-color: lightBlue;" text="ADD">
          <font>
             <Font name="Times New Roman" size="13.0" />
          </font>
       </Button>
-      <TableView fx:id="outputTableView" layoutX="7.0" layoutY="260.0" prefHeight="200.0" prefWidth="642.0">
+      <TableView layoutX="7.0" layoutY="260.0" prefHeight="200.0" prefWidth="642.0">
         <columns>
-            <TableColumn fx:id="guestIdTableColumn" prefWidth="58.0" text="GuestID" />
-          <TableColumn fx:id="guestNameTableColumn" prefWidth="123.0" text="GuestName" />
-            <TableColumn fx:id="guestTypeTableColumn" prefWidth="131.0" text="GuestType" />
-            <TableColumn fx:id="setReserveTableColumn" prefWidth="78.0" text="SeatReserve" />
-            <TableColumn fx:id="EventTypeTableColumn" prefWidth="64.0" text="EventType" />
-            <TableColumn fx:id="priceTableColumn" prefWidth="90.0" text="Price" />
-            <TableColumn fx:id="DateTableColumn" prefWidth="90.0" text="Date" />
+            <TableColumn prefWidth="58.0" text="GuestID" />
+          <TableColumn prefWidth="123.0" text="GuestName" />
+            <TableColumn prefWidth="131.0" text="GuestType" />
+            <TableColumn prefWidth="78.0" text="SeatReserve" />
+            <TableColumn prefWidth="64.0" text="EventType" />
+            <TableColumn prefWidth="90.0" text="Price" />
+            <TableColumn prefWidth="90.0" text="Date" />
         </columns>
       </TableView>
       <Label layoutX="117.0" layoutY="460.0" prefHeight="30.0" prefWidth="136.0" text="Modify Section">
@@ -114,15 +114,15 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <ComboBox fx:id="modifyEventTypeCombobox" layoutX="125.0" layoutY="533.0" prefHeight="26.0" prefWidth="186.0" />
+      <ComboBox layoutX="125.0" layoutY="533.0" prefHeight="26.0" prefWidth="186.0" />
       <Label layoutX="75.0" layoutY="572.0" prefHeight="17.0" prefWidth="26.0" text="Date">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <DatePicker fx:id="modifyDateDatePicker" layoutX="125.0" layoutY="567.0" />
-      <TextField fx:id="modifySeatsToReserveTextField" layoutX="125.0" layoutY="609.0" prefHeight="26.0" prefWidth="186.0" />
-      <Button blendMode="MULTIPLY" layoutX="175.0" layoutY="677.0" mnemonicParsing="false" onAction="#modifyButtonOnAction" prefHeight="26.0" prefWidth="136.0" style="-fx-background-color: lightBlue;" text="Modify">
+      <DatePicker layoutX="125.0" layoutY="567.0" />
+      <TextField fx:id="guestNameTextField11" layoutX="125.0" layoutY="609.0" prefHeight="26.0" prefWidth="186.0" />
+      <Button blendMode="MULTIPLY" layoutX="175.0" layoutY="677.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="136.0" style="-fx-background-color: lightBlue;" text="Modify">
          <font>
             <Font name="Times New Roman Bold" size="13.0" />
          </font>
@@ -132,25 +132,19 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="priceTextField" layoutX="374.0" layoutY="191.0" prefHeight="26.0" prefWidth="186.0" />
+      <TextField fx:id="guestNameTextField12" layoutX="374.0" layoutY="191.0" prefHeight="26.0" prefWidth="186.0" />
       <Label layoutX="73.0" layoutY="653.0" text="Price:">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="modifyPriceTextField" layoutX="125.0" layoutY="648.0" prefHeight="26.0" prefWidth="186.0" />
+      <TextField fx:id="guestNameTextField121" layoutX="125.0" layoutY="648.0" prefHeight="26.0" prefWidth="186.0" />
       <Line endX="1.0" endY="220.0" layoutX="340.0" layoutY="475.0" startX="1.0" startY="-10.0" />
       <Label layoutX="50.0" layoutY="503.0" text="Guest ID:">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="modifyGuestIdTextField" layoutX="125.0" layoutY="498.0" prefHeight="26.0" prefWidth="186.0" />
-      <TextField fx:id="guestIDTextField" layoutX="219.0" layoutY="66.0" />
-      <Label layoutX="131.0" layoutY="71.0" text="Guest ID:">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
+      <TextField fx:id="guestNameTextField2" layoutX="125.0" layoutY="498.0" prefHeight="26.0" prefWidth="186.0" />
    </children>
 </AnchorPane>

@@ -1,4 +1,4 @@
 package org.example.groupno4_ecoresort_oop.arman;
 
-public class TourSchedule {
+public class Tour {
 }

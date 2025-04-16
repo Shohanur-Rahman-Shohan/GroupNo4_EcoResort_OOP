@@ -41,6 +41,5 @@
       <Label layoutX="58.0" layoutY="211.0" text="Set Reminder:" />
       <DatePicker layoutX="153.0" layoutY="207.0" />
       <Button layoutX="299.0" layoutY="269.0" mnemonicParsing="false" style="-fx-background-color: LightBlue;" text="Set Reminder" />
-      <Button layoutX="317.0" layoutY="73.0" mnemonicParsing="false" style="-fx-background-color: LightBlue;" text="Load" />
    </children>
 </AnchorPane>
