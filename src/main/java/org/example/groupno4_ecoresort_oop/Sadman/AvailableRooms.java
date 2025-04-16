@@ -5,6 +5,7 @@ import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 
 
 public class AvailableRooms
@@ -19,6 +20,10 @@ public class AvailableRooms
     private ComboBox<String> BfCB;
     @FXML
     private ComboBox<String> RmCB;
+    @FXML
+    private Label chInLabel;
+    @FXML
+    private Label chOutLabel;
 
     @FXML
     public void initialize() {
