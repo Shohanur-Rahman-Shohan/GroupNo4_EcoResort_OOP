@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="272.0" layoutY="52.0" text="Daily Reports" />
+      <TableView layoutX="138.0" layoutY="137.0" prefHeight="223.0" prefWidth="444.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="staff id" />
+          <TableColumn prefWidth="75.0" text="room number" />
+            <TableColumn prefWidth="75.0" text="complete task " />
+            <TableColumn prefWidth="75.0" text="incomplete task" />
+            <TableColumn prefWidth="75.0" text="time schedules" />
+            <TableColumn prefWidth="75.0" text="feedback" />
+        </columns>
+      </TableView>
+      <Button layoutX="512.0" layoutY="417.0" mnemonicParsing="false" text="generate reports" />
+   </children>
+</AnchorPane>
