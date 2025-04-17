@@ -45,6 +45,8 @@ public class TourScheduleViewController
     private TextField modifypriceTextField;
     @javafx.fxml.FXML
     private TableColumn eventTypeTC;
+    @javafx.fxml.FXML
+    private TextField guestIdTextField1;
 
     @javafx.fxml.FXML
     public void initialize() {

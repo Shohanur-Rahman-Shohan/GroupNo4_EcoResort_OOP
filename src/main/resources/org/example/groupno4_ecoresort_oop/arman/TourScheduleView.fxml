@@ -37,7 +37,7 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <Label layoutX="24.0" layoutY="118.0" text="Guest Name:">
+      <Label layoutX="140.0" layoutY="75.0" text="Guest Name:">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -147,5 +147,11 @@
       </Label>
       <TextField fx:id="modifyGuestIdTextField" layoutX="125.0" layoutY="498.0" prefHeight="26.0" prefWidth="186.0" />
       <Button layoutX="32.0" layoutY="11.0" mnemonicParsing="false" onAction="#BackButtonOnAction" style="-fx-background-color: lightBlue;" text="Back" />
+      <TextField fx:id="guestIdTextField1" layoutX="231.0" layoutY="70.0" />
+      <Label layoutX="34.0" layoutY="128.0" text="Guest Name:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
