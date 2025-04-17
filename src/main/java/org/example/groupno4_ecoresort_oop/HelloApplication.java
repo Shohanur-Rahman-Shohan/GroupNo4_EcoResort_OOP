@@ -20,6 +20,7 @@ public class HelloApplication extends Application {
         Manager GM= new GeneralManager(2312227, "Shohanur", "Rahman", "shohanur@gmail.com", "12345", "+8801xxxxxxxxx");
         managers.add(GM);
 
+
         SceneSwitcher.stage= stage;
         FXMLLoader fxmlLoader = new FXMLLoader(
                 HelloApplication.class.getResource("arman/ACDashboard.fxml"));

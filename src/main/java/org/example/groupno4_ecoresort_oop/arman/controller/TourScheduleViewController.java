@@ -3,6 +3,10 @@ package org.example.groupno4_ecoresort_oop.arman.controller;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import org.example.groupno4_ecoresort_oop.SceneSwitcher;
+import org.example.groupno4_ecoresort_oop.arman.TourSchedule;
+import org.example.groupno4_ecoresort_oop.utils.FileHandler;
+
+import java.util.ArrayList;
 
 public class TourScheduleViewController
 {
@@ -50,7 +54,11 @@ public class TourScheduleViewController
 
     @javafx.fxml.FXML
     public void initialize() {
+        eventTypeCombobox.getItems().addAll("Adventure Activities","Village Tour","Tree-Plantingaa","Cultural Performance","Meditation Session");
+        guestTypeCombobox.getItems().addAll("Individual","Couple", "Family","AdventureSeekers","ResearchGuests","Corporate","Eco-Conscious Guests");
+        modifyEventTypeCombobox.getItems().addAll("Adventure Activities","Village Tour","Tree-Plantingaa","Cultural Performance","Meditation Session");
     }
+
 
     @javafx.fxml.FXML
     public void modifyButtonOnAction(ActionEvent actionEvent) {
@@ -58,6 +66,9 @@ public class TourScheduleViewController
 
     @javafx.fxml.FXML
     public void addButtonOnAction(ActionEvent actionEvent) {
+        TourSchedule tourschedule = new TourSchedule();
+        FileHandler.writeObjectToFile(tourschedule, "TourSchedule.txt");
+
     }
 
     @javafx.fxml.FXML
