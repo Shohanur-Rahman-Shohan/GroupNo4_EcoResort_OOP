@@ -55,36 +55,36 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <TextField layoutX="140.0" layoutY="396.0" />
+      <TextField fx:id="updatedPrceTextField" layoutX="140.0" layoutY="396.0" />
       <Label layoutX="39.0" layoutY="401.0" prefHeight="0.0" prefWidth="79.0" text="Update Price:">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Button layoutX="15.0" layoutY="466.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="282.0" style="-fx-background-color: LIghtBlue;" text="Update" />
+      <Button layoutX="15.0" layoutY="466.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="26.0" prefWidth="282.0" style="-fx-background-color: LIghtBlue;" text="Update" />
       <Label layoutX="8.0" layoutY="435.0" prefHeight="17.0" prefWidth="113.0" text="Updated Description">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <TextField layoutX="140.0" layoutY="430.0" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="308.0" layoutY="300.0" prefHeight="192.0" prefWidth="338.0" text="Display" textAlignment="CENTER" wrapText="true" />
-      <Button layoutX="14.0" layoutY="11.0" mnemonicParsing="false" style="-fx-background-color: LightBlue;" text="BACK" />
+      <TextField fx:id="UpdatedDescriptionTextField" layoutX="140.0" layoutY="430.0" />
+      <Label fx:id="outputDisplayLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="308.0" layoutY="300.0" prefHeight="192.0" prefWidth="338.0" text="Display" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#backButtonOnAction" style="-fx-background-color: LightBlue;" text="BACK" />
       <Label layoutX="39.0" layoutY="364.0" prefHeight="17.0" prefWidth="79.0" text="Guest Name:">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <TextField layoutX="140.0" layoutY="359.0" prefHeight="26.0" prefWidth="160.0" />
-      <TableView layoutX="4.0" layoutY="78.0" prefHeight="217.0" prefWidth="691.0">
+      <TextField fx:id="updateGuestNameTextField" layoutX="140.0" layoutY="359.0" prefHeight="26.0" prefWidth="160.0" />
+      <TableView fx:id="outputTableView" layoutX="4.0" layoutY="78.0" prefHeight="217.0" prefWidth="691.0">
          <columns>
-            <TableColumn prefWidth="58.0" text="GuestID" />
-            <TableColumn prefWidth="123.0" text="GuestName" />
-            <TableColumn prefWidth="131.0" text="GuestType" />
-            <TableColumn prefWidth="78.0" text="SeatReserve" />
-            <TableColumn prefWidth="64.0" text="EventType" />
-            <TableColumn prefWidth="90.0" text="Price" />
-            <TableColumn prefWidth="90.0" text="Date" />
+            <TableColumn fx:id="guestIdTC" prefWidth="58.0" text="GuestID" />
+            <TableColumn fx:id="guestNameTC" prefWidth="123.0" text="GuestName" />
+            <TableColumn fx:id="guestTypeTC" prefWidth="131.0" text="GuestType" />
+            <TableColumn fx:id="seatReserveTC" prefWidth="78.0" text="SeatReserve" />
+            <TableColumn fx:id="eventTypeTC" prefWidth="64.0" text="EventType" />
+            <TableColumn fx:id="priceTC" prefWidth="90.0" text="Price" />
+            <TableColumn fx:id="dateTC" prefWidth="146.0" text="Date" />
          </columns>
       </TableView>
       <Label layoutX="39.0" layoutY="329.0" prefHeight="17.0" prefWidth="79.0" text="Guest ID:">
@@ -92,6 +92,6 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <TextField layoutX="140.0" layoutY="325.0" prefHeight="26.0" prefWidth="160.0" />
+      <TextField fx:id="updateGuestIdTextField" layoutX="140.0" layoutY="325.0" prefHeight="26.0" prefWidth="160.0" />
    </children>
 </AnchorPane>
