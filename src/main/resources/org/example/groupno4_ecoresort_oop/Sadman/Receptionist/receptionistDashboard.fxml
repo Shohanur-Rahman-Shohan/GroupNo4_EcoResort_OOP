@@ -25,7 +25,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="258.0" layoutY="189.0" mnemonicParsing="false" onAction="#avaialbleRoomsOnAction" prefHeight="40.0" prefWidth="285.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 0.0% 100.0%, reflect, #c6aa1f 0.0%, #c6aa1f 0.6711%, #000000 0.6711%, #00bae4 100.0%);" text="Check-Out Management" textFill="WHITE">
+      <Button layoutX="258.0" layoutY="200.0" mnemonicParsing="false" onAction="#avaialbleRoomsOnAction" prefHeight="40.0" prefWidth="285.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 0.0% 100.0%, reflect, #c6aa1f 0.0%, #c6aa1f 0.6711%, #000000 0.6711%, #00bae4 100.0%);" text="Check-Out Management" textFill="WHITE">
          <effect>
             <DropShadow blurType="GAUSSIAN" />
          </effect>

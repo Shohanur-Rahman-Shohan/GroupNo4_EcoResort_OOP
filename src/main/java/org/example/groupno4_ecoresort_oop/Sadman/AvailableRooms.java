@@ -1,89 +1,67 @@
 package org.example.groupno4_ecoresort_oop.Sadman;
 
-import java.time.LocalDate;
+import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 
-public class AvailableRooms {
-    private String roomType, bedP, ViewP;
-    private double roomNo , price;
-    private LocalDate checkOutDate, checkInDate;
 
-    public AvailableRooms(String roomType, String bedP, String viewP, double roomNo, double price, LocalDate checkOutDate, LocalDate checkInDate) {
-        this.roomType = roomType;
-        this.bedP = bedP;
-        ViewP = viewP;
-        this.roomNo = roomNo;
-        this.price = price;
-        this.checkOutDate = checkOutDate;
-        this.checkInDate = checkInDate;
-    }
+public class AvailableRooms
+{
+    @FXML
+    private DatePicker checkInDatepicker;
+    @FXML
+    private ComboBox<String> VfCB;
+    @FXML
+    private DatePicker checkOutDatepicker;
+    @FXML
+    private ComboBox<String> BfCB;
+    @FXML
+    private ComboBox<String> RmCB;
 
-    public String getRoomType() {
-        return roomType;
-    }
+    @FXML
+    public void initialize() {
+        RmCB.getItems().addAll("Single Room" , "Double Room", "Suite");
+        BfCB.getItems().addAll("King Size bed" , "Family Bed", "Two single beds");
+        VfCB.getItems().addAll("Sea View", "Garden View", "Pool View");
 
-    public void setRoomType(String roomType) {
-        this.roomType = roomType;
-    }
+        VfCB.setValue("Sea View");
+        RmCB.setValue("Single Room");
+        BfCB.setValue("Family Bed");
 
-    public String getBedP() {
-        return bedP;
-    }
-
-    public void setBedP(String bedP) {
-        this.bedP = bedP;
-    }
-
-    public String getViewP() {
-        return ViewP;
-    }
-
-    public void setViewP(String viewP) {
-        ViewP = viewP;
-    }
-
-    public double getRoomNo() {
-        return roomNo;
-    }
-
-    public void setRoomNo(double roomNo) {
-        this.roomNo = roomNo;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public LocalDate getCheckOutDate() {
-        return checkOutDate;
-    }
-
-    public void setCheckOutDate(LocalDate checkOutDate) {
-        this.checkOutDate = checkOutDate;
-    }
-
-    public LocalDate getCheckInDate() {
-        return checkInDate;
-    }
-
-    public void setCheckInDate(LocalDate checkInDate) {
-        this.checkInDate = checkInDate;
     }
 
 
-    @Override
-    public String toString() {
-        return "AvailableRooms{" +
-                "roomType='" + roomType + '\'' +
-                ", bedP='" + bedP + '\'' +
-                ", ViewP='" + ViewP + '\'' +
-                ", roomNo=" + roomNo +
-                ", price=" + price +
-                ", checkOutDate=" + checkOutDate +
-                ", checkInDate=" + checkInDate +
-                '}';
+    @FXML
+    public void BpCB(Event event) {
+    }
+
+    @FXML
+    public void clearfilterOnAction(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void makeReservationOnAction(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void filterOnAction(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void SearchRoomOnAction(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void RmCBOnAction(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void BfCBCombobox(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void VfCombobox(ActionEvent actionEvent) {
     }
 }

@@ -8,13 +8,14 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="640.0" prefWidth="691.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.arman.controller.ManageBudgetSportsController">
+<AnchorPane prefHeight="640.0" prefWidth="691.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.arman.controller.ManageAdventureSportsController">
    <children>
       <Label layoutX="189.0" layoutY="26.0" prefHeight="30.0" prefWidth="238.0" text="Manage Adventure Sports">
          <font>
@@ -38,36 +39,39 @@
          </textFill>
       </Label>
       <Label layoutX="57.0" layoutY="108.0" text="Activity Name:" />
-      <TextField layoutX="179.0" layoutY="103.0" />
+      <TextField fx:id="activityNameTextField" layoutX="179.0" layoutY="103.0" />
       <Label layoutX="70.0" layoutY="141.0" text="Category:" />
       <Label layoutX="46.0" layoutY="183.0" prefHeight="17.0" prefWidth="88.0" text="Max Capacity:" />
-      <DatePicker layoutX="179.0" layoutY="248.0" prefHeight="26.0" prefWidth="166.0" />
-      <Button layoutX="37.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: LightBlue;" text="BACK" />
-      <TextField layoutX="179.0" layoutY="178.0" />
+      <DatePicker fx:id="scheduleDatePicker" layoutX="179.0" layoutY="248.0" prefHeight="26.0" prefWidth="166.0" />
+      <Button layoutX="37.0" layoutY="28.0" mnemonicParsing="false" onAction="#backButtonOnAction" style="-fx-background-color: LightBlue;" text="BACK" />
+      <TextField fx:id="maxCapacityTextField" layoutX="179.0" layoutY="178.0" />
       <Label layoutX="90.0" layoutY="218.0" text="Status:" />
       <Label layoutX="81.0" layoutY="252.0" text="Schedule" />
-      <TableView layoutX="16.0" layoutY="293.0" prefHeight="200.0" prefWidth="659.0">
+      <TableView fx:id="outputTableView" layoutX="16.0" layoutY="293.0" prefHeight="200.0" prefWidth="659.0">
         <columns>
-          <TableColumn prefWidth="117.499755859375" text="Category" />
-            <TableColumn prefWidth="130.87542724609375" text="Max Capacity" />
-          <TableColumn prefWidth="94.0002670288086" text="ActivityName" />
-            <TableColumn prefWidth="137.93865966796875" text="Status" />
-            <TableColumn prefWidth="171.37701416015625" text="Schedule" />
+          <TableColumn fx:id="categoryTableColumn" prefWidth="117.499755859375" text="Category" />
+            <TableColumn fx:id="maxCapacityTableColumn" prefWidth="130.87542724609375" text="Max Capacity" />
+          <TableColumn fx:id="activitynameTableColumn" prefWidth="94.0002670288086" text="ActivityName" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="137.93865966796875" text="Status" />
+            <TableColumn fx:id="scheduleTableColumn" prefWidth="171.37701416015625" text="Schedule" />
         </columns>
       </TableView>
-      <Button layoutX="386.0" layoutY="248.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: LightBlue;" text="Add" />
-      <RadioButton layoutX="171.0" layoutY="141.0" mnemonicParsing="false" text="Water" />
-      <RadioButton layoutX="237.0" layoutY="141.0" mnemonicParsing="false" text="Land" />
-      <ComboBox layoutX="180.0" layoutY="214.0" prefHeight="26.0" prefWidth="160.0" />
-      <RadioButton layoutX="293.0" layoutY="141.0" mnemonicParsing="false" text="Aerial" />
-      <TextField layoutX="182.0" layoutY="67.0" />
+      <Button layoutX="386.0" layoutY="248.0" mnemonicParsing="false" onAction="#addButtonOnAction" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: LightBlue;" text="Add" />
+      <RadioButton fx:id="waterRadioButton" layoutX="171.0" layoutY="141.0" mnemonicParsing="false" text="Water">
+         <toggleGroup>
+            <ToggleGroup fx:id="categoryToggleGroup" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="landRadioButton" layoutX="237.0" layoutY="141.0" mnemonicParsing="false" text="Land" toggleGroup="$categoryToggleGroup" />
+      <ComboBox fx:id="statusCombobox" layoutX="180.0" layoutY="214.0" prefHeight="26.0" prefWidth="160.0" />
+      <RadioButton fx:id="aerialRadioButton" layoutX="293.0" layoutY="141.0" mnemonicParsing="false" text="Aerial" toggleGroup="$categoryToggleGroup" />
+      <TextField fx:id="activityIdTextField" layoutX="182.0" layoutY="67.0" />
       <Label layoutX="58.0" layoutY="72.0" text="Activity  ID:" />
-      <TextField layoutX="100.0" layoutY="501.0" />
+      <TextField fx:id="searchIdTextField" layoutX="100.0" layoutY="501.0" />
       <Label layoutX="55.0" layoutY="506.0" text="ID:" />
       <Label layoutX="36.0" layoutY="539.0" text="Status:" />
-      <ComboBox layoutX="102.0" layoutY="534.0" prefHeight="26.0" prefWidth="160.0" />
+      <ComboBox fx:id="updateStatusCombobox" layoutX="102.0" layoutY="534.0" prefHeight="26.0" prefWidth="160.0" />
       <Label layoutX="13.0" layoutY="578.0" prefHeight="17.0" prefWidth="88.0" text="Max Capacity:" />
-      <TextField layoutX="102.0" layoutY="574.0" />
-      <Button layoutX="23.0" layoutY="606.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="238.0" style="-fx-background-color: LightBlue;" text="Update" />
+      <TextField fx:id="updatemaxCapacityTextField" layoutX="102.0" layoutY="574.0" />
+      <Button layoutX="23.0" layoutY="606.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="26.0" prefWidth="238.0" style="-fx-background-color: LightBlue;" text="Update" />
    </children>
 </AnchorPane>

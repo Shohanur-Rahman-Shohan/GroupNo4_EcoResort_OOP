@@ -4,29 +4,21 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import org.example.groupno4_ecoresort_oop.SceneSwitcher;
 
-public class EmergencyMaintenanceController
+public class SetReminderForRecurringMaintenanceCheckController
 {
     @javafx.fxml.FXML
-    private TableView outputTableView;
-    @javafx.fxml.FXML
-    private ComboBox statusComboBox;
-    @javafx.fxml.FXML
-    private TableColumn statusTC;
-    @javafx.fxml.FXML
-    private TableColumn emergencyTC;
-    @javafx.fxml.FXML
-    private TableColumn requestIdTC;
+    private Label maintenanceStatusCheckLabel;
     @javafx.fxml.FXML
     private TextField requestIdTextField;
     @javafx.fxml.FXML
-    private ComboBox emergencyComboBox;
+    private DatePicker setReminderDatePicker;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void updateButtonOnAction(ActionEvent actionEvent) {
+    public void setReminderButtonOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -36,9 +28,5 @@ public class EmergencyMaintenanceController
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    @javafx.fxml.FXML
-    public void filterButtonOnAction(ActionEvent actionEvent) {
     }
 }

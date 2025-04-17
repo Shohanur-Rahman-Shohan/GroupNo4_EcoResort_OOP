@@ -20,9 +20,10 @@ public class HelloApplication extends Application {
         Manager GM= new GeneralManager(2312227, "Shohanur", "Rahman", "shohanur@gmail.com", "12345", "+8801xxxxxxxxx");
         managers.add(GM);
 
+
         SceneSwitcher.stage= stage;
         FXMLLoader fxmlLoader = new FXMLLoader(
-                HelloApplication.class.getResource("user/LoginView.fxml"));
+                HelloApplication.class.getResource("arman/TourScheduleView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("ECO Resort");
         stage.setScene(scene);

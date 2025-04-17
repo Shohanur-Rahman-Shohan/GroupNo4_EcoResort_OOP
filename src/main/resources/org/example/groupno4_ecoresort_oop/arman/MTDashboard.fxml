@@ -8,7 +8,6 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="535.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.arman.controller.MTDashboardController">
    <children>
       <Label layoutX="173.0" layoutY="10.0" prefHeight="63.0" prefWidth="328.0" text="Maintenance Technician Dashboard" wrapText="true">
@@ -40,5 +39,6 @@
       <Button layoutX="206.0" layoutY="350.0" mnemonicParsing="false" onMouseClicked="#monthlyMaintenanceButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Monthly Maintenance" textFill="WHITE" />
       <Button layoutX="206.0" layoutY="408.0" mnemonicParsing="false" onMouseClicked="#swimmingPoolButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Swimming Pool" textFill="WHITE" />
       <Button layoutX="206.0" layoutY="464.0" mnemonicParsing="false" onMouseClicked="#setReminderButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Set Reminder" textFill="WHITE" />
+      <Button layoutX="34.0" layoutY="23.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" style="-fx-background-color: lightBlue;" text="LogOut" />
    </children>
 </AnchorPane>
