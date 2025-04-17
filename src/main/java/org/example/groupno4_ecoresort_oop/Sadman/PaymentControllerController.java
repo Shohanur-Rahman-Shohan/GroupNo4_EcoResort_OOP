@@ -1,6 +1,8 @@
 package org.example.groupno4_ecoresort_oop.Sadman;
 
-public class PaymentController
+import javafx.scene.control.TextField;
+
+public class PaymentControllerController
 {
     @javafx.fxml.FXML
     private TextField reservationIDTextField;
