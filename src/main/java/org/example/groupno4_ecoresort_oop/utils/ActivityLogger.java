@@ -51,24 +51,24 @@ public class ActivityLogger implements Serializable {
                 '}';
     }
 
-    public static void log(String activity, Integer userId) {
-        ActivityLogger activityLogger = new ActivityLogger(activity, LocalDateTime.now(), userId);
-        FileHandler.writeObjectToFile(activityLogger, "activity_logs.bin");
-    }
-
-    public static ArrayList<ActivityLogger> getUserActivityLogs(Integer userId) {
-        ArrayList<ActivityLogger> activityLoggers = new ArrayList<ActivityLogger>();
-        ArrayList<ActivityLogger> allActivityLoggers = FileHandler.<ActivityLogger>readObjectsFromFile("activity_logs.bin");
-        if (allActivityLoggers == null) {
-            return activityLoggers;
-        }
-
-        for (ActivityLogger activityLogger : allActivityLoggers) {
-            if (activityLogger.getUserId().equals(userId)) {
-                activityLoggers.add(activityLogger);
-            }
-        }
-
-        return activityLoggers;
-    }
+//    public static void log(String activity, Integer userId) {
+//        ActivityLogger activityLogger = new ActivityLogger(activity, LocalDateTime.now(), userId);
+////        FileHandler.writeObjectToFile(activityLogger, "activity_logs.bin");
+//    }
+//
+//    public static ArrayList<ActivityLogger> getUserActivityLogs(Integer userId) {
+//        ArrayList<ActivityLogger> activityLoggers = new ArrayList<ActivityLogger>();
+//        ArrayList<ActivityLogger> allActivityLoggers = FileHandler.<ActivityLogger>readObjectsFromFile("activity_logs.bin");
+//        if (allActivityLoggers == null) {
+//            return activityLoggers;
+//        }
+//
+//        for (ActivityLogger activityLogger : allActivityLoggers) {
+//            if (activityLogger.getUserId().equals(userId)) {
+//                activityLoggers.add(activityLogger);
+//            }
+//        }
+//
+//        return activityLoggers;
+//    }
 }

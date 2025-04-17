@@ -23,7 +23,7 @@ public class HelloApplication extends Application {
 
         SceneSwitcher.stage= stage;
         FXMLLoader fxmlLoader = new FXMLLoader(
-                HelloApplication.class.getResource("arman/ACDashboard.fxml"));
+                HelloApplication.class.getResource("arman/TourScheduleView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("ECO Resort");
         stage.setScene(scene);

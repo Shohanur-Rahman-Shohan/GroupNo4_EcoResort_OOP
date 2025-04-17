@@ -37,11 +37,6 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <Label layoutX="140.0" layoutY="75.0" text="Guest Name:">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
       <TextField fx:id="guestNameTextField" layoutX="105.0" layoutY="113.0" />
       <ComboBox fx:id="eventTypeCombobox" layoutX="105.0" layoutY="153.0" prefHeight="26.0" prefWidth="160.0" />
       <Label layoutX="27.0" layoutY="158.0" text="Event Type:">
@@ -147,11 +142,16 @@
       </Label>
       <TextField fx:id="modifyGuestIdTextField" layoutX="125.0" layoutY="498.0" prefHeight="26.0" prefWidth="186.0" />
       <Button layoutX="32.0" layoutY="11.0" mnemonicParsing="false" onAction="#BackButtonOnAction" style="-fx-background-color: lightBlue;" text="Back" />
-      <TextField fx:id="guestIdTextField1" layoutX="231.0" layoutY="70.0" />
-      <Label layoutX="34.0" layoutY="128.0" text="Guest Name:">
+      <Label layoutX="25.0" layoutY="118.0" text="Guest Name:">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
+      <Label layoutX="175.0" layoutY="58.0" prefHeight="30.0" prefWidth="71.0" text="Guest ID:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="guestIDTextField1" layoutX="232.0" layoutY="60.0" />
    </children>
 </AnchorPane>

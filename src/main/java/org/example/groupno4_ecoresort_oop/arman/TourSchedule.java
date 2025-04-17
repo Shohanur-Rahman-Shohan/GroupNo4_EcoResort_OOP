@@ -1,8 +1,9 @@
 package org.example.groupno4_ecoresort_oop.arman;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class TourSchedule {
+public class TourSchedule implements Serializable {
     private String guestId;
     private String guestName;
     private LocalDate date;
