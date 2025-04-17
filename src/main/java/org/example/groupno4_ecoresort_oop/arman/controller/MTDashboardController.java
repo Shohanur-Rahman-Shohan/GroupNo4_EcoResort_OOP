@@ -33,7 +33,7 @@ public class MTDashboardController
     @javafx.fxml.FXML
     public void setReminderButtonOnClick(Event event) {
         try {
-            SceneSwitcher.switchTo("arman/setReminder");
+            SceneSwitcher.switchTo("arman/SetReminderForRecurringMaintenanceCheck");
         } catch (Exception e) {
             e.printStackTrace();
         }

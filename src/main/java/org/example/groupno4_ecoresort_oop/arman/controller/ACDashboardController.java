@@ -67,7 +67,7 @@ public class ACDashboardController
     @javafx.fxml.FXML
     public void resolveComplaintsButtonOnClick(Event event) {
         try {
-            SceneSwitcher.switchTo("ResolveComplaints");
+            SceneSwitcher.switchTo("arman/ResolveComplaints");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -76,7 +76,7 @@ public class ACDashboardController
     @javafx.fxml.FXML
     public void assignTourGuideButtonOnClick(Event event) {
         try {
-            SceneSwitcher.switchTo("AssignTourGuide");
+            SceneSwitcher.switchTo("arman/AssignTourGuide");
         } catch (Exception e) {
             e.printStackTrace();
         }

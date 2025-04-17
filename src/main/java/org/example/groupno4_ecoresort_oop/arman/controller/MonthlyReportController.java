@@ -20,7 +20,7 @@ public class MonthlyReportController
     @javafx.fxml.FXML
     public void backButtonOnAction(ActionEvent actionEvent) {
         try {
-            SceneSwitcher.switchTo("user/MTDashboard");
+            SceneSwitcher.switchTo("arman/MTDashboard");
         } catch (Exception e) {
             e.printStackTrace();
         }

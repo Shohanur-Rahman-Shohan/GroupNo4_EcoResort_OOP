@@ -32,7 +32,7 @@ public class SwimmingPoolController
     @javafx.fxml.FXML
     public void BackButtonOnAction(ActionEvent actionEvent) {
         try {
-            SceneSwitcher.switchTo("user/MTDashboard");
+            SceneSwitcher.switchTo("arman/MTDashboard");
         } catch (Exception e) {
             e.printStackTrace();
         }
