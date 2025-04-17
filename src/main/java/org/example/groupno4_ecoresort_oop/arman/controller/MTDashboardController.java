@@ -1,5 +1,6 @@
 package org.example.groupno4_ecoresort_oop.arman.controller;
 
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 
 import javafx.event.Event;
@@ -85,5 +86,10 @@ public class MTDashboardController
 
     @javafx.fxml.FXML
     public void logOutButtonOnAction(ActionEvent actionEvent) {
+        try {
+            SceneSwitcher.switchTo("user/LoginView");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

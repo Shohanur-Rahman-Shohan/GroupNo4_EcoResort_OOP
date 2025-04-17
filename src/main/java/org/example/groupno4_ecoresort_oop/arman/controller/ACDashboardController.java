@@ -84,5 +84,10 @@ public class ACDashboardController
 
     @javafx.fxml.FXML
     public void logOutButtonOnAction(ActionEvent actionEvent) {
+        try {
+            SceneSwitcher.switchTo("user/LoginView");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

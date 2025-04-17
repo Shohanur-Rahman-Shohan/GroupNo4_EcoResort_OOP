@@ -1,5 +1,8 @@
 package org.example.groupno4_ecoresort_oop.arman.controller;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.*;
+
 public class ResolveComplaintsController
 {
     @javafx.fxml.FXML
