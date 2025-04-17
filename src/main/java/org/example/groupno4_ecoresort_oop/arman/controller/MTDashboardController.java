@@ -14,7 +14,7 @@ public class MTDashboardController
     @javafx.fxml.FXML
     public void monthlyMaintenanceButtonOnClick(Event event) {
         try {
-            SceneSwitcher.switchTo("arman/ManageAdventureSports");
+            SceneSwitcher.switchTo("arman/MonthlyReport");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -23,7 +23,7 @@ public class MTDashboardController
     @javafx.fxml.FXML
     public void repairRequestButtonONClick(Event event) {
         try {
-            SceneSwitcher.switchTo("arman/ManageAdventureSports");
+            SceneSwitcher.switchTo("arman/ManageRepairRequest");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -32,7 +32,7 @@ public class MTDashboardController
     @javafx.fxml.FXML
     public void setReminderButtonOnClick(Event event) {
         try {
-            SceneSwitcher.switchTo("arman/");
+            SceneSwitcher.switchTo("arman/setReminder");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -81,5 +81,9 @@ public class MTDashboardController
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @javafx.fxml.FXML
+    public void logOutButtonOnAction(ActionEvent actionEvent) {
     }
 }

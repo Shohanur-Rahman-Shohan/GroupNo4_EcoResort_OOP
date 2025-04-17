@@ -8,6 +8,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
@@ -46,7 +47,7 @@
       <TextField fx:id="maxCapacityTextField" layoutX="179.0" layoutY="178.0" />
       <Label layoutX="90.0" layoutY="218.0" text="Status:" />
       <Label layoutX="81.0" layoutY="252.0" text="Schedule" />
-      <TableView layoutX="16.0" layoutY="293.0" prefHeight="200.0" prefWidth="659.0">
+      <TableView fx:id="outputTableView" layoutX="16.0" layoutY="293.0" prefHeight="200.0" prefWidth="659.0">
         <columns>
           <TableColumn fx:id="categoryTableColumn" prefWidth="117.499755859375" text="Category" />
             <TableColumn fx:id="maxCapacityTableColumn" prefWidth="130.87542724609375" text="Max Capacity" />
@@ -56,10 +57,13 @@
         </columns>
       </TableView>
       <Button layoutX="386.0" layoutY="248.0" mnemonicParsing="false" onAction="#addButtonOnAction" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: LightBlue;" text="Add" />
-      <RadioButton layoutX="171.0" layoutY="141.0" mnemonicParsing="false" text="Water" />
-      <RadioButton layoutX="237.0" layoutY="141.0" mnemonicParsing="false" text="Land" />
+      <RadioButton fx:id="waterRadioButton" layoutX="171.0" layoutY="141.0" mnemonicParsing="false" text="Water">
+         <toggleGroup>
+            <ToggleGroup fx:id="categoryToggleGroup" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="landRadioButton" layoutX="237.0" layoutY="141.0" mnemonicParsing="false" text="Land" toggleGroup="$categoryToggleGroup" />
       <ComboBox fx:id="statusCombobox" layoutX="180.0" layoutY="214.0" prefHeight="26.0" prefWidth="160.0" />
-      <RadioButton layoutX="293.0" layoutY="141.0" mnemonicParsing="false" text="Aerial" />
+      <RadioButton fx:id="aerialRadioButton" layoutX="293.0" layoutY="141.0" mnemonicParsing="false" text="Aerial" toggleGroup="$categoryToggleGroup" />
       <TextField fx:id="activityIdTextField" layoutX="182.0" layoutY="67.0" />
       <Label layoutX="58.0" layoutY="72.0" text="Activity  ID:" />
       <TextField fx:id="searchIdTextField" layoutX="100.0" layoutY="501.0" />
@@ -67,7 +71,7 @@
       <Label layoutX="36.0" layoutY="539.0" text="Status:" />
       <ComboBox fx:id="updateStatusCombobox" layoutX="102.0" layoutY="534.0" prefHeight="26.0" prefWidth="160.0" />
       <Label layoutX="13.0" layoutY="578.0" prefHeight="17.0" prefWidth="88.0" text="Max Capacity:" />
-      <TextField fx:id="maxCapacityTextField" layoutX="102.0" layoutY="574.0" />
+      <TextField fx:id="updatemaxCapacityTextField" layoutX="102.0" layoutY="574.0" />
       <Button layoutX="23.0" layoutY="606.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="26.0" prefWidth="238.0" style="-fx-background-color: LightBlue;" text="Update" />
    </children>
 </AnchorPane>

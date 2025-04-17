@@ -39,5 +39,6 @@
       <Button layoutX="196.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#assignTourGuideButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Assign Tour Guide" textFill="WHITE" />
       <Button layoutX="196.0" layoutY="398.0" mnemonicParsing="false" onMouseClicked="#trackGuestParticipationButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Track Guest Participation" textFill="WHITE" />
       <Button layoutX="196.0" layoutY="454.0" mnemonicParsing="false" onMouseClicked="#resolveComplaintsButtonOnClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: Navy;" text="Resolve Complaints" textFill="WHITE" />
+      <Button layoutX="39.0" layoutY="50.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" style="-fx-background-color: lightBlue;" text="LogOut" />
    </children>
 </AnchorPane>

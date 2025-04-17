@@ -1,5 +1,6 @@
 package org.example.groupno4_ecoresort_oop.arman.controller;
 
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import org.example.groupno4_ecoresort_oop.SceneSwitcher;
 
@@ -79,5 +80,9 @@ public class ACDashboardController
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @javafx.fxml.FXML
+    public void logOutButtonOnAction(ActionEvent actionEvent) {
     }
 }
