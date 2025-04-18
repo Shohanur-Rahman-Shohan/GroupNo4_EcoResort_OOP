@@ -1,12 +1,8 @@
 package org.example.groupno4_ecoresort_oop.Sadman;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
-import javax.swing.table.TableColumn;
-import javax.swing.text.TableView;
 
 public class CheckOutManagementController
 {
@@ -25,11 +21,11 @@ public class CheckOutManagementController
     @javafx.fxml.FXML
     private TableColumn phoneTableColumn;
     @javafx.fxml.FXML
-    private TableView TableView;
-    @javafx.fxml.FXML
     private TableColumn chsrgesTableColumn;
     @javafx.fxml.FXML
     private CheckBox paymentdoneCheckBox;
+    @javafx.fxml.FXML
+    private TableView outputTableView;
 
     @javafx.fxml.FXML
     public void initialize() {
