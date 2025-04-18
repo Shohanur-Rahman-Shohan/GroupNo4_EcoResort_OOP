@@ -56,20 +56,11 @@ public class LoginViewController
 
     @javafx.fxml.FXML
     public void signUp_OA(ActionEvent actionEvent) {
-
         try {
             SceneSwitcher.switchTo("user/SignUp");
         } catch (Exception e) {
         }
-
-
     }
-
-
-
-
-
-
 
 
 
