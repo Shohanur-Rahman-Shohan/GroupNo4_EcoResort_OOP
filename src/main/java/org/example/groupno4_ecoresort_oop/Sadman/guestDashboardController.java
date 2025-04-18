@@ -3,7 +3,7 @@ package org.example.groupno4_ecoresort_oop.Sadman;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 
-public class guestDashboard
+public class guestDashboardController
 {
     @javafx.fxml.FXML
     private Label guestLabel;

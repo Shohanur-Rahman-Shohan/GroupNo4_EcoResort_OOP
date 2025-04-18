@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: rgb(230, 230, 250);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.Sadman.CheckInManagement">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: rgb(230, 230, 250);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.Sadman.CheckInManagementController">
    <children>
       <Label layoutX="262.0" layoutY="14.0" text="Check-In Management">
          <font>
