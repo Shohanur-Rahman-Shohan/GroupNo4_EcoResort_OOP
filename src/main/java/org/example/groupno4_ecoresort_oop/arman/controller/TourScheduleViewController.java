@@ -1,6 +1,7 @@
 package org.example.groupno4_ecoresort_oop.arman.controller;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.example.groupno4_ecoresort_oop.SceneSwitcher;
@@ -78,8 +79,34 @@ public class TourScheduleViewController
     }
 
 
-    @javafx.fxml.FXML
+    @FXML
     public void modifyButtonOnAction(ActionEvent actionEvent) {
+        String guestId = modifyGuestIdTextField.getText();
+        String newEventType = modifyEventTypeCombobox.getValue();
+        LocalDate newDate = modifyDateDatePicker.getValue();
+        int newSeats = Integer.parseInt(modifyseatsToReserveTextField.getText());
+        double newPrice = Double.parseDouble(modifypriceTextField.getText());
+
+        File file = new File("Data/arman/tourschedule.bin");
+        List<TourSchedule> tourSchedules = BinaryFileHelper.readAllObjects(file);
+
+        boolean found = false;
+        for (TourSchedule ts : tourSchedules) {
+            if (ts.getGuestId().equals(guestId)) {
+                ts.setEventtype(newEventType);
+                ts.setDate(newDate);
+                ts.setSeatReserver(newSeats);
+                ts.setPrice(newPrice);
+                found = true;
+                break;
+            }
+        }
+
+        if (found) {
+            BinaryFileHelper.writeAllObjects(file, tourSchedules);
+            outputTableView.getItems().clear();
+            outputTableView.getItems().addAll(tourSchedules);
+        }
     }
 
     @javafx.fxml.FXML
