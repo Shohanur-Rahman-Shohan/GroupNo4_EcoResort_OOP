@@ -5,6 +5,8 @@ import javafx.scene.control.*;
 import org.example.groupno4_ecoresort_oop.SceneSwitcher;
 import org.example.groupno4_ecoresort_oop.arman.ActivityCoordinator;
 import org.example.groupno4_ecoresort_oop.arman.MaintenanceTechnician;
+import org.example.groupno4_ecoresort_oop.shohan.managers.FinanceManager;
+import org.example.groupno4_ecoresort_oop.shohan.managers.GeneralManager;
 import org.example.groupno4_ecoresort_oop.utils.BinaryFileHelper;
 
 import java.io.File;
@@ -29,7 +31,7 @@ public class LoginViewController {
     @javafx.fxml.FXML
     public void initialize() {
         // Populate user type combo box
-        userType_CB.getItems().addAll("ActivityCoordinator", "MaintenanceTechnician");
+        userType_CB.getItems().addAll("ActivityCoordinator", "MaintenanceTechnician","GeneralManager","FinanceManager");
         showPassword_L.setOpacity(0); // Initially hide password label
     }
 
@@ -90,7 +92,15 @@ public class LoginViewController {
                     SceneSwitcher.switchTo("arman/ACDashboard");
                 } else if (user instanceof MaintenanceTechnician) {
                     SceneSwitcher.switchTo("arman/MTDashboard");
+
+                }else if (user instanceof GeneralManager) {
+                    SceneSwitcher.switchTo("user/DashBoard");
+                }else if (user instanceof FinanceManager) {
+                    SceneSwitcher.switchTo("user/DashBoard");
                 }
+
+
+
                 break;
             }
         }

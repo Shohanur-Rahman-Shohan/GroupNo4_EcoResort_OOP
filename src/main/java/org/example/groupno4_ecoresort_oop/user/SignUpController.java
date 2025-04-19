@@ -5,6 +5,8 @@ import javafx.scene.control.*;
 import org.example.groupno4_ecoresort_oop.SceneSwitcher;
 import org.example.groupno4_ecoresort_oop.arman.ActivityCoordinator;
 import org.example.groupno4_ecoresort_oop.arman.MaintenanceTechnician;
+import org.example.groupno4_ecoresort_oop.shohan.managers.FinanceManager;
+import org.example.groupno4_ecoresort_oop.shohan.managers.GeneralManager;
 import org.example.groupno4_ecoresort_oop.utils.BinaryFileHelper;
 
 import java.io.File;
@@ -65,6 +67,15 @@ public class SignUpController {
         int userId = generateUserId();
 
         // Create the user object based on the user type
+
+
+//        User newGM;
+//        newGM = new GeneralManager("Shohan", "shohan@gmail.com", "12345", 1111, 1749581973, "GeneralManager");
+//        User newFM;
+//        newFM = new FinanceManager("Shohan", "shohan@gmail.com", "12345", 2222, 1749581973, "FinanceManager");
+
+
+
         User newUser;
         if (userType.equalsIgnoreCase("ActivityCoordinator")) {
             newUser = new ActivityCoordinator(firstName, email, password, userId, phoneNumber);
@@ -81,6 +92,8 @@ public class SignUpController {
 
             // Add new user to the list
             users.add(newUser);
+//            users.add(newGM);
+//            users.add(newFM);
 
             // Save the updated list back to the file
             BinaryFileHelper.writeAllObjects(file, users);
