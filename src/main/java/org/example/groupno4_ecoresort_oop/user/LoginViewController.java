@@ -3,13 +3,16 @@ package org.example.groupno4_ecoresort_oop.user;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import org.example.groupno4_ecoresort_oop.SceneSwitcher;
-import org.example.groupno4_ecoresort_oop.shohan.managers.Manager;
+import org.example.groupno4_ecoresort_oop.arman.ActivityCoordinator;
+import org.example.groupno4_ecoresort_oop.arman.MaintenanceTechnician;
+import org.example.groupno4_ecoresort_oop.utils.BinaryFileHelper;
 
+import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 
-public class LoginViewController
-{
+public class LoginViewController {
+
     @javafx.fxml.FXML
     private PasswordField password_PF;
     @javafx.fxml.FXML
@@ -18,103 +21,84 @@ public class LoginViewController
     private TextField email_TF;
     @javafx.fxml.FXML
     private Label showPassword_L;
+    @javafx.fxml.FXML
+    private ComboBox<String> userType_CB;
 
-
-
-    // Database
-    private ArrayList<Manager> managers;
-
-    public void setDataBase(ArrayList<Manager> managers) {
-        this.managers = managers;
-    }
-
-
-
-
+    private List<User> users;
 
     @javafx.fxml.FXML
     public void initialize() {
-        showPassword_L.setOpacity(0);
+        // Populate user type combo box
+        userType_CB.getItems().addAll("ActivityCoordinator", "MaintenanceTechnician");
+        showPassword_L.setOpacity(0); // Initially hide password label
     }
 
     @javafx.fxml.FXML
     public void showPassword_OA(ActionEvent actionEvent) {
+        // Show or hide the password based on the checkbox state
         if (showPassword_CB.isSelected()) {
-            String password = password_PF.getText();
-            showPassword_L.setText(password);
-            showPassword_L.setOpacity(100);
+            password_PF.setStyle("-fx-text-fill: black;");
+            password_PF.setPromptText(password_PF.getText());
+            password_PF.setText(""); // Clear the password text to show plain text
         } else {
-            showPassword_L.setText("");
-            showPassword_L.setOpacity(0);
+            password_PF.setPromptText("********");
+            password_PF.setText(""); // Clear the current text to be masked
         }
     }
-
-
-
-
-
 
     @javafx.fxml.FXML
     public void signUp_OA(ActionEvent actionEvent) {
-
+        // Navigate to the sign-up page
         try {
             SceneSwitcher.switchTo("user/SignUp");
         } catch (Exception e) {
+            e.printStackTrace();
         }
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     @javafx.fxml.FXML
     public void loginContinue_OA(ActionEvent actionEvent) throws IOException {
-
-        /*
+        // Capture email, password, and user type
         String email = email_TF.getText();
         String password = password_PF.getText();
+        String userType = userType_CB.getValue();
 
-        boolean isValidEmailAndPassword = Manager.validateEmailAndPassword(email, password);
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        if (!isValidEmailAndPassword) {
-            alert.setAlertType(Alert.AlertType.ERROR);
-            alert.setHeaderText("Invalid Email or Password");
-            alert.setContentText("Please use valid email and password. Password must be at least 5 digit, and must contain a number");
+        // Validate that the fields are not empty
+        if (email.isEmpty() || password.isEmpty() || userType == null) {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Please fill in all fields.");
             alert.showAndWait();
             return;
         }
 
-        Manager currentManager = Manager.verifyManager(managers, email, password);
-        if (currentManager == null) {
-            alert.setHeaderText("Invalid Email or Password");
-            alert.setContentText("Please use valid email and password.");
-            alert.showAndWait();
-            return;
+        // Load users from the binary file
+        File file = new File("Data/arman/users.bin");
+        users = BinaryFileHelper.readAllObjects(file);
+
+        boolean isValidUser = false;
+        for (User user : users) {
+            // Debugging: Log the email, password, and user type being compared
+            System.out.println("Comparing email: " + user.getEmail() + " with input: " + email);
+            System.out.println("Comparing password: " + user.getPassword() + " with input: " + password);
+            System.out.println("Comparing user type: " + user.getUserType() + " with input: " + userType);
+
+            // Check if email, password, and user type match
+            if (user.getEmail().equals(email) && user.getPassword().equals(password) && user.getUserType().equals(userType)) {
+                isValidUser = true;
+
+                // Redirect to the appropriate dashboard
+                if (user instanceof ActivityCoordinator) {
+                    SceneSwitcher.switchTo("arman/ACDashboard");
+                } else if (user instanceof MaintenanceTechnician) {
+                    SceneSwitcher.switchTo("arman/MTDashboard");
+                }
+                break;
+            }
         }
 
-        email_TF.clear();
-        password_PF.clear();
-
-        Scene scene = ((Button) actionEvent.getSource()).getScene();
-        Stage stage = (Stage) scene.getWindow();
-
-        */
-
-
-        try {
-            SceneSwitcher.switchTo("user/DashBoard");
-        } catch (Exception e) {
+        // If no valid user is found, show an error message
+        if (!isValidUser) {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Invalid email, password, or user type.");
+            alert.showAndWait();
         }
     }
 }

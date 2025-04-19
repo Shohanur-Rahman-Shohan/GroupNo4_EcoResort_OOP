@@ -47,7 +47,7 @@
       <Label layoutX="50.0" layoutY="247.0" text="Check ID:" />
       <TextField fx:id="checkIDTextField" layoutX="117.0" layoutY="243.0" />
       <Button layoutX="297.0" layoutY="243.0" mnemonicParsing="false" onAction="#searchButtonOnAction" text="Search" />
-      <TextArea fx:id="outputTextArea" layoutX="14.0" layoutY="285.0" prefHeight="62.0" prefWidth="337.0" />
+      <TextArea fx:id="outputTextArea" layoutX="56.0" layoutY="285.0" prefHeight="222.0" prefWidth="420.0" />
       <Button layoutY="2.0" mnemonicParsing="false" onAction="#backButtonOnAction" style="-fx-background-color: lightBlue;" text="Back" />
    </children>
 </AnchorPane>

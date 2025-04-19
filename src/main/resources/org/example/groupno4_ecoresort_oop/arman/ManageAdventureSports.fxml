@@ -48,19 +48,21 @@
       <Label layoutX="90.0" layoutY="218.0" text="Status:" />
       <Label layoutX="81.0" layoutY="252.0" text="Schedule" />
       <TableView fx:id="outputTableView" layoutX="16.0" layoutY="293.0" prefHeight="200.0" prefWidth="659.0">
-        <columns>
-          <TableColumn fx:id="categoryTableColumn" prefWidth="117.499755859375" text="Category" />
-            <TableColumn fx:id="maxCapacityTableColumn" prefWidth="130.87542724609375" text="Max Capacity" />
-          <TableColumn fx:id="activitynameTableColumn" prefWidth="94.0002670288086" text="ActivityName" />
-            <TableColumn fx:id="statusTableColumn" prefWidth="137.93865966796875" text="Status" />
-            <TableColumn fx:id="scheduleTableColumn" prefWidth="171.37701416015625" text="Schedule" />
-        </columns>
+         <columns>
+            <TableColumn fx:id="activityIdTableColumn" prefWidth="65.0" text="Activity ID" />
+            <TableColumn fx:id="categoryTableColumn" prefWidth="117.5" text="Category" />
+            <TableColumn fx:id="maxCapacityTableColumn" prefWidth="95.0" text="Max Capacity" />
+            <TableColumn fx:id="activitynameTableColumn" prefWidth="127.5" text="ActivityName" />
+            <TableColumn fx:id="statusTableColumn" minWidth="0.0" prefWidth="120.0" text="Status" />
+            <TableColumn fx:id="scheduleTableColumn" maxWidth="200.0" prefWidth="137.0" text="Schedule" />
+         </columns>
       </TableView>
       <Button layoutX="386.0" layoutY="248.0" mnemonicParsing="false" onAction="#addButtonOnAction" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: LightBlue;" text="Add" />
       <RadioButton fx:id="waterRadioButton" layoutX="171.0" layoutY="141.0" mnemonicParsing="false" text="Water">
          <toggleGroup>
             <ToggleGroup fx:id="categoryToggleGroup" />
-         </toggleGroup></RadioButton>
+         </toggleGroup>
+      </RadioButton>
       <RadioButton fx:id="landRadioButton" layoutX="237.0" layoutY="141.0" mnemonicParsing="false" text="Land" toggleGroup="$categoryToggleGroup" />
       <ComboBox fx:id="statusCombobox" layoutX="180.0" layoutY="214.0" prefHeight="26.0" prefWidth="160.0" />
       <RadioButton fx:id="aerialRadioButton" layoutX="293.0" layoutY="141.0" mnemonicParsing="false" text="Aerial" toggleGroup="$categoryToggleGroup" />
