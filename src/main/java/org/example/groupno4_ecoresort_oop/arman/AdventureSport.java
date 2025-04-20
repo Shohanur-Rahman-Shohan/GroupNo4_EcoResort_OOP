@@ -11,7 +11,7 @@ public class AdventureSport implements Serializable {
     private String status;
     private LocalDate schedule;
 
-    // Constructor
+
     public AdventureSport(String activityId, String activityName, String category, int maxCapacity, String status, LocalDate schedule) {
         this.activityId = activityId;
         this.activityName = activityName;
@@ -21,7 +21,7 @@ public class AdventureSport implements Serializable {
         this.schedule = schedule;
     }
 
-    // Getters and Setters
+
     public String getActivityId() {
         return activityId;
     }
@@ -29,7 +29,6 @@ public class AdventureSport implements Serializable {
     public void setActivityId(String activityId) {
         this.activityId = activityId;
     }
-
     public String getActivityName() {
         return activityName;
     }
@@ -37,7 +36,6 @@ public class AdventureSport implements Serializable {
     public void setActivityName(String activityName) {
         this.activityName = activityName;
     }
-
     public String getCategory() {
         return category;
     }
@@ -45,7 +43,6 @@ public class AdventureSport implements Serializable {
     public void setCategory(String category) {
         this.category = category;
     }
-
     public int getMaxCapacity() {
         return maxCapacity;
     }
@@ -53,7 +50,6 @@ public class AdventureSport implements Serializable {
     public void setMaxCapacity(int maxCapacity) {
         this.maxCapacity = maxCapacity;
     }
-
     public String getStatus() {
         return status;
     }
@@ -61,7 +57,6 @@ public class AdventureSport implements Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
-
     public LocalDate getSchedule() {
         return schedule;
     }

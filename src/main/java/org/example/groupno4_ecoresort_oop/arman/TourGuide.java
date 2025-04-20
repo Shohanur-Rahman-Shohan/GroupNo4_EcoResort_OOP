@@ -1,7 +1,6 @@
 package org.example.groupno4_ecoresort_oop.arman;
 
 import java.io.Serializable;
-
 public class TourGuide implements Serializable {
     private String guideName;
     private String guestId;
@@ -12,11 +11,9 @@ public class TourGuide implements Serializable {
         this.guestId = guestId;
         this.date = date;
     }
-
     public String getGuideName() {
         return guideName;
     }
-
     public void setGuideName(String guideName) {
         this.guideName = guideName;
     }
@@ -24,7 +21,6 @@ public class TourGuide implements Serializable {
     public String getGuestId() {
         return guestId;
     }
-
     public String getDate() {
         return date;
     }

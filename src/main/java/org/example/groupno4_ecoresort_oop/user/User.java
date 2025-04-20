@@ -10,17 +10,17 @@ public abstract class User implements Serializable {
     private int phoneNumber;
     private String userType;
 
-    // Constructor to initialize the user
+
     public User(String name, String email, String password, int id, int phoneNumber, String userType) {
         this.name = name;
         this.email = email;
-        this.password = password; // In practice, you should hash this password
+        this.password = password;
         this.id = id;
         this.phoneNumber = phoneNumber;
         this.userType = userType;
     }
 
-    // Getter methods for the attributes
+
     public String getName() {
         return name;
     }
@@ -45,10 +45,9 @@ public abstract class User implements Serializable {
         return userType;
     }
 
-    // Abstract method that must be implemented by subclasses
+
     public abstract String getRoleDescription();
 
-    // Overriding toString method for a clean string representation
     @Override
     public String toString() {
         return "User{" +

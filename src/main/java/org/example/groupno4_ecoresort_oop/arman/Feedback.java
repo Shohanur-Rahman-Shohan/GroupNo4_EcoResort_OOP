@@ -26,8 +26,6 @@ public class Feedback implements Serializable {
             return "Low";
         }
     }
-
-    // Getters and Setters
     public String getActivityId() {
         return activityId;
     }
@@ -62,15 +60,12 @@ public class Feedback implements Serializable {
         this.enjoyment = enjoyment;
         this.successRate = calculateSuccessRate();
     }
-
     public String getAdditionalComment() {
         return additionalComment;
     }
-
     public void setAdditionalComment(String additionalComment) {
         this.additionalComment = additionalComment;
     }
-
     public String getSuccessRate() {
         return successRate;
     }

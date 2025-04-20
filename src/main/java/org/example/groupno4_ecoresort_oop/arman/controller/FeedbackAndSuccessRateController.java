@@ -44,7 +44,7 @@ public class FeedbackAndSuccessRateController {
 
     @javafx.fxml.FXML
     public void initialize() {
-        // Set up TableView columns
+
         activityIdTC.setCellValueFactory(new PropertyValueFactory<>("activityId"));
         comfortTC.setCellValueFactory(new PropertyValueFactory<>("comfort"));
         safetyTC.setCellValueFactory(new PropertyValueFactory<>("safety"));
@@ -52,12 +52,10 @@ public class FeedbackAndSuccessRateController {
         successRateTC.setCellValueFactory(new PropertyValueFactory<>("successRate"));
         additionalCommentTC.setCellValueFactory(new PropertyValueFactory<>("additionalComment"));
 
-        // Populate ComboBoxes with star ratings (★)
         comfortComboBox.getItems().addAll("★", "★★", "★★★", "★★★★", "★★★★★");
         safetyCombobox.getItems().addAll("★", "★★", "★★★", "★★★★", "★★★★★");
         enjoymentComboBox.getItems().addAll("★", "★★", "★★★", "★★★★", "★★★★★");
 
-        // Load existing feedback data from binary file
         List<Feedback> feedbackList = readFeedbackFromFile();
         outputTableView.getItems().addAll(feedbackList);
     }
@@ -70,15 +68,12 @@ public class FeedbackAndSuccessRateController {
         String enjoyment = enjoymentComboBox.getValue();
         String additionalComment = additionalCommentTextField.getText();
 
-        // Create a new Feedback object
         Feedback newFeedback = new Feedback(activityId, getRating(comfort), getRating(safety), getRating(enjoyment), additionalComment);
 
-        // Save the new feedback to the binary file
         List<Feedback> feedbackList = readFeedbackFromFile();
         feedbackList.add(newFeedback);
         writeFeedbackToFile(feedbackList);
 
-        // Refresh TableView
         outputTableView.getItems().clear();
         outputTableView.getItems().addAll(feedbackList);
     }
@@ -92,7 +87,7 @@ public class FeedbackAndSuccessRateController {
         }
     }
 
-    // Helper method to convert the star rating to an integer
+
     private int getRating(String starRating) {
         switch (starRating) {
             case "★★★★★":
@@ -110,7 +105,7 @@ public class FeedbackAndSuccessRateController {
         }
     }
 
-    // Method to read feedback data from the binary file
+
     private List<Feedback> readFeedbackFromFile() {
         List<Feedback> feedbackList = new ArrayList<>();
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FILE_PATH))) {
@@ -121,12 +116,11 @@ public class FeedbackAndSuccessRateController {
         return feedbackList;
     }
 
-    // Method to write feedback data to the binary file
     private void writeFeedbackToFile(List<Feedback> feedbackList) {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_PATH))) {
             oos.writeObject(feedbackList);
         } catch (IOException e) {
-            e.printStackTrace();  // Handle the exception
+            e.printStackTrace();
         }
     }
 }

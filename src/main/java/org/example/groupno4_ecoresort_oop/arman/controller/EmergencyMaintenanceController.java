@@ -27,7 +27,6 @@ public class EmergencyMaintenanceController {
 
     @FXML
     public void initialize() {
-        // Setup table columns
         requestIdTC.setCellValueFactory(new PropertyValueFactory<>("requestId"));
         statusTC.setCellValueFactory(new PropertyValueFactory<>("status"));
         emergencyTC.setCellValueFactory(new PropertyValueFactory<>("emergency"));
@@ -44,7 +43,6 @@ public class EmergencyMaintenanceController {
         String id = requestIdTextField.getText();
         String newStatus = statusComboBox.getValue();
         String newEmergency = emergencyComboBox.getValue();
-
         boolean found = false;
         for (RepairRequest req : requestList) {
             if (req.getRequestId().equals(id)) {
@@ -54,7 +52,6 @@ public class EmergencyMaintenanceController {
                 break;
             }
         }
-
         if (found) {
             saveToFile();
             outputTableView.refresh();
@@ -62,7 +59,6 @@ public class EmergencyMaintenanceController {
             showAlert("Request ID not found!");
         }
     }
-
     @FXML
     public void filterButtonOnAction(ActionEvent actionEvent) {
         String id = requestIdTextField.getText();
@@ -79,7 +75,6 @@ public class EmergencyMaintenanceController {
             outputTableView.setItems(filteredList);
         }
     }
-
     @FXML
     public void backButtonOnAction(ActionEvent actionEvent) {
         try {
@@ -92,7 +87,6 @@ public class EmergencyMaintenanceController {
     private void loadFromFile() {
         File file = new File(FILE_PATH);
         if (!file.exists()) return;
-
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(FILE_PATH))) {
             ArrayList<RepairRequest> list = (ArrayList<RepairRequest>) in.readObject();
             requestList.setAll(list);
@@ -108,7 +102,6 @@ public class EmergencyMaintenanceController {
             e.printStackTrace();
         }
     }
-
     private void showAlert(String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setHeaderText(null);

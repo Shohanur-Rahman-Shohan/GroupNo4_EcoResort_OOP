@@ -46,7 +46,7 @@ public class UpdateTourAndPriceViewController
 
     @javafx.fxml.FXML
     public void initialize() {
-        // Setup TableView columns
+
         guestIdTC.setCellValueFactory(new PropertyValueFactory<>("guestId"));
         guestNameTC.setCellValueFactory(new PropertyValueFactory<>("guestName"));
         guestTypeTC.setCellValueFactory(new PropertyValueFactory<>("guestType"));
@@ -55,7 +55,6 @@ public class UpdateTourAndPriceViewController
         eventTypeTC.setCellValueFactory(new PropertyValueFactory<>("eventtype"));
         dateTC.setCellValueFactory(new PropertyValueFactory<>("date"));
 
-        // Load tour schedule data from binary file
         File file = new File("Data/arman/tourschedule.bin");
         List<TourSchedule> tourSchedules = BinaryFileHelper.readAllObjects(file);
         outputTableView.getItems().addAll(tourSchedules);
@@ -67,7 +66,7 @@ public class UpdateTourAndPriceViewController
         String newGuestName = updateGuestNameTextField.getText();
         double newPrice = 0;
 
-        // Handle invalid price input
+
         try {
             newPrice = Double.parseDouble(updatedPrceTextField.getText());
         } catch (NumberFormatException e) {
@@ -75,7 +74,7 @@ public class UpdateTourAndPriceViewController
             return;  // Exit the method if the price format is incorrect
         }
 
-        // Get the data from binary file
+
         File file = new File("Data/arman/tourschedule.bin");
         List<TourSchedule> tourSchedules = BinaryFileHelper.readAllObjects(file);
 
@@ -90,17 +89,15 @@ public class UpdateTourAndPriceViewController
         }
 
         if (found) {
-            // Save the updated tour schedule back to the binary file
+
             BinaryFileHelper.writeAllObjects(file, tourSchedules);
 
-            // Refresh the TableView with updated data
             outputTableView.getItems().clear();
             outputTableView.getItems().addAll(tourSchedules);
 
-            // Display success message
             outputDisplayLabel.setText("Tour Schedule Updated Successfully!");
         } else {
-            // Display error message if guest ID is not found
+
             outputDisplayLabel.setText("Guest ID not found.");
         }
     }
@@ -108,7 +105,7 @@ public class UpdateTourAndPriceViewController
     @javafx.fxml.FXML
     public void backButtonOnAction(ActionEvent actionEvent) {
         try {
-            // Navigate back to the dashboard
+
             SceneSwitcher.switchTo("arman/ACDashboard");
         } catch (Exception e) {
             e.printStackTrace();

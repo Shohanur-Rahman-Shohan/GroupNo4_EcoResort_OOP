@@ -28,7 +28,6 @@ public class TourSchedule implements Serializable {
     public String getGuestId() {
         return guestId;
     }
-
     public void setGuestId(String guestId) {
         this.guestId = guestId;
     }
@@ -36,7 +35,6 @@ public class TourSchedule implements Serializable {
     public String getGuestName() {
         return guestName;
     }
-
     public void setGuestName(String guestName) {
         this.guestName = guestName;
     }
