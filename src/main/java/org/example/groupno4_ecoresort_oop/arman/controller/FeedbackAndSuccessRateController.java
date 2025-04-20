@@ -44,7 +44,7 @@ public class FeedbackAndSuccessRateController {
 
     @javafx.fxml.FXML
     public void initialize() {
-        // Set up TableView columns
+
         activityIdTC.setCellValueFactory(new PropertyValueFactory<>("activityId"));
         comfortTC.setCellValueFactory(new PropertyValueFactory<>("comfort"));
         safetyTC.setCellValueFactory(new PropertyValueFactory<>("safety"));
@@ -52,12 +52,10 @@ public class FeedbackAndSuccessRateController {
         successRateTC.setCellValueFactory(new PropertyValueFactory<>("successRate"));
         additionalCommentTC.setCellValueFactory(new PropertyValueFactory<>("additionalComment"));
 
-        // Populate ComboBoxes with star ratings (★)
         comfortComboBox.getItems().addAll("★", "★★", "★★★", "★★★★", "★★★★★");
         safetyCombobox.getItems().addAll("★", "★★", "★★★", "★★★★", "★★★★★");
         enjoymentComboBox.getItems().addAll("★", "★★", "★★★", "★★★★", "★★★★★");
 
-        // Load existing feedback data from binary file
         List<Feedback> feedbackList = readFeedbackFromFile();
         outputTableView.getItems().addAll(feedbackList);
     }
@@ -70,15 +68,12 @@ public class FeedbackAndSuccessRateController {
         String enjoyment = enjoymentComboBox.getValue();
         String additionalComment = additionalCommentTextField.getText();
 
-        // Create a new Feedback object
         Feedback newFeedback = new Feedback(activityId, getRating(comfort), getRating(safety), getRating(enjoyment), additionalComment);
 
-        // Save the new feedback to the binary file
         List<Feedback> feedbackList = readFeedbackFromFile();
         feedbackList.add(newFeedback);
         writeFeedbackToFile(feedbackList);
 
-        // Refresh TableView
         outputTableView.getItems().clear();
         outputTableView.getItems().addAll(feedbackList);
     }

@@ -17,6 +17,12 @@ public class TrackGuestParticipationController
 
     @javafx.fxml.FXML
     public void checkButtonOnAction(ActionEvent actionEvent) {
+        String guestId = checkGuestIdTextField.getText();
+        if (guestId.isEmpty()) {
+            outputDisplayTextArea.setText("Please enter a Guest ID");
+            return;
+        }
+
     }
 
     @javafx.fxml.FXML
