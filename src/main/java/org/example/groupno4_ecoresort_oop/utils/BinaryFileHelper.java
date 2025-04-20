@@ -5,17 +5,16 @@ import java.util.List;
 
 public class BinaryFileHelper {
 
-    // Save a single object to the file (header once)
     public static void saveObject(File file, Object obj) {
         try {
             createDirIfNotExists(file);
 
             boolean fileExists = file.exists();
-            FileOutputStream fos = new FileOutputStream(file, true); // append = true
+            FileOutputStream fos = new FileOutputStream(file, true);
 
             ObjectOutputStream oos = fileExists
-                    ? new AppendableObjectOutputStream(fos) // Skip header
-                    : new ObjectOutputStream(fos);          // Write header
+                    ? new AppendableObjectOutputStream(fos)
+                    : new ObjectOutputStream(fos);
 
             oos.writeObject(obj);
             oos.close();
@@ -24,7 +23,6 @@ public class BinaryFileHelper {
         }
     }
 
-    // Read all objects from the file
     public static <T> List<T> readAllObjects(File file) {
         List<T> objects = new ArrayList<>();
 
@@ -33,7 +31,7 @@ public class BinaryFileHelper {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
             while (true) {
                 try {
-                    @SuppressWarnings("unchecked")
+
                     T obj = (T) ois.readObject();
                     objects.add(obj);
                 } catch (EOFException eof) {
@@ -41,7 +39,7 @@ public class BinaryFileHelper {
                 }
             }
         } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace(); // Optionally handle errors differently
+            e.printStackTrace();
         }
 
         return objects;
@@ -57,7 +55,6 @@ public class BinaryFileHelper {
         }
     }
 
-    // Create parent directory if missing
     private static void createDirIfNotExists(File file) {
         File parent = file.getParentFile();
         if (parent != null && !parent.exists()) {
@@ -65,7 +62,6 @@ public class BinaryFileHelper {
         }
     }
 
-    // Inner class to avoid rewriting the stream header
     private static class AppendableObjectOutputStream extends ObjectOutputStream {
         public AppendableObjectOutputStream(OutputStream out) throws IOException {
             super(out);
@@ -73,7 +69,7 @@ public class BinaryFileHelper {
 
         @Override
         protected void writeStreamHeader() throws IOException {
-            // Skip writing the header
+
         }
     }
 }
