@@ -16,7 +16,6 @@ public class AssignedRepairTask implements Serializable {
     public String getRequestId() {
         return requestId;
     }
-
     public String getRequestType() {
         return requestType;
     }

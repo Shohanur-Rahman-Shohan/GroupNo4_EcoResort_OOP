@@ -15,7 +15,6 @@ public class SwimmingPoolTestResult implements Serializable {
         this.phLevel = phLevel;
         this.remarks = remarks;
     }
-
     public LocalDate getTestDate() { return testDate; }
     public String getChlorineLevel() { return chlorineLevel; }
     public String getPhLevel() { return phLevel; }
