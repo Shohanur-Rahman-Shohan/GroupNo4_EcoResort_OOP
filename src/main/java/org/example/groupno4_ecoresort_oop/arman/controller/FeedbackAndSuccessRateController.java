@@ -87,7 +87,7 @@ public class FeedbackAndSuccessRateController {
         }
     }
 
-    // Helper method to convert the star rating to an integer
+
     private int getRating(String starRating) {
         switch (starRating) {
             case "★★★★★":
@@ -105,7 +105,7 @@ public class FeedbackAndSuccessRateController {
         }
     }
 
-    // Method to read feedback data from the binary file
+
     private List<Feedback> readFeedbackFromFile() {
         List<Feedback> feedbackList = new ArrayList<>();
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FILE_PATH))) {
@@ -116,12 +116,11 @@ public class FeedbackAndSuccessRateController {
         return feedbackList;
     }
 
-    // Method to write feedback data to the binary file
     private void writeFeedbackToFile(List<Feedback> feedbackList) {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_PATH))) {
             oos.writeObject(feedbackList);
         } catch (IOException e) {
-            e.printStackTrace();  // Handle the exception
+            e.printStackTrace();
         }
     }
 }

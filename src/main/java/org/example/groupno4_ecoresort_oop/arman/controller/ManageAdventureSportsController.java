@@ -57,7 +57,7 @@ public class ManageAdventureSportsController {
 
     @javafx.fxml.FXML
     public void initialize() {
-        // Setup TableView columns
+
         categoryTableColumn.setCellValueFactory(new PropertyValueFactory<>("category"));
         maxCapacityTableColumn.setCellValueFactory(new PropertyValueFactory<>("maxCapacity"));
         activitynameTableColumn.setCellValueFactory(new PropertyValueFactory<>("activityName"));
@@ -65,11 +65,11 @@ public class ManageAdventureSportsController {
         scheduleTableColumn.setCellValueFactory(new PropertyValueFactory<>("schedule"));
         activityIdTableColumn.setCellValueFactory(new PropertyValueFactory<>("activityId"));
 
-        // Load adventure sports data from binary file
+
         List<AdventureSport> adventureSports = readAdventureSportsFromFile();
         outputTableView.getItems().addAll(adventureSports);
 
-        // Populate the status combobox with available statuses
+
         statusCombobox.getItems().addAll("Available", "Unavailable");
         updateStatusCombobox.getItems().addAll("Available", "Unavailable");
     }
@@ -85,12 +85,10 @@ public class ManageAdventureSportsController {
 
         AdventureSport newSport = new AdventureSport(activityId, activityName, category, maxCapacity, status, schedule);
 
-        // Save the new sport to the binary file
         List<AdventureSport> adventureSports = readAdventureSportsFromFile();
         adventureSports.add(newSport);
         writeAdventureSportsToFile(adventureSports);
 
-        // Refresh the TableView
         outputTableView.getItems().clear();
         outputTableView.getItems().addAll(adventureSports);
     }
@@ -118,13 +116,13 @@ public class ManageAdventureSportsController {
             outputTableView.getItems().clear();
             outputTableView.getItems().addAll(adventureSports);
 
-            // Show success message
+
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Success");
             alert.setHeaderText("Adventure Sport Updated");
             alert.show();
         } else {
-            // Show error message if not found
+
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
             alert.setHeaderText("Adventure Sport not found!");
@@ -135,14 +133,14 @@ public class ManageAdventureSportsController {
     @javafx.fxml.FXML
     public void backButtonOnAction(ActionEvent actionEvent) {
         try {
-            // Scene switch back to the dashboard
+
             SceneSwitcher.switchTo("arman/ACDashboard");
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    // Method to read all adventure sports from the binary file
+
     private List<AdventureSport> readAdventureSportsFromFile() {
         List<AdventureSport> adventureSports = new ArrayList<>();
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FILE_PATH))) {
@@ -153,7 +151,7 @@ public class ManageAdventureSportsController {
         return adventureSports;
     }
 
-    // Method to write all adventure sports to the binary file
+
     private void writeAdventureSportsToFile(List<AdventureSport> adventureSports) {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_PATH))) {
             oos.writeObject(adventureSports);
