@@ -35,31 +35,26 @@ public class AssignTourGuideController {
 
     @javafx.fxml.FXML
     public void initialize() {
-        // Initialize the table columns to map to the correct fields of TourGuide
+
         guestIdTC.setCellValueFactory(new PropertyValueFactory<>("guestId"));
         tourDayTC.setCellValueFactory(new PropertyValueFactory<>("date"));
         tourGuideTC.setCellValueFactory(new PropertyValueFactory<>("guideName"));
-
         createTourGuideFile();
-        // Read the tourguide.bin file and populate the table
         loadTourGuides();
-
-        // Populate ComboBox with random guide names
         populateGuideComboBox();
     }
 
     private void loadTourGuides() {
-        // Read the tourguide.bin file
+
         File file = new File("Data/arman/tourguide.bin");
         tourGuides = BinaryFileHelper.readAllObjects(file);
 
-        // Add the tour guides to the table
+
         outputTableView.getItems().clear();
         outputTableView.getItems().addAll(tourGuides);
     }
 
     private void populateGuideComboBox() {
-        // Add 5-6 random guide names to the ComboBox
         List<String> guideNames = new ArrayList<>();
         guideNames.add("GUIDE 1");
         guideNames.add("GUIDE 2");
@@ -70,7 +65,6 @@ public class AssignTourGuideController {
         guideNames.add("GUIDE 7");
         guideNames.add("GUIDE 8");
 
-        // Shuffle the list to add randomness
         Random rand = new Random();
         for (int i = 0; i < guideNames.size(); i++) {
             int j = rand.nextInt(guideNames.size());
@@ -79,7 +73,7 @@ public class AssignTourGuideController {
             guideNames.set(j, temp);
         }
 
-        // Add to the ComboBox
+
         availableGuideCombobox.getItems().clear();
         availableGuideCombobox.getItems().addAll(guideNames);
     }
@@ -98,10 +92,10 @@ public class AssignTourGuideController {
             }
 
             if (selectedGuide != null && selectedGuide.getGuideName() == null) {
-                // Enable ComboBox if no guide is assigned
+
                 availableGuideCombobox.setDisable(false);
 
-                // Update ComboBox to exclude already assigned guides
+
                 List<String> assignedGuideNames = new ArrayList<>();
                 for (TourGuide tg : tourGuides) {
                     if (tg.getGuideName() != null) {
@@ -128,7 +122,7 @@ public class AssignTourGuideController {
         String selectedGuideName = availableGuideCombobox.getValue();
 
         if (!guestId.isEmpty() && selectedGuideName != null) {
-            // Find the corresponding TourGuide and assign the selected guide
+
             TourGuide selectedGuide = null;
             for (TourGuide tg : tourGuides) {
                 if (tg.getGuestId().equals(guestId)) {
@@ -138,19 +132,13 @@ public class AssignTourGuideController {
             }
 
             if (selectedGuide != null) {
-                // Set the selected guide to the TourGuide object
                 selectedGuide.setGuideName(selectedGuideName);
-
-                // Save the updated list back to the tourguide.bin file
                 File file = new File("Data/arman/tourguide.bin");
                 BinaryFileHelper.writeAllObjects(file, tourGuides);
-
-                // Reload the tour guides and update the table
                 loadTourGuides();
             }
         }
     }
-
     @javafx.fxml.FXML
     public void backButtonOnAction(ActionEvent actionEvent) {
         try {
@@ -163,20 +151,12 @@ public class AssignTourGuideController {
     public void createTourGuideFile() {
         File tourScheduleFile = new File("Data/arman/tourschedule.bin");
         File tourGuideFile = new File("Data/arman/tourguide.bin");
-
-        // Read the original tour schedules
         List<TourSchedule> tourSchedules = BinaryFileHelper.readAllObjects(tourScheduleFile);
-
-        // Create a new list to hold the TourGuide objects
         List<TourGuide> tourGuides = new ArrayList<>();
-
-        // For each TourSchedule, create a new TourGuide object with null guide name
         for (TourSchedule ts : tourSchedules) {
             TourGuide guide = new TourGuide(null, ts.getGuestId(), ts.getDate().toString());
             tourGuides.add(guide);
         }
-
-        // Write the TourGuide objects to the new tourguide.bin file
         BinaryFileHelper.writeAllObjects(tourGuideFile, tourGuides);
         System.out.println("Tour guide data written to tourguide.bin with null guides.");
     }
