@@ -20,8 +20,6 @@ public class DashBoardController
     private Menu fm_MB;
     @javafx.fxml.FXML
     private BorderPane dashboard_BP;
-    @javafx.fxml.FXML
-    private Button signOutt_OA;
 
 
     @javafx.fxml.FXML
@@ -166,5 +164,23 @@ public class DashBoardController
 
     @javafx.fxml.FXML
     public void viewFinanceSummary_OA(ActionEvent actionEvent) {
+    }
+
+
+
+
+
+
+
+    @javafx.fxml.FXML
+    public void appintUsers_OA(ActionEvent actionEvent) {
+        try {
+            SceneSwitcher.switchTo("shohan/controllers/appointUser");
+        } catch (Exception e) {
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void updateUsersSalary_OA(ActionEvent actionEvent) {
     }
 }

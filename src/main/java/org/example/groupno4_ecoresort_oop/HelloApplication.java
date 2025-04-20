@@ -20,7 +20,7 @@ public class HelloApplication extends Application {
 
 
         // File location
-        File file = new File("Data/arman/users.bin");
+        File file = new File("Data/users.bin");
 
 
 //        // Delete previous data if the file exists
@@ -38,7 +38,12 @@ public class HelloApplication extends Application {
 
 
         FXMLLoader fxmlLoader = new FXMLLoader(
-                HelloApplication.class.getResource("user/LoginView.fxml"));
+                HelloApplication.class.getResource("user/LoginView.fxml"));   // Main
+
+
+//                HelloApplication.class.getResource("shohan/controllers/appointUser.fxml"));  // Temporary (Delete Afterward)
+
+
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("ECO Resort");
         stage.setScene(scene);

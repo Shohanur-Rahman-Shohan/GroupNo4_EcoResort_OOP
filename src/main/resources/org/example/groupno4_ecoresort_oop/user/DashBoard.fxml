@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -31,6 +30,7 @@
                         <MenuItem mnemonicParsing="false" onAction="#manageAdvanture_OA" text="Manage Advanture Events" />
                         <MenuItem mnemonicParsing="false" onAction="#manageRoomCapacir" text="Manage Room Capacity" />
                         <MenuItem mnemonicParsing="false" onAction="#crisisManagement_OA" text="Crisis Management" />
+                        <MenuItem mnemonicParsing="false" onAction="#appintUsers_OA" text="Appoint Users" />
                   </items>
                 </Menu>
                 <Menu fx:id="fm_MB" mnemonicParsing="false" text="Finance Manager">
@@ -44,6 +44,7 @@
                         <MenuItem mnemonicParsing="false" onAction="#depertmentalCost_OA" text="Depertmental Cost Distribution" />
                         <MenuItem mnemonicParsing="false" onAction="#manageEventProfit_OA" text="Manage Event Profit" />
                         <MenuItem mnemonicParsing="false" onAction="#emergencySpecialfund_OA" text="Emergency/ Special Fund" />
+                        <MenuItem mnemonicParsing="false" onAction="#updateUsersSalary_OA" text="Update Users Salary" />
                   </items>
                 </Menu>
               </menus>
@@ -56,13 +57,6 @@
                </font>
             </Label>
          </center>
-         <bottom>
-            <Button fx:id="signOutt_OA" mnemonicParsing="false" prefHeight="78.0" prefWidth="569.0" text="SignOut" BorderPane.alignment="CENTER">
-               <font>
-                  <Font name="System Bold" size="27.0" />
-               </font>
-            </Button>
-         </bottom>
       </BorderPane>
    </children>
 </AnchorPane>
