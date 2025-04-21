@@ -3,6 +3,7 @@ package org.example.groupno4_ecoresort_oop.arman.controller;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import org.example.groupno4_ecoresort_oop.SceneSwitcher;
 import org.example.groupno4_ecoresort_oop.arman.TourSchedule;
 import org.example.groupno4_ecoresort_oop.utils.BinaryFileHelper;
 
@@ -38,6 +39,10 @@ public class TrackGuestParticipationController {
 
     @javafx.fxml.FXML
     public void BackButtonOnAction(ActionEvent actionEvent) {
-
+        try {
+            SceneSwitcher.switchTo("arman/MTDashboard");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
