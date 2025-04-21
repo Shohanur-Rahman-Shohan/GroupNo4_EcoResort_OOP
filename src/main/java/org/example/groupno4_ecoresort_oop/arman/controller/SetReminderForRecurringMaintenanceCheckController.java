@@ -19,8 +19,22 @@ public class SetReminderForRecurringMaintenanceCheckController
 
     @javafx.fxml.FXML
     public void setReminderButtonOnAction(ActionEvent actionEvent) {
-    }
+        String requestId = requestIdTextField.getText();
+        if (requestId == null || requestId.isEmpty()) {
+            maintenanceStatusCheckLabel.setText("Please enter a Request ID.");
+            return;
+        }
+        if (setReminderDatePicker.getValue() == null) {
+            maintenanceStatusCheckLabel.setText("Please select a reminder date.");
+            return;
+        }
+        if (setReminderDatePicker.getValue().isBefore(java.time.LocalDate.now())) {
+            maintenanceStatusCheckLabel.setText("Reminder date cannot be in the past.");
+            return;
+        }
+        maintenanceStatusCheckLabel.setText("Reminder set successfully for Request ID: " + requestId);
 
+    }
     @javafx.fxml.FXML
     public void backButtonOnAction(ActionEvent actionEvent) {
         try {

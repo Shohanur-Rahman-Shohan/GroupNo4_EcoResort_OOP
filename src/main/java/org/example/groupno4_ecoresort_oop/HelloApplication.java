@@ -47,7 +47,7 @@ public class HelloApplication extends Application {
         Managers.addDefaultManagers();
 
         FXMLLoader fxmlLoader = new FXMLLoader(
-                HelloApplication.class.getResource("user/LoginView.fxml"));   // Main
+                HelloApplication.class.getResource("arman/MTDashboard.fxml"));   // Main
 
 //                HelloApplication.class.getResource("shohan/controllers/appointUser.fxml"));  // Temporary (Delete Afterward)
 
@@ -60,7 +60,7 @@ public class HelloApplication extends Application {
 
 
 
-        // Print current user data from the binary file
+
         List<User> users = BinaryFileHelper.readAllObjects(allUserFile);
         System.out.println("======= Loaded Users from allUserFile.bin =======");
         for (User user : users) {
