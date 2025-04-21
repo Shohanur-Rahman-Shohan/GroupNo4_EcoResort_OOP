@@ -14,15 +14,16 @@
             <Font name="System Bold" size="35.0" />
          </font>
       </Button>
-      <TableView layoutX="11.0" layoutY="96.0" prefHeight="266.0" prefWidth="582.0" style="-fx-background-color: cyan;">
+      <TableView fx:id="table_T" layoutX="11.0" layoutY="96.0" prefHeight="266.0" prefWidth="582.0" style="-fx-background-color: cyan;">
          <columns>
-            <TableColumn prefWidth="65.5999755859375" text="Serial No." />
-            <TableColumn prefWidth="202.4000244140625" text="Depertment Name" />
-            <TableColumn prefWidth="149.5999755859375" text="Funding (%)" />
-            <TableColumn prefWidth="164.79998779296875" text="Funding (BDT)" />
+            <TableColumn fx:id="gm_TV" prefWidth="96.79998779296875" text="General Manager" />
+            <TableColumn fx:id="ac_TV" prefWidth="103.20001220703125" text="ActivityCoordinator" />
+            <TableColumn fx:id="mt_TV" prefWidth="116.0" text="MaintenanceTechnician" />
+            <TableColumn fx:id="hs_TV" prefWidth="127.2000732421875" text="HousekeepingSupervisor" />
+            <TableColumn fx:id="ms_TV" prefWidth="131.199951171875" text="marketingAndSalesManagement" />
          </columns>
       </TableView>
-      <Label alignment="CENTER" layoutX="141.0" layoutY="24.0" prefHeight="38.0" prefWidth="323.0" style="-fx-background-color: cyan;" text="View Depertmental Cost Distribution">
+      <Label alignment="CENTER" layoutX="94.0" layoutY="22.0" prefHeight="38.0" prefWidth="417.0" style="-fx-background-color: cyan;" text="View Depertmental Cost Distribution History">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font>

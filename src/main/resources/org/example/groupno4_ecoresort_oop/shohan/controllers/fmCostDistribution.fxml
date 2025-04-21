@@ -18,9 +18,9 @@
          <children>
             <Line endX="414.99993896484375" endY="1.1444091796875E-5" layoutX="105.0" layoutY="1.0" startX="-98.79998779296875" />
             <Line endX="401.0" layoutX="118.0" layoutY="412.0" startX="-111.00001525878906" />
-            <TextField layoutX="79.0" layoutY="192.0" promptText="\%" />
-            <TextField layoutX="188.0" layoutY="105.0" promptText="\%" />
-            <Button layoutX="154.0" layoutY="336.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="222.0" text="ADD/ Update Funding">
+            <TextField fx:id="activityCoordinator_TF" layoutX="79.0" layoutY="192.0" promptText="\%" />
+            <TextField fx:id="gm_TF" layoutX="188.0" layoutY="105.0" promptText="\%" />
+            <Button layoutX="154.0" layoutY="336.0" mnemonicParsing="false" onAction="#update_OA" prefHeight="42.0" prefWidth="222.0" text="ADD/ Update Funding">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -32,11 +32,11 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <TextField layoutX="79.0" layoutY="268.0" promptText="\%" />
-            <TextField layoutX="301.0" layoutY="193.0" promptText="\%" />
+            <TextField fx:id="housekeepingSupervisor_TF" layoutX="79.0" layoutY="268.0" promptText="\%" />
+            <TextField fx:id="maintenanceTechnician_TF" layoutX="301.0" layoutY="193.0" promptText="\%" />
             <Label layoutX="307.0" layoutY="168.0" prefHeight="26.0" prefWidth="137.0" text="Maintenance Technician" />
             <Label layoutX="80.0" layoutY="243.0" prefHeight="26.0" prefWidth="150.0" text="Housekeeping Supervisor" />
-            <TextField layoutX="301.0" layoutY="267.0" promptText="\%" />
+            <TextField fx:id="marketingAndSales_TF" layoutX="301.0" layoutY="267.0" promptText="\%" />
             <Label layoutX="293.0" layoutY="243.0" prefHeight="26.0" prefWidth="165.0" text="Marketing and Sales Manager" />
          </children>
       </AnchorPane>

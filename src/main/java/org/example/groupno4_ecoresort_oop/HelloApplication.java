@@ -23,7 +23,7 @@ public class HelloApplication extends Application {
 
 
 
-        // File location
+
         File file = new File("Data/users.bin");
         File guestFile = new File("Data/guests.bin");
         File allUserFile= new File("Data/allTypeUsers.bin");
@@ -47,9 +47,11 @@ public class HelloApplication extends Application {
         Managers.addDefaultManagers();
 
         FXMLLoader fxmlLoader = new FXMLLoader(
-                HelloApplication.class.getResource("user/LoginView.fxml"));   // Main
+//                HelloApplication.class.getResource("user/LoginView.fxml"));   // Main
 
-//                HelloApplication.class.getResource("shohan/controllers/appointUser.fxml"));  // Temporary (Delete Afterward)
+                HelloApplication.class.getResource("shohan/controllers/fmCostDistribution.fxml"));  // Temporary (Delete Afterward)
+
+
 
 
         Scene scene = new Scene(fxmlLoader.load());

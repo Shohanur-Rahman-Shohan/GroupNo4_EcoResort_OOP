@@ -14,4 +14,8 @@ module org.example.groupno4_ecoresort_oop {
     opens org.example.groupno4_ecoresort_oop.arman.controller to javafx.fxml;
     exports org.example.groupno4_ecoresort_oop.arman;
     opens org.example.groupno4_ecoresort_oop.arman to javafx.fxml;
+    exports org.example.groupno4_ecoresort_oop.shohan.dummyClasses;
+    opens org.example.groupno4_ecoresort_oop.shohan.dummyClasses to javafx.fxml;
+    exports org.example.groupno4_ecoresort_oop.shohan;
+    opens org.example.groupno4_ecoresort_oop.shohan to javafx.fxml;
 }

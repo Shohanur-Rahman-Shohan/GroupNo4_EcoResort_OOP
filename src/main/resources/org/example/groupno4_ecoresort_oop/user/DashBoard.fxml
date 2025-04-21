@@ -22,29 +22,28 @@
                 </Menu>
                 <Menu fx:id="gm_MB" mnemonicParsing="false" text="General Manager">
                   <items>
-                    <MenuItem mnemonicParsing="false" onAction="#roomOccupancy_OA" text="View Real Time Room Occupancy" />
-                        <MenuItem mnemonicParsing="false" onAction="#workforceEfficiency_OA" text="View Workforce Efficiency" />
+                    <MenuItem mnemonicParsing="false" onAction="#roomOccupancy_OA" text="Appint Users" />
+                        <MenuItem mnemonicParsing="false" onAction="#workforceEfficiency_OA" text="View Real Time Room Occupancy" />
+                        <MenuItem mnemonicParsing="false" onAction="#addAdvanture_OA" text="Add Adventure Events" />
                         <MenuItem mnemonicParsing="false" onAction="#guestSatisfaction_OA" text="View Guest Satisfaction &amp; Feedback" />
                         <MenuItem mnemonicParsing="false" onAction="#vipRequest_OA" text="VIP- Requests &amp; Special Services" />
-                        <MenuItem mnemonicParsing="false" onAction="#addAdvanture_OA" text="Add Adventure Events" />
-                        <MenuItem mnemonicParsing="false" onAction="#manageAdvanture_OA" text="Manage Advanture Events" />
                         <MenuItem mnemonicParsing="false" onAction="#manageRoomCapacir" text="Manage Room Capacity" />
+                        <MenuItem mnemonicParsing="false" onAction="#manageAdvanture_OA" text="Manage Advanture Events" />
                         <MenuItem mnemonicParsing="false" onAction="#crisisManagement_OA" text="Crisis Management" />
-                        <MenuItem mnemonicParsing="false" onAction="#appintUsers_OA" text="Appoint Users" />
                   </items>
                 </Menu>
                 <Menu fx:id="fm_MB" mnemonicParsing="false" text="Finance Manager">
                   <items>
-                    <MenuItem mnemonicParsing="false" onAction="#analizeAdjustServicePrice_OA" text="Analize &amp; Adjust Service Prices" />
+                        <MenuItem mnemonicParsing="false" onAction="#depertmentalCost_OA" text="Depertmental Cost Distribution" />
+                        <MenuItem mnemonicParsing="false" onAction="#updateUsersSalary_OA" text="Update Users Salary" />
                         <MenuItem mnemonicParsing="false" onAction="#realTimeExpense_OA" text="Real Time Expenses" />
                         <MenuItem mnemonicParsing="false" onAction="#viewFinanceSummary_OA" text="View Finance Summary" />
-                        <MenuItem mnemonicParsing="false" onAction="#trackCarbonCredit_OA" text="Track Carbon Credit" />
+                    <MenuItem mnemonicParsing="false" onAction="#analizeAdjustServicePrice_OA" text="Analize &amp; Adjust Service Prices" />
                         <MenuItem mnemonicParsing="false" onAction="#guestProfitablity_OA" text="Guest Profitability " />
-                        <MenuItem mnemonicParsing="false" onAction="#compareFinance_OA" text="Compare Financials " />
-                        <MenuItem mnemonicParsing="false" onAction="#depertmentalCost_OA" text="Depertmental Cost Distribution" />
+                        <MenuItem mnemonicParsing="false" onAction="#costDistributionHistory_OA" text="Cost Distribution History" />
+                        <MenuItem mnemonicParsing="false" onAction="#trackCarbonCredit_OA" text="Track Carbon Credit" />
                         <MenuItem mnemonicParsing="false" onAction="#manageEventProfit_OA" text="Manage Event Profit" />
                         <MenuItem mnemonicParsing="false" onAction="#emergencySpecialfund_OA" text="Emergency/ Special Fund" />
-                        <MenuItem mnemonicParsing="false" onAction="#updateUsersSalary_OA" text="Update Users Salary" />
                   </items>
                 </Menu>
               </menus>

@@ -85,6 +85,8 @@ public class LoginViewController {
         BinaryFileHelper.writeAllObjects(allUsersFile, users);
         users = BinaryFileHelper.readAllObjects(allUsersFile);
 
+
+
         boolean isValidUser = false;
         for (User user : users) {
             if (user.getEmail().equals(email) && user.getPassword().equals(password) && user.getUserType().equals(userType)) {
@@ -109,9 +111,9 @@ public class LoginViewController {
 
 
                 } else if (user instanceof Receptionist) {
-                    SceneSwitcher.switchTo("Sadman/Guest/guestDashboard");
-                } else if (user instanceof Guest) {
                     SceneSwitcher.switchTo("Sadman/Receptionist/receptionistDashboard");
+                } else if (user instanceof Guest) {
+                    SceneSwitcher.switchTo("Sadman/Guest/guestDashboard");
                 }
 
                 break;

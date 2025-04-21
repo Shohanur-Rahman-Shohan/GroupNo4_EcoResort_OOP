@@ -8,11 +8,12 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.example.groupno4_ecoresort_oop.SceneSwitcher;
 import org.example.groupno4_ecoresort_oop.arman.AssignedRepairTask;
+import org.example.groupno4_ecoresort_oop.shohan.dummyClasses.ExpenseHistory;
+import org.example.groupno4_ecoresort_oop.utils.BinaryFileHelper;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+
 
 public class AssignRepairTaskController {
 
@@ -48,8 +49,8 @@ public class AssignRepairTaskController {
     }
 
     private void setupTeams() {
-        typeToTeamsMap.put("Plumbing", FXCollections.observableArrayList("Plumber Team A", "Plumber Team B","Plumber Team C","Plumber Team D"));
-        typeToTeamsMap.put("Electrical", FXCollections.observableArrayList("Electric Team A", "Electric Team B","Electric Team C","Electric Team D"));
+        typeToTeamsMap.put("Plumbing", FXCollections.observableArrayList("Plumber Team A", "Plumber Team B", "Plumber Team C", "Plumber Team D"));
+        typeToTeamsMap.put("Electrical", FXCollections.observableArrayList("Electric Team A", "Electric Team B", "Electric Team C", "Electric Team D"));
         typeToTeamsMap.put("Carpentry", FXCollections.observableArrayList("Carpenters United", "WoodFix Team"));
         typeToTeamsMap.put("Cleaning", FXCollections.observableArrayList("CleanPro", "EcoClean"));
     }
@@ -65,9 +66,11 @@ public class AssignRepairTaskController {
             return;
         }
 
+        // Add task to table and save it
         AssignedRepairTask task = new AssignedRepairTask(requestId, requestType, assignedTeam);
         taskList.add(task);
         saveAssignedTasks();
+
     }
 
     private void saveAssignedTasks() {
@@ -83,8 +86,8 @@ public class AssignRepairTaskController {
 
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(file))) {
             Object obj = in.readObject();
-            if (obj instanceof java.util.List) {
-                taskList.addAll((java.util.List<AssignedRepairTask>) obj);
+            if (obj instanceof List<?>) {
+                taskList.addAll((List<AssignedRepairTask>) obj);
             }
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
