@@ -12,9 +12,9 @@ import java.util.ArrayList;
 
 
 public class HelloApplication extends Application {
+    private static Stage mainstage;
     @Override
     public void start(Stage stage) throws IOException {
-
 
         ArrayList<Manager> managers= new ArrayList<>();
         Manager GM= new GeneralManager(2312227, "Shohanur", "Rahman", "shohanur@gmail.com", "12345", "+8801xxxxxxxxx");
@@ -27,11 +27,14 @@ public class HelloApplication extends Application {
         stage.setTitle("ECO Resort");
         stage.setScene(scene);
 
-
+        mainstage=stage;
 
         stage.show();
     }
 
+    public static Stage getPrimaryStage() {
+        return mainstage;
+    }
     public static void main(String[] args) {
         launch();
     }

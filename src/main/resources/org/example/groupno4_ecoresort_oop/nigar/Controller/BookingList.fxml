@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="487.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.nigar.BookingListController">
+   <children>
+      <TableView fx:id="tablee" layoutX="123.0" layoutY="91.0" prefHeight="258.0" prefWidth="504.0">
+        <columns>
+          <TableColumn prefWidth="82.39996337890625" text="Guest Name" />
+          <TableColumn prefWidth="130.3999481201172" text="Room No" />
+            <TableColumn prefWidth="122.4000244140625" text="Booking ID" />
+            <TableColumn prefWidth="168.79998779296875" text="Check In/Out" />
+        </columns>
+      </TableView>
+      <Label layoutX="299.0" layoutY="35.0" text="Booking List" textFill="#b91bb4">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="update" layoutX="512.0" layoutY="386.0" mnemonicParsing="false" onAction="#switch1" style="-fx-background-color: #ff00ff;" text="Update Booking List" />
+      <Button fx:id="create" layoutX="123.0" layoutY="386.0" mnemonicParsing="false" onAction="#switch1" style="-fx-background-color: #ff00ff; -fx-background-radius: 30;" text="Create Schedule" />
+   </children>
+</AnchorPane>

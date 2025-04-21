@@ -16,54 +16,51 @@ import org.example.groupno4_ecoresort_oop.HelloApplication;
 
 import java.io.IOException;
 
-public class GuestRequestController {
+public class BookingListController {
 
     private final Stage stage = HelloApplication.getPrimaryStage();
 
+    @FXML
+    private Button createschedule;
 
     @FXML
-    private TableView<RequestItem> tableView;
+    private Button updatebookinglist;
 
     @FXML
-    private TableColumn<RequestItem, String> dateColumn;
+    private TableView<Booking> tableView;
 
     @FXML
-    private TableColumn<RequestItem, String> priorityColumn;
+    private TableColumn<Booking, String> colGuestName;
 
     @FXML
-    private TableColumn<RequestItem, String> requestColumn;
+    private TableColumn<Booking, String> colRoomNo;
 
     @FXML
-    private Button submitrequest;
+    private TableColumn<Booking, String> colBookingId;
 
     @FXML
-    private Button clear;
-
-    private final ObservableList<RequestItem> requestList = FXCollections.observableArrayList();
-
+    private TableColumn<Booking, String> colCheckInOut;
 
     @FXML
     public void initialize() {
 
-        dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
-        priorityColumn.setCellValueFactory(new PropertyValueFactory<>("priority"));
-        requestColumn.setCellValueFactory(new PropertyValueFactory<>("request"));
+        colGuestName.setCellValueFactory(new PropertyValueFactory<>("guestName"));
+        colRoomNo.setCellValueFactory(new PropertyValueFactory<>("roomNo"));
+        colBookingId.setCellValueFactory(new PropertyValueFactory<>("bookingId"));
+        colCheckInOut.setCellValueFactory(new PropertyValueFactory<>("checkInOut"));
 
-
-        requestList.addAll(
-                new RequestItem("2025-04-18", "High", "Extra pillows"),
-                new RequestItem("2025-04-18", "Low", "Wake-up call")
+        ObservableList<Booking> bookings = FXCollections.observableArrayList(
+                new Booking("Nigar", "106", "BKG006", "2025-04-20 to 2025-04-22"),
+                new Booking("Diba", "203", "BKG002", "2025-04-19 to 2025-04-21")
         );
 
-        tableView.setItems(requestList);
+        tableView.setItems(bookings);
     }
-
 
     @FXML
     private void switch1(ActionEvent event) {
         switchScene("nigar.controller/DashBoardController.fxml");
     }
-
 
     public void switchScene(String fxml) {
         try {
@@ -76,16 +73,7 @@ public class GuestRequestController {
             ex.printStackTrace();
         }
     }
-
-    @FXML
-    private void handleSubmitRequest(ActionEvent event) {
-
-        System.out.println("Request submitted.");
-    }
-
-    @FXML
-    private void handleClear(ActionEvent event) {
-        requestList.clear();
-    }
 }
+
+
 

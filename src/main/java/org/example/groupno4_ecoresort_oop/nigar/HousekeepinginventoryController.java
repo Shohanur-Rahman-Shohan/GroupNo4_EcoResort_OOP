@@ -16,54 +16,50 @@ import org.example.groupno4_ecoresort_oop.HelloApplication;
 
 import java.io.IOException;
 
-public class GuestRequestController {
+public class HousekeepinginventoryController {
 
     private final Stage stage = HelloApplication.getPrimaryStage();
 
+    @FXML
+    private Button report;
 
     @FXML
-    private TableView<RequestItem> tableView;
+    private TableView<InventoryItem> tableView;
 
     @FXML
-    private TableColumn<RequestItem, String> dateColumn;
+    private TableColumn<InventoryItem, String> name;
 
     @FXML
-    private TableColumn<RequestItem, String> priorityColumn;
+    private TableColumn<InventoryItem, String> stock;
 
     @FXML
-    private TableColumn<RequestItem, String> requestColumn;
+    private TableColumn<InventoryItem, String> status;
 
     @FXML
-    private Button submitrequest;
-
-    @FXML
-    private Button clear;
-
-    private final ObservableList<RequestItem> requestList = FXCollections.observableArrayList();
+    private TableColumn<InventoryItem, String> request;
 
 
     @FXML
     public void initialize() {
 
-        dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
-        priorityColumn.setCellValueFactory(new PropertyValueFactory<>("priority"));
-        requestColumn.setCellValueFactory(new PropertyValueFactory<>("request"));
+        name.setCellValueFactory(new PropertyValueFactory<>("name"));
+        stock.setCellValueFactory(new PropertyValueFactory<>("stock"));
+        status.setCellValueFactory(new PropertyValueFactory<>("status"));
+        request.setCellValueFactory(new PropertyValueFactory<>("request"));
 
-
-        requestList.addAll(
-                new RequestItem("2025-04-18", "High", "Extra pillows"),
-                new RequestItem("2025-04-18", "Low", "Wake-up call")
+        ObservableList<InventoryItem> items = FXCollections.observableArrayList(
+                new InventoryItem("Towels", "15", "In Stock", "None"),
+                new InventoryItem("Soap", "5", "Low", "Request"),
+                new InventoryItem("Toilet Paper", "25", "In Stock", "None")
         );
 
-        tableView.setItems(requestList);
+        tableView.setItems(items);
     }
-
 
     @FXML
     private void switch1(ActionEvent event) {
         switchScene("nigar.controller/DashBoardController.fxml");
     }
-
 
     public void switchScene(String fxml) {
         try {
@@ -76,16 +72,4 @@ public class GuestRequestController {
             ex.printStackTrace();
         }
     }
-
-    @FXML
-    private void handleSubmitRequest(ActionEvent event) {
-
-        System.out.println("Request submitted.");
-    }
-
-    @FXML
-    private void handleClear(ActionEvent event) {
-        requestList.clear();
-    }
 }
-

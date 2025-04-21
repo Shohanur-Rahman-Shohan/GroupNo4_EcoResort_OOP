@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="442.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.nigar.PromotePackageandOffersController">
+   <children>
+      <Label layoutX="219.0" layoutY="24.0" text="Promote Package and Offers" textFill="#ae116f">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView layoutX="106.0" layoutY="84.0" prefHeight="200.0" prefWidth="467.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Package" />
+          <TableColumn prefWidth="127.99996948242188" text="Offer" />
+            <TableColumn prefWidth="133.59999084472656" text="Room Type" />
+            <TableColumn prefWidth="130.4000244140625" text="Discount" />
+        </columns>
+      </TableView>
+      <Button layoutX="456.0" layoutY="316.0" mnemonicParsing="false" text="Create Promotion" />
+   </children>
+</AnchorPane>

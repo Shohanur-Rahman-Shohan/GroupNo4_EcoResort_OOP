@@ -5,11 +5,14 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="603.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.nigar.DailyReportsController">
    <children>
-      <Label layoutX="272.0" layoutY="52.0" text="Daily Reports" />
+      <Label layoutX="272.0" layoutY="52.0" text="Daily Reports" textFill="#c419c7">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
       <TableView layoutX="138.0" layoutY="137.0" prefHeight="223.0" prefWidth="444.0">
         <columns>
           <TableColumn prefWidth="75.0" text="staff id" />
@@ -20,6 +23,6 @@
             <TableColumn prefWidth="75.0" text="feedback" />
         </columns>
       </TableView>
-      <Button layoutX="512.0" layoutY="417.0" mnemonicParsing="false" text="generate reports" />
+      <Button layoutX="512.0" layoutY="417.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="generate reports" />
    </children>
 </AnchorPane>

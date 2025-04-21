@@ -1,6 +1,7 @@
 module org.example.groupno4_ecoresort_oop {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
 
 
     opens org.example.groupno4_ecoresort_oop to javafx.fxml;
