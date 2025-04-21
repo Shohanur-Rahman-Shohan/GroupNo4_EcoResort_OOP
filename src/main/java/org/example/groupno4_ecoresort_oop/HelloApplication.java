@@ -34,9 +34,9 @@ public class HelloApplication extends Application {
 
 
         FXMLLoader fxmlLoader = new FXMLLoader(
-//                HelloApplication.class.getResource("user/LoginView.fxml"));   // Main
+                HelloApplication.class.getResource("user/LoginView.fxml"));   // Main
 
-                HelloApplication.class.getResource("shohan/controllers/fmCostDistribution.fxml"));  // Temporary (Delete Afterward)
+//                HelloApplication.class.getResource("shohan/controllers/fmCostDistribution.fxml"));  // Temporary (Delete Afterward)
 
 
 
