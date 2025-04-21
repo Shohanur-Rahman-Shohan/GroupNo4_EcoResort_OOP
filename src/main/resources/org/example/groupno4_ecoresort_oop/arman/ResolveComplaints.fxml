@@ -38,9 +38,8 @@
       <TableView fx:id="outputTableView" layoutY="74.0" prefHeight="200.0" prefWidth="635.0">
         <columns>
             <TableColumn fx:id="complaintIdTC" prefWidth="157.0" text="Complaint ID" />
-            <TableColumn fx:id="complaintListTC" prefWidth="145.0" text="Complaint List" />
-            <TableColumn fx:id="complaintTypeTC" prefWidth="145.0" text="Complaint Type" />
-            <TableColumn fx:id="statusTC" prefWidth="187.0" text="Status" />
+            <TableColumn fx:id="complaintTypeTC" prefWidth="248.0" text="Complaint Type" />
+            <TableColumn fx:id="statusTC" prefWidth="229.0" text="Status" />
         </columns>
       </TableView>
       <Label layoutX="43.0" layoutY="293.0" text="Complaint ID:" />

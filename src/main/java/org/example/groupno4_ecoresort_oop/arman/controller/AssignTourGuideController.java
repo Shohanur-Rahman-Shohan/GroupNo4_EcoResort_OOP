@@ -149,15 +149,22 @@ public class AssignTourGuideController {
     }
 
     public void createTourGuideFile() {
-        File tourScheduleFile = new File("Data/arman/tourschedule.bin");
         File tourGuideFile = new File("Data/arman/tourguide.bin");
-        List<TourSchedule> tourSchedules = BinaryFileHelper.readAllObjects(tourScheduleFile);
-        List<TourGuide> tourGuides = new ArrayList<>();
-        for (TourSchedule ts : tourSchedules) {
-            TourGuide guide = new TourGuide(null, ts.getGuestId(), ts.getDate().toString());
-            tourGuides.add(guide);
+
+        // Only create if file doesn't exist
+        if (!tourGuideFile.exists()) {
+            File tourScheduleFile = new File("Data/arman/tourschedule.bin");
+            List<TourSchedule> tourSchedules = BinaryFileHelper.readAllObjects(tourScheduleFile);
+            List<TourGuide> tourGuides = new ArrayList<>();
+            for (TourSchedule ts : tourSchedules) {
+                TourGuide guide = new TourGuide(null, ts.getGuestId(), ts.getDate().toString());
+                tourGuides.add(guide);
+            }
+            BinaryFileHelper.writeAllObjects(tourGuideFile, tourGuides);
+            System.out.println("Tour guide data written to tourguide.bin with null guides.");
+        } else {
+            System.out.println("Tour guide file already exists. Not overwriting.");
         }
-        BinaryFileHelper.writeAllObjects(tourGuideFile, tourGuides);
-        System.out.println("Tour guide data written to tourguide.bin with null guides.");
     }
+
 }
