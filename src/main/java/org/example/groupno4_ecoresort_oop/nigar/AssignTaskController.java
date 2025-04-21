@@ -12,18 +12,12 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import org.example.groupno4_ecoresort_oop.HelloApplication;
 
-
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AssignTaskController {
-
-    // Stage reference to switch scenes
-    private final Stage stage = HelloApplication.getPrimaryStage();
-
-    @FXML
-    private Button notificationButton;
 
     @FXML
     private TableView<Task> taskTable;
@@ -43,49 +37,70 @@ public class AssignTaskController {
     @FXML
     private TableColumn<Task, String> colDate;
 
+    @FXML
+    private Button notificationButton;
+
+    private Stage stage = DashboardController.getPrimaryStage();
 
     @FXML
     public void initialize() {
-
         colStaffId.setCellValueFactory(new PropertyValueFactory<>("staffId"));
         colTask.setCellValueFactory(new PropertyValueFactory<>("task"));
         colRoomNumber.setCellValueFactory(new PropertyValueFactory<>("roomNumber"));
         colTime.setCellValueFactory(new PropertyValueFactory<>("time"));
         colDate.setCellValueFactory(new PropertyValueFactory<>("date"));
 
+        List<Task> taskList = loadTasksFromTextFile("task_data.txt");
+        ObservableList<Task> data = FXCollections.observableArrayList(taskList);
+        taskTable.setItems(data);
+    }
 
-        ObservableList<Task> tasks = FXCollections.observableArrayList(
-                new Task("S101", "Clean Room", "101", "10:00 AM", "2025-04-18"),
-                new Task("S102", "Fix AC", "202", "11:00 AM", "2025-04-18")
-        );
+    private List<Task> loadTasksFromTextFile(String filename) {
+        List<Task> tasks = new ArrayList<>();
 
+        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+            String line;
 
-        taskTable.setItems(tasks);
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.trim().split("\\s+");
+                if (parts.length == 5) {
+                    String staffId = parts[0];
+                    String task = parts[1].replace('_', ' ');
+                    String roomNumber = parts[2];
+                    String time = parts[3];
+                    String date = parts[4];
+
+                    tasks.add(new Task(staffId, task, roomNumber, time, date));
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return tasks;
     }
 
 
-    @FXML
-    public void switchScene(String fxml) {
+    private void switchScene(String fxml) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
             Parent root = loader.load();
             Scene scene = new Scene(root, 1280, 720);
             stage.setScene(scene);
             stage.show();
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
-
     @FXML
-    private void switchToDashboard(ActionEvent event) {
-        switchScene("nigar.controller/DashBoardController.fxml");
+    private void setNotification(javafx.event.ActionEvent event) {
+        System.out.println("notification");
     }
 
     @FXML
-    private void setNotification(ActionEvent event) {
-        System.out.println("Notification");
+    private void switchSceneA(ActionEvent event) {
+        switchScene("dashboard.fxml");
     }
 }
 

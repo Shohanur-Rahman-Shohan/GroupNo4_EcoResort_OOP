@@ -13,15 +13,12 @@ import java.io.IOException;
 import java.util.List;
 
 public class HelloApplication extends Application {
-    public static Stage getPrimaryStage() {
-        return null;
-    }
+    private static Stage stage;
 
     @Override
-    public void start(Stage stage) throws IOException {
-        SceneSwitcher.stage = stage;
-
-
+    public void start(Stage stage1) throws IOException {
+        SceneSwitcher.stage = stage1;
+        stage=stage1;
 
         // File location
         File file = new File("Data/users.bin");
@@ -32,18 +29,12 @@ public class HelloApplication extends Application {
 //            file.delete();
 //        }
 
-
-
         // Add default managers (........)
         Managers.addDefaultManagers();
 
 
-
-
-
         FXMLLoader fxmlLoader = new FXMLLoader(
                 HelloApplication.class.getResource("user/LoginView.fxml"));   // Main
-
 
 //                HelloApplication.class.getResource("shohan/controllers/appointUser.fxml"));  // Temporary (Delete Afterward)
 
@@ -53,9 +44,6 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         stage.show();
 
-
-
-
         // Print current user data from the binary file
         List<User> users = BinaryFileHelper.readAllObjects(file);
         System.out.println("======= Loaded Users from users.bin =======");
@@ -63,6 +51,10 @@ public class HelloApplication extends Application {
             System.out.println(user);
         }
         System.out.println("===========================================");
+    }
+
+    public static Stage getPrimaryStage() {
+        return stage;
     }
 
 

@@ -21,6 +21,6 @@
             <TableColumn prefWidth="154.4000244140625" text="Promotion" />
         </columns>
       </TableView>
-      <Button fx:id="add" layoutX="422.0" layoutY="361.0" mnemonicParsing="false" onAction="#add" style="-fx-background-radius: 30; -fx-background-color: #ff00ff;" text="Add Promotion" />
+      <Button fx:id="add" layoutX="422.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchSceneA" style="-fx-background-radius: 30; -fx-background-color: #ff00ff;" text="Add Promotion" />
    </children>
 </AnchorPane>

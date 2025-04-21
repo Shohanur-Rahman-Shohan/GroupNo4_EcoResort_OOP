@@ -12,33 +12,12 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import org.example.groupno4_ecoresort_oop.HelloApplication;
 
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CollaboratewithAgenciesandPlatformController {
-
-    private final Stage stage = HelloApplication.getPrimaryStage();
-
-
-    @FXML
-    public void switchScene(String fxml) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
-            Parent root = loader.load();
-            Scene scene = new Scene(root, 1280, 720);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-    }
-
-    @FXML
-    private void switch1(ActionEvent event) {
-        switchScene("nigar.controller/DashBoardController.fxml");
-    }
-
 
     @FXML
     private TableView<Agency> agencyTable;
@@ -53,8 +32,9 @@ public class CollaboratewithAgenciesandPlatformController {
     private TableColumn<Agency, String> colPromotion;
 
     @FXML
-    private Button addpromotion;
+    private Button addPromotion;
 
+    private Stage stage = DashboardController.getPrimaryStage(); // or HelloApplication.getPrimaryStage()
 
     @FXML
     public void initialize() {
@@ -62,20 +42,55 @@ public class CollaboratewithAgenciesandPlatformController {
         colContact.setCellValueFactory(new PropertyValueFactory<>("contact"));
         colPromotion.setCellValueFactory(new PropertyValueFactory<>("promotion"));
 
-        ObservableList<Agency> agencies = FXCollections.observableArrayList(
-                new Agency("EcoTours", "contact@ecotours.com", "10% off package tours"),
-                new Agency("GreenWay Travel", "info@greenway.com", "Free eco-certification listing")
-        );
-
-        agencyTable.setItems(agencies);
+        List<Agency> agencyList = loadAgenciesFromTextFile("agencies.txt");
+        ObservableList<Agency> data = FXCollections.observableArrayList(agencyList);
+        agencyTable.setItems(data);
     }
 
+    private List<Agency> loadAgenciesFromTextFile(String filename) {
+        List<Agency> agencies = new ArrayList<>();
 
-    @FXML
-    private void addPromotion(ActionEvent event) {
-        System.out.println("Add promotion logic goes here.");
+        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+            String line;
+
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.trim().split("\\|"); // Use | as delimiter
+                if (parts.length == 3) {
+                    String agencyName = parts[0];
+                    String contact = parts[1];
+                    String promotion = parts[2];
+
+                    agencies.add(new Agency(agencyName, contact, promotion));
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return agencies;
+    }
+
+private void switchScene(String fxml) {
+    try {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
+        Parent root = loader.load();
+        Scene scene = new Scene(root, 1280, 720);
+        stage.setScene(scene);
+        stage.show();
+    } catch (IOException e) {
+        e.printStackTrace();
     }
 }
 
+@FXML
+private void setNotification(ActionEvent event) {
+    System.out.println("add promotion");
+}
+
+@FXML
+private void switchSceneA(ActionEvent event) {
+    switchScene("dashboard.fxml");
+}
+}
 
 

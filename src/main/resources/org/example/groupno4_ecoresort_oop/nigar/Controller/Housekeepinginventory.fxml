@@ -7,20 +7,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="576.0" prefWidth="763.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.nigar.HousekeepinginventoryController">
-   <children>
-      <Label layoutX="292.0" layoutY="28.0" text="housekeeping inventory" textFill="#8e1376">
-         <font>
-            <Font size="18.0" />
-         </font></Label>
-      <TableView layoutX="162.0" layoutY="102.0" prefHeight="291.0" prefWidth="453.0">
-        <columns>
-          <TableColumn prefWidth="105.60003662109375" text="name " />
-          <TableColumn prefWidth="91.199951171875" text="stock" />
-            <TableColumn prefWidth="143.20001220703125" text="status" />
-            <TableColumn prefWidth="112.00003051757812" text="request" />
-        </columns>
-      </TableView>
-      <Button layoutX="515.0" layoutY="432.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="report" />
-   </children>
+<AnchorPane prefHeight="576.0" prefWidth="763.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.nigar.HousekeepingInventoryController">
+    <children>
+        <Label layoutX="292.0" layoutY="28.0" text="housekeeping inventory" textFill="#8e1376">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="inventoryTable" layoutX="162.0" layoutY="102.0" prefHeight="291.0" prefWidth="453.0">
+            <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="105.6" text="name " />
+                <TableColumn fx:id="stockColumn" prefWidth="91.2" text="stock" />
+                <TableColumn fx:id="statusColumn" prefWidth="143.2" text="status" />
+                <TableColumn fx:id="requestColumn" prefWidth="112.0" text="request" />
+            </columns>
+        </TableView>
+
+        <Button fx:id="reportButton" layoutX="515.0" layoutY="432.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="report" />
+    </children>
 </AnchorPane>

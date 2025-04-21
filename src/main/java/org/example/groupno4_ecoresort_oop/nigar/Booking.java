@@ -1,6 +1,8 @@
 package org.example.groupno4_ecoresort_oop.nigar;
 
-public class Booking {
+import java.io.Serializable;
+
+public class Booking implements Serializable {
     private String guestName;
     private String roomNo;
     private String bookingId;
@@ -17,15 +19,31 @@ public class Booking {
         return guestName;
     }
 
+    public void setGuestName(String guestName) {
+        this.guestName = guestName;
+    }
+
     public String getRoomNo() {
         return roomNo;
+    }
+
+    public void setRoomNo(String roomNo) {
+        this.roomNo = roomNo;
     }
 
     public String getBookingId() {
         return bookingId;
     }
 
+    public void setBookingId(String bookingId) {
+        this.bookingId = bookingId;
+    }
+
     public String getCheckInOut() {
         return checkInOut;
+    }
+
+    public void setCheckInOut(String checkInOut) {
+        this.checkInOut = checkInOut;
     }
 }
