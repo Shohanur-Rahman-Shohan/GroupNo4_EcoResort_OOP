@@ -47,7 +47,7 @@ public class HelloApplication extends Application {
         Managers.addDefaultManagers();
 
         FXMLLoader fxmlLoader = new FXMLLoader(
-                HelloApplication.class.getResource("arman/MTDashboard.fxml"));   // Main
+                HelloApplication.class.getResource("user/LoginView.fxml"));   // Main
 
 //                HelloApplication.class.getResource("shohan/controllers/appointUser.fxml"));  // Temporary (Delete Afterward)
 
