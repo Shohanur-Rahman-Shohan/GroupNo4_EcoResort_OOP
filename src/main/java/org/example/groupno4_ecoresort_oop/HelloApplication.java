@@ -25,25 +25,29 @@ public class HelloApplication extends Application {
 
         // File location
         File file = new File("Data/users.bin");
+        File guestFile = new File("Data/guests.bin");
+        File allUserFile= new File("Data/allTypeUsers.bin");
 
 
 //        // Delete previous data if the file exists
 //        if (file.exists()) {
 //            file.delete();
 //        }
+//        if (guestFile.exists()) {
+//            guestFile.delete();
+//        }
+//        if (allUserFile.exists()) {
+//            allUserFile.delete();
+//        }
+
 
 
 
         // Add default managers (........)
         Managers.addDefaultManagers();
 
-
-
-
-
         FXMLLoader fxmlLoader = new FXMLLoader(
                 HelloApplication.class.getResource("user/LoginView.fxml"));   // Main
-
 
 //                HelloApplication.class.getResource("shohan/controllers/appointUser.fxml"));  // Temporary (Delete Afterward)
 
@@ -57,13 +61,18 @@ public class HelloApplication extends Application {
 
 
         // Print current user data from the binary file
-        List<User> users = BinaryFileHelper.readAllObjects(file);
-        System.out.println("======= Loaded Users from users.bin =======");
+        List<User> users = BinaryFileHelper.readAllObjects(allUserFile);
+        System.out.println("======= Loaded Users from allUserFile.bin =======");
         for (User user : users) {
             System.out.println(user);
         }
         System.out.println("===========================================");
     }
+
+
+
+
+
 
 
 

@@ -24,14 +24,15 @@ public class Managers {
         List<User> users = BinaryFileHelper.readAllObjects(file);               // Read existing users
 
         boolean gmExists = false;
-        boolean fmExists = false;
+//        boolean fmExists = false;
 
         for (User user : users) {
             if (user instanceof GeneralManager) {
                 gmExists = true;
-            } else if (user instanceof FinanceManager) {
-                fmExists = true;
             }
+//            else if (user instanceof FinanceManager) {
+//                fmExists = true;
+//            }
         }
 
 
@@ -42,10 +43,12 @@ public class Managers {
             User newGM = new GeneralManager("Shohan", "gm@gmail.com", "12345", 1111, 1749581973, "GeneralManager");
             users.add(newGM);
         }
-        if (!fmExists) {
-            User newFM = new FinanceManager("Shohan", "fm@gmail.com", "12345", 2222, 1749581973, "FinanceManager");
-            users.add(newFM);
-        }
+//        if (!fmExists) {
+//            User newFM = new FinanceManager("Shohan", "fm@gmail.com", "12345", 2222, 1749581973, "FinanceManager");
+//            users.add(newFM);
+//        }
+
+
 
         // Save updated list
         BinaryFileHelper.writeAllObjects(file, users);

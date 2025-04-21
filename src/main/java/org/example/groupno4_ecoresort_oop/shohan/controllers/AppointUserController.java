@@ -39,17 +39,17 @@ public class AppointUserController
     private TextField firstName_TF;
     @FXML
     private PasswordField password_TF;
-
-
-
-
-
+    @FXML
+    private Label showPassword_L;
+    @FXML
+    private CheckBox showPassword_CB;
 
 
     @FXML
     public void initialize() {
         userType_CB.getItems().setAll("FinanceManager","ActivityCoordinator","MaintenanceTechnician","HousekeepingSupervisor","MarketingAndSalesManager","Receptionist");
         gender_CB.getItems().setAll("Male","Female");
+        showPassword_L.setOpacity(0);
     }
 
 
@@ -192,7 +192,7 @@ public class AppointUserController
     private int generateUserId() {
         File file = new File("Data/users.bin");
         List<User> users = BinaryFileHelper.readAllObjects(file);
-        int maxId = 1112;                                                 // First generated ID becomes 1113
+        int maxId = 1111;                                                 // First generated ID becomes 1112
 
         for (User user : users) {
             if (user.getId() > maxId) {
@@ -203,4 +203,23 @@ public class AppointUserController
         return maxId + 1;
     }
 
+
+
+
+
+
+
+
+
+
+
+    @FXML
+    public void showPassword_OA(ActionEvent actionEvent) {
+        if (showPassword_CB.isSelected()) {
+            showPassword_L.setText(password_TF.getText());
+            showPassword_L.setOpacity(1);
+        } else {
+            showPassword_L.setOpacity(0);
+        }
+    }
 }
