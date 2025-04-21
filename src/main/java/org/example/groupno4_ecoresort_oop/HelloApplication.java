@@ -13,6 +13,10 @@ import java.io.IOException;
 import java.util.List;
 
 public class HelloApplication extends Application {
+    public static Stage getPrimaryStage() {
+        return null;
+    }
+
     @Override
     public void start(Stage stage) throws IOException {
         SceneSwitcher.stage = stage;
