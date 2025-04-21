@@ -35,14 +35,14 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <TableView layoutX="-2.0" layoutY="78.0" prefHeight="202.0" prefWidth="612.0">
+      <TableView fx:id="outputTableView" layoutX="-2.0" layoutY="78.0" prefHeight="202.0" prefWidth="612.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="ActivityID" />
-            <TableColumn prefWidth="93.0" text="Comfort" />
-            <TableColumn prefWidth="86.0" text="Safety" />
-            <TableColumn prefWidth="102.0" text="Enjoyment" />
-            <TableColumn prefWidth="128.0" text="Additional Comment" />
-            <TableColumn prefWidth="128.0" text="Success Rate" />
+          <TableColumn fx:id="activityIdTC" prefWidth="75.0" text="ActivityID" />
+            <TableColumn fx:id="comfortTC" prefWidth="93.0" text="Comfort" />
+            <TableColumn fx:id="safetyTC" prefWidth="86.0" text="Safety" />
+            <TableColumn fx:id="enjoymentTC" prefWidth="102.0" text="Enjoyment" />
+            <TableColumn fx:id="additionalCommentTC" prefWidth="128.0" text="Additional Comment" />
+            <TableColumn fx:id="successRateTC" prefWidth="128.0" text="Success Rate" />
         </columns>
       </TableView>
       <Label layoutX="75.0" layoutY="294.0" text="Enter  the Activity ID: ">
@@ -50,32 +50,32 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <TextField layoutX="208.0" layoutY="289.0" prefHeight="26.0" prefWidth="207.0" />
+      <TextField fx:id="activityIdTextField" layoutX="208.0" layoutY="289.0" prefHeight="26.0" prefWidth="207.0" />
       <Label layoutX="145.0" layoutY="340.0" text="Comfort:">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <ComboBox layoutX="214.0" layoutY="335.0" prefHeight="26.0" prefWidth="201.0" />
+      <ComboBox fx:id="comfortComboBox" layoutX="214.0" layoutY="335.0" prefHeight="26.0" prefWidth="201.0" />
       <Label layoutX="126.0" layoutY="429.0" text="Enjoyment:">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <ComboBox layoutX="214.0" layoutY="379.0" prefHeight="26.0" prefWidth="201.0" />
+      <ComboBox fx:id="safetyCombobox" layoutX="214.0" layoutY="379.0" prefHeight="26.0" prefWidth="201.0" />
       <Label layoutX="146.0" layoutY="384.0" prefHeight="17.0" prefWidth="48.0" text="Safety:">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <ComboBox layoutX="211.0" layoutY="425.0" prefHeight="26.0" prefWidth="207.0" />
+      <ComboBox fx:id="enjoymentComboBox" layoutX="211.0" layoutY="425.0" prefHeight="26.0" prefWidth="207.0" />
       <Label layoutX="76.0" layoutY="478.0" text="Additional comment:">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <TextField layoutX="211.0" layoutY="474.0" prefHeight="26.0" prefWidth="207.0" />
-      <Button layoutX="326.0" layoutY="522.0" mnemonicParsing="false" style="-fx-background-color: LightBlue;" text="Give Feedback" />
-      <Button layoutX="21.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: LightBlue;" text="BACK" />
+      <TextField fx:id="additionalCommentTextField" layoutX="211.0" layoutY="474.0" prefHeight="26.0" prefWidth="207.0" />
+      <Button layoutX="326.0" layoutY="522.0" mnemonicParsing="false" onAction="#giveFeedBackButtonOnAction" style="-fx-background-color: LightBlue;" text="Give Feedback" />
+      <Button layoutX="21.0" layoutY="24.0" mnemonicParsing="false" onAction="#backButtonOnAction" style="-fx-background-color: LightBlue;" text="BACK" />
    </children>
 </AnchorPane>

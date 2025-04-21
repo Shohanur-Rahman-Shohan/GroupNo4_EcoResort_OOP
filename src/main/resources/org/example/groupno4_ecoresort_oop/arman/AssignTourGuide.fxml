@@ -12,7 +12,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="613.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.arman.AssignTourGuideController">
+<AnchorPane prefHeight="613.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.arman.controller.AssignTourGuideController">
    <children>
       <Label layoutX="248.0" layoutY="6.0" prefHeight="66.0" prefWidth="163.0" text="Assign Tour Guide">
          <font>
@@ -36,22 +36,23 @@
          </textFill>
       </Label>
       <Label layoutX="115.0" layoutY="360.0" />
-      <TableView layoutX="29.0" layoutY="101.0" prefHeight="200.0" prefWidth="661.0">
+      <TableView fx:id="outputTableView" layoutX="29.0" layoutY="101.0" prefHeight="200.0" prefWidth="661.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="TourID" />
-          <TableColumn prefWidth="357.15171813964844" text="TourDay" />
-            <TableColumn prefWidth="225.34828186035156" text="TourGuide" />
+          <TableColumn fx:id="guestIdTC" prefWidth="75.0" text="Guest ID" />
+          <TableColumn fx:id="tourDayTC" prefWidth="357.15171813964844" text="TourDay" />
+            <TableColumn fx:id="tourGuideTC" prefWidth="225.34828186035156" text="TourGuide" />
         </columns>
       </TableView>
-      <Label layoutX="123.0" layoutY="324.0" text="Tour ID:" />
-      <TextField layoutX="205.0" layoutY="317.0" />
-      <Button layoutX="377.0" layoutY="318.0" mnemonicParsing="false" style="-fx-background-color: lightBlue;" text="Load Available Guide" />
+      <Label layoutX="123.0" layoutY="324.0" text="Guest ID" />
+      <TextField fx:id="tourIdTextField" layoutX="205.0" layoutY="317.0" />
+      <Button layoutX="377.0" layoutY="318.0" mnemonicParsing="false" onAction="#loadAvailableGuideOnAction" style="-fx-background-color: lightBlue;" text="Load Available Guide" />
       <Label layoutX="272.0" layoutY="381.0" prefHeight="31.0" prefWidth="115.0" text="Available Guides:">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <ComboBox layoutX="243.0" layoutY="428.0" prefHeight="26.0" prefWidth="178.0" />
-      <Button layoutX="310.0" layoutY="475.0" mnemonicParsing="false" style="-fx-background-color: LightBlue;" text="Save" />
+      <ComboBox fx:id="availableGuideCombobox" layoutX="243.0" layoutY="428.0" prefHeight="26.0" prefWidth="178.0" />
+      <Button layoutX="310.0" layoutY="475.0" mnemonicParsing="false" onAction="#saveButtonOnAction" style="-fx-background-color: LightBlue;" text="Save" />
+      <Button layoutX="25.0" layoutY="15.0" mnemonicParsing="false" onAction="#backButtonOnAction" style="-fx-background-color: LightBlue;" text="BACK" />
    </children>
 </AnchorPane>

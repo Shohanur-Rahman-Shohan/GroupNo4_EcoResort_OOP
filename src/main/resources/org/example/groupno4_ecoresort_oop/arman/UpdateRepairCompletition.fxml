@@ -11,7 +11,6 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="445.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.arman.controller.UpdateRepairCompletitionController">
    <children>
       <Label layoutX="207.0" layoutY="7.0" prefHeight="35.0" prefWidth="239.0" text="Update Completition Details">
@@ -35,17 +34,18 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <TableView layoutX="6.0" layoutY="47.0" prefHeight="195.0" prefWidth="632.0">
+      <TableView fx:id="outputCompletitionTableView" layoutX="6.0" layoutY="47.0" prefHeight="195.0" prefWidth="632.0">
          <columns>
-            <TableColumn prefWidth="75.0" text="RequestID" />
-            <TableColumn prefWidth="84.0" text="Location" />
-            <TableColumn prefWidth="152.0" text="Type" />
-            <TableColumn prefWidth="129.0" text="Status" />
-            <TableColumn prefWidth="140.0" text="RequestDate" />
+            <TableColumn fx:id="requestIdTC" prefWidth="75.0" text="RequestID" />
+            <TableColumn fx:id="locationTC" prefWidth="84.0" text="Location" />
+            <TableColumn fx:id="typeTC" prefWidth="152.0" text="Type" />
+            <TableColumn fx:id="statusTC" prefWidth="129.0" text="Status" />
+            <TableColumn fx:id="requestDateTC" prefWidth="140.0" text="RequestDate" />
          </columns>
       </TableView>
-      <Button layoutX="338.0" layoutY="255.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="270.0" text="Update Repair  Completition Details" />
-      <TextField layoutX="136.0" layoutY="256.0" />
+      <Button layoutX="338.0" layoutY="255.0" mnemonicParsing="false" onAction="#updateRepairCompletitionDetailsButtonOnAction" prefHeight="26.0" prefWidth="270.0" text="Update Repair  Completition Details" />
+      <TextField fx:id="requestIdTextField" layoutX="136.0" layoutY="256.0" />
       <Label layoutX="62.0" layoutY="261.0" text="Request ID:" />
+      <Button layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#backButtonOnAction" style="-fx-background-color: LightBlue;" text="Back" />
    </children>
 </AnchorPane>

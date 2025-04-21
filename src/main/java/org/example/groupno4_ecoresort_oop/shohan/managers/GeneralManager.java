@@ -1,17 +1,18 @@
 package org.example.groupno4_ecoresort_oop.shohan.managers;
 
-public class GeneralManager extends Manager {
+import org.example.groupno4_ecoresort_oop.user.User;
 
+import java.io.Serializable;
 
+public class GeneralManager extends User implements Serializable {
 
-
-    public GeneralManager() {
+    public GeneralManager(String name, String email, String password, int id, int phoneNumber, String userType) {
+        super(name, email, password, id, phoneNumber, "GeneralManager");
     }
 
-
-
-    public GeneralManager(int id, String firstName, String lastName, String email, String password, String phoneNumber) {
-        super(id, firstName, lastName, email, password, phoneNumber, "GeneralManager");
+    @Override
+    public String getRoleDescription() {
+        return "Responsible for Managing And OverViewing The Resorts Activity.";
     }
 }
 

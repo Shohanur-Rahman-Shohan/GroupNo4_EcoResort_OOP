@@ -35,19 +35,20 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <TableView layoutX="14.0" layoutY="67.0" prefHeight="200.0" prefWidth="619.0">
+      <TableView fx:id="outputTableView" layoutX="14.0" layoutY="67.0" prefHeight="200.0" prefWidth="619.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="RequestID" />
-          <TableColumn prefWidth="299.0" text="RequestType" />
-            <TableColumn prefWidth="244.0" text="AssignTo" />
+          <TableColumn fx:id="requestIdTC" prefWidth="75.0" text="RequestID" />
+          <TableColumn fx:id="requestTypeTC" prefWidth="299.0" text="RequestType" />
+            <TableColumn fx:id="assignToTC" prefWidth="244.0" text="AssignTo" />
         </columns>
       </TableView>
       <Label layoutX="129.0" layoutY="287.0" text="RequestID:" />
-      <TextField layoutX="203.0" layoutY="283.0" />
-      <ComboBox layoutX="203.0" layoutY="326.0" prefHeight="26.0" prefWidth="160.0" />
+      <TextField fx:id="requestIdTextField" layoutX="203.0" layoutY="283.0" />
+      <ComboBox fx:id="requestTypeCombobox" layoutX="203.0" layoutY="326.0" prefHeight="26.0" prefWidth="160.0" />
       <Label layoutX="113.0" layoutY="331.0" text="RequestType:" />
       <Label layoutX="36.0" layoutY="377.0" text="Available  Team for the type:" />
-      <ComboBox layoutX="203.0" layoutY="373.0" prefHeight="26.0" prefWidth="160.0" />
-      <Button layoutX="308.0" layoutY="423.0" mnemonicParsing="false" style="-fx-background-color: LightBlue;" text="Assign" />
+      <ComboBox fx:id="availableTeamForTheTypeCombobox" layoutX="203.0" layoutY="373.0" prefHeight="26.0" prefWidth="160.0" />
+      <Button layoutX="308.0" layoutY="423.0" mnemonicParsing="false" onAction="#AssignButtonOnAction" style="-fx-background-color: LightBlue;" text="Assign" />
+      <Button layoutX="22.0" layoutY="18.0" mnemonicParsing="false" onAction="#backButtonOnAction" style="-fx-background-color: LightBlue;" text="BACK" />
    </children>
 </AnchorPane>

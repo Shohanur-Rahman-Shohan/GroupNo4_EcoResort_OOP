@@ -10,8 +10,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="563.0" prefWidth="633.0" style="-fx-background-image: lightblue;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.arman.controller.RecurringMaintenanceCheckController">
+<AnchorPane prefHeight="563.0" prefWidth="633.0" style="-fx-background-image: lightblue;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.arman.controller.SetReminderForRecurringMaintenanceCheckController">
    <children>
       <Label layoutX="122.0" layoutY="14.0" prefHeight="30.0" prefWidth="389.0" text="Set Reminder for Recurring Maintenance Check" wrapText="true">
          <font>
@@ -35,11 +34,12 @@
          </textFill>
       </Label>
       <Label layoutX="58.0" layoutY="77.0" text="Request ID:" />
-      <TextField layoutX="133.0" layoutY="73.0" />
+      <TextField fx:id="requestIdTextField" layoutX="133.0" layoutY="73.0" />
       <Label layoutX="58.0" layoutY="142.0" text="Maintenace Status Check :" />
-      <Label layoutX="246.0" layoutY="142.0" text="Not Set" />
+      <Label fx:id="maintenanceStatusCheckLabel" layoutX="246.0" layoutY="142.0" text="Not Set" />
       <Label layoutX="58.0" layoutY="211.0" text="Set Reminder:" />
-      <DatePicker layoutX="153.0" layoutY="207.0" />
-      <Button layoutX="299.0" layoutY="269.0" mnemonicParsing="false" style="-fx-background-color: LightBlue;" text="Set Reminder" />
+      <DatePicker fx:id="setReminderDatePicker" layoutX="153.0" layoutY="207.0" />
+      <Button layoutX="299.0" layoutY="269.0" mnemonicParsing="false" onAction="#setReminderButtonOnAction" style="-fx-background-color: LightBlue;" text="Set Reminder" />
+      <Button layoutX="36.0" layoutY="16.0" mnemonicParsing="false" onAction="#backButtonOnAction" style="-fx-background-color: lightBlue;" text="Back" />
    </children>
 </AnchorPane>

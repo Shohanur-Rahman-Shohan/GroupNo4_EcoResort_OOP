@@ -1,37 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="543.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.user.DashBoardController">
    <children>
-      <BorderPane prefHeight="400.0" prefWidth="543.0">
+      <BorderPane fx:id="dashboard_BP" prefHeight="400.0" prefWidth="543.0">
          <top>
             <MenuBar BorderPane.alignment="CENTER">
               <menus>
-                <Menu mnemonicParsing="false" text="Home">
+                <Menu fx:id="home_MB" mnemonicParsing="false" text="Home">
                   <items>
                     <MenuItem mnemonicParsing="false" text="Notification" />
-                        <MenuItem mnemonicParsing="false" text="Sign Out" />
+                        <MenuItem mnemonicParsing="false" onAction="#signOut_OA" text="Sign Out" />
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="General Manager">
+                <Menu fx:id="gm_MB" mnemonicParsing="false" text="General Manager">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
+                    <MenuItem mnemonicParsing="false" onAction="#roomOccupancy_OA" text="View Real Time Room Occupancy" />
+                        <MenuItem mnemonicParsing="false" onAction="#workforceEfficiency_OA" text="View Workforce Efficiency" />
+                        <MenuItem mnemonicParsing="false" onAction="#guestSatisfaction_OA" text="View Guest Satisfaction &amp; Feedback" />
+                        <MenuItem mnemonicParsing="false" onAction="#vipRequest_OA" text="VIP- Requests &amp; Special Services" />
+                        <MenuItem mnemonicParsing="false" onAction="#addAdvanture_OA" text="Add Adventure Events" />
+                        <MenuItem mnemonicParsing="false" onAction="#manageAdvanture_OA" text="Manage Advanture Events" />
+                        <MenuItem mnemonicParsing="false" onAction="#manageRoomCapacir" text="Manage Room Capacity" />
+                        <MenuItem mnemonicParsing="false" onAction="#crisisManagement_OA" text="Crisis Management" />
+                        <MenuItem mnemonicParsing="false" onAction="#appintUsers_OA" text="Appoint Users" />
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Finance Manager">
+                <Menu fx:id="fm_MB" mnemonicParsing="false" text="Finance Manager">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
+                    <MenuItem mnemonicParsing="false" onAction="#analizeAdjustServicePrice_OA" text="Analize &amp; Adjust Service Prices" />
+                        <MenuItem mnemonicParsing="false" onAction="#realTimeExpense_OA" text="Real Time Expenses" />
+                        <MenuItem mnemonicParsing="false" onAction="#viewFinanceSummary_OA" text="View Finance Summary" />
+                        <MenuItem mnemonicParsing="false" onAction="#trackCarbonCredit_OA" text="Track Carbon Credit" />
+                        <MenuItem mnemonicParsing="false" onAction="#guestProfitablity_OA" text="Guest Profitability " />
+                        <MenuItem mnemonicParsing="false" onAction="#compareFinance_OA" text="Compare Financials " />
+                        <MenuItem mnemonicParsing="false" onAction="#depertmentalCost_OA" text="Depertmental Cost Distribution" />
+                        <MenuItem mnemonicParsing="false" onAction="#manageEventProfit_OA" text="Manage Event Profit" />
+                        <MenuItem mnemonicParsing="false" onAction="#emergencySpecialfund_OA" text="Emergency/ Special Fund" />
+                        <MenuItem mnemonicParsing="false" onAction="#updateUsersSalary_OA" text="Update Users Salary" />
                   </items>
                 </Menu>
               </menus>
             </MenuBar>
          </top>
+         <center>
+            <Label alignment="CENTER" prefHeight="114.0" prefWidth="438.0" text="Welcome To Dusai" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Label>
+         </center>
       </BorderPane>
    </children>
 </AnchorPane>

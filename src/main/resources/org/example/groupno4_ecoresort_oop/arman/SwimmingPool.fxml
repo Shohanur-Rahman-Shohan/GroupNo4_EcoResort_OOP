@@ -12,7 +12,6 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="529.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.arman.controller.SwimmingPoolController">
    <children>
       <Label layoutX="176.0" layoutY="14.0" prefHeight="35.0" prefWidth="239.0" text="Swimming Pool Water Quality">
@@ -40,18 +39,19 @@
       <Label layoutX="27.0" layoutY="99.0" text="Chlorin Level:" />
       <Label layoutX="27.0" layoutY="130.0" text="PH level:" />
       <Label layoutX="32.0" layoutY="160.0" prefHeight="17.0" prefWidth="56.0" text="Remarks" />
-      <DatePicker layoutX="117.0" layoutY="59.0" />
-      <TextField layoutX="117.0" layoutY="95.0" />
-      <TextField layoutX="117.0" layoutY="126.0" />
-      <TextField layoutX="117.0" layoutY="156.0" />
-      <Button layoutX="426.0" layoutY="207.0" mnemonicParsing="false" style="-fx-background-color: lightBlue;" text="Save Text Result" />
-      <TableView layoutX="27.0" layoutY="245.0" prefHeight="200.0" prefWidth="515.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="Test Date" />
-          <TableColumn prefWidth="138.0" text="Chlorin Level" />
-            <TableColumn prefWidth="136.0" text="PH level:" />
-            <TableColumn prefWidth="164.0" text="Remarks" />
-        </columns>
+      <DatePicker fx:id="testDateDatePicker" layoutX="117.0" layoutY="59.0" />
+      <TextField fx:id="chlorinLevelTextField" layoutX="117.0" layoutY="95.0" />
+      <TextField fx:id="phLevelTextField" layoutX="117.0" layoutY="126.0" />
+      <TextField fx:id="remarksTextField" layoutX="117.0" layoutY="156.0" />
+      <Button layoutX="426.0" layoutY="207.0" mnemonicParsing="false" onAction="#saveTestResultButtonOnAction" style="-fx-background-color: lightBlue;" text="Save Test Result" />
+      <TableView fx:id="swimmingPoolTableView" layoutX="27.0" layoutY="245.0" prefHeight="200.0" prefWidth="515.0">
+         <columns>
+            <TableColumn fx:id="testDateTC" prefWidth="132.0" text="Test Date" />
+            <TableColumn fx:id="chlorinTC" prefWidth="132.0" text="Chlorin Level" />
+            <TableColumn fx:id="phLevelTC" prefWidth="101.0" text="PH level" />
+            <TableColumn fx:id="remarksTC" prefWidth="148.0" text="Remarks" />
+         </columns>
       </TableView>
+      <Button layoutX="14.0" layoutY="19.0" mnemonicParsing="false" onAction="#BackButtonOnAction" style="-fx-background-color: LightBlue;" text="Back" />
    </children>
 </AnchorPane>

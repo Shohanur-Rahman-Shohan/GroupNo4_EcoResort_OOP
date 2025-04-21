@@ -10,8 +10,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.arman.TrackGuestParticipationController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.arman.controller.TrackGuestParticipationController">
    <children>
       <Label layoutX="186.0" prefHeight="35.0" prefWidth="206.0" text="Track Guest Participation">
          <font>
@@ -35,8 +34,9 @@
          </textFill>
       </Label>
       <Label layoutX="30.0" layoutY="65.0" text="Guest ID:" />
-      <TextField layoutX="93.0" layoutY="61.0" />
-      <Button layoutX="273.0" layoutY="61.0" mnemonicParsing="false" text="Check" />
-      <TextArea layoutX="34.0" layoutY="137.0" prefHeight="200.0" prefWidth="438.0" />
+      <TextField fx:id="checkGuestIdTextField" layoutX="93.0" layoutY="61.0" />
+      <Button layoutX="273.0" layoutY="61.0" mnemonicParsing="false" onAction="#checkButtonOnAction" text="Check" />
+      <TextArea fx:id="outputDisplayTextArea" layoutX="34.0" layoutY="137.0" prefHeight="200.0" prefWidth="438.0" />
+      <Button layoutX="28.0" layoutY="18.0" mnemonicParsing="false" onAction="#BackButtonOnAction" style="-fx-background-color: LightBlue;" text="Back" />
    </children>
 </AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.shohan.controllers.FmViewExpenseHistoryController">
+   <children>
+      <Button layoutX="-8.0" layoutY="-15.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: transparent;" text="←" textFill="#669c2c">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Button>
+      <TableView layoutX="10.0" layoutY="110.0" prefHeight="266.0" prefWidth="582.0" style="-fx-background-color: cyan;">
+         <columns>
+            <TableColumn prefWidth="65.5999755859375" text="Serial No." />
+            <TableColumn prefWidth="96.00006866455078" text="User ID" />
+            <TableColumn prefWidth="126.39996337890625" text="User Type" />
+            <TableColumn prefWidth="158.4000244140625" text="Expense On" />
+            <TableColumn prefWidth="133.59994506835938" text="Expense " />
+         </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="151.0" layoutY="34.0" prefHeight="38.0" prefWidth="323.0" style="-fx-background-color: cyan;" text="View Expense History">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

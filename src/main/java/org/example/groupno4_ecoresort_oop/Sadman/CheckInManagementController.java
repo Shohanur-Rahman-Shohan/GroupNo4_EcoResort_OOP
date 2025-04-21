@@ -1,14 +1,11 @@
 package org.example.groupno4_ecoresort_oop.Sadman;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
-public class CheckInManagement {
+public class CheckInManagementController {
 
     @FXML
     private TextField ResIDTextField;

@@ -54,5 +54,10 @@
          </font>
       </Label>
       <Line endX="457.800048828125" endY="-1.52587890625E-5" layoutX="131.0" layoutY="73.0" startX="-123.00001525878906" startY="-1.52587890625E-5" />
+      <Button layoutY="-11.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: transparent;" text="←" textFill="#669c2c">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
