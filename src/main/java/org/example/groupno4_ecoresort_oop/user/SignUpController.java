@@ -4,10 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import org.example.groupno4_ecoresort_oop.Sadman.user.Guest;
 import org.example.groupno4_ecoresort_oop.SceneSwitcher;
-import org.example.groupno4_ecoresort_oop.arman.ActivityCoordinator;
-import org.example.groupno4_ecoresort_oop.arman.MaintenanceTechnician;
-import org.example.groupno4_ecoresort_oop.shohan.managers.FinanceManager;
-import org.example.groupno4_ecoresort_oop.shohan.managers.GeneralManager;
 import org.example.groupno4_ecoresort_oop.utils.BinaryFileHelper;
 
 import java.io.File;
@@ -30,9 +26,15 @@ public class SignUpController {
     private ComboBox<String> gender_CB;    // Gender ComboBox
     @javafx.fxml.FXML
     private PasswordField password_TF;
+    @javafx.fxml.FXML
+    private Label showPassword_L;
+    @javafx.fxml.FXML
+    private CheckBox showPassword_CB;
+
 
     @javafx.fxml.FXML
     public void initialize() {
+        showPassword_L.setOpacity(0);
         userType_CB.getItems().addAll("Guest");
         gender_CB.getItems().addAll("Male", "Female");
     }
@@ -135,5 +137,25 @@ public class SignUpController {
             }
         }
         return maxId + 1;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    @javafx.fxml.FXML
+    public void showPassword_OA(ActionEvent actionEvent) {
+        if (showPassword_CB.isSelected()) {
+            showPassword_L.setText(password_TF.getText());
+            showPassword_L.setOpacity(1);
+        } else {
+            showPassword_L.setOpacity(0);
+        }
     }
 }

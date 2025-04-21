@@ -23,5 +23,15 @@ public class Complaint implements Serializable {
         public void setType(String type) { this.type = type; }
         public String getStatus() { return status; }
         public void setStatus(String status) { this.status = status; }
+
+    @Override
+    public String toString() {
+        return "Complaint{" +
+                "id='" + id + '\'' +
+                ", description='" + description + '\'' +
+                ", type='" + type + '\'' +
+                ", status='" + status + '\'' +
+                '}';
     }
+}
 

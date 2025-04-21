@@ -16,13 +16,13 @@
       <TextField fx:id="firstName_TF" layoutX="88.0" layoutY="148.0" />
       <TextField fx:id="email_TF" layoutX="88.0" layoutY="278.0" prefHeight="26.0" prefWidth="386.0" promptText="\@gmail.com" />
       <TextField fx:id="phoneNumber_TF" layoutX="88.0" layoutY="344.0" prefHeight="26.0" prefWidth="386.0" promptText="+8801xxxxxxxxx" />
-      <Button layoutX="180.0" layoutY="481.0" mnemonicParsing="false" onAction="#signUp_OA" prefHeight="26.0" prefWidth="175.0" text="Sign UP" />
+      <Button layoutX="180.0" layoutY="475.0" mnemonicParsing="false" onAction="#signUp_OA" prefHeight="32.0" prefWidth="175.0" text="Sign UP" />
       <ComboBox fx:id="gender_CB" layoutX="87.0" layoutY="212.0" prefWidth="150.0" />
       <Label layoutX="88.0" layoutY="123.0" prefHeight="26.0" prefWidth="66.0" text="First Name" />
       <Label layoutX="88.0" layoutY="187.0" prefHeight="26.0" prefWidth="50.0" text="Gender" />
       <Label layoutX="89.0" layoutY="251.0" prefHeight="26.0" prefWidth="33.0" text="Email" />
       <Label layoutX="86.0" layoutY="319.0" prefHeight="26.0" prefWidth="82.0" text="Phone Number" />
-      <Label layoutX="91.0" layoutY="393.0" prefHeight="18.0" prefWidth="66.0" text="Password" />
+      <Label layoutX="91.0" layoutY="393.0" prefHeight="18.0" prefWidth="66.0" text="Password:" />
       <Label layoutX="324.0" layoutY="123.0" prefHeight="26.0" prefWidth="73.0" text="Last Name" />
       <Label layoutX="325.0" layoutY="186.0" prefHeight="26.0" prefWidth="66.0" text="User Type" />
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="116.0" layoutY="13.0" prefHeight="42.0" prefWidth="289.0" text="Create a new account" textAlignment="JUSTIFY">
@@ -37,7 +37,7 @@
       </Label>
       <ComboBox fx:id="userType_CB" layoutX="324.0" layoutY="210.0" prefWidth="150.0" />
       <PasswordField fx:id="password_TF" layoutX="88.0" layoutY="413.0" prefHeight="26.0" prefWidth="386.0" promptText="At least 5 digit and must contain a number" />
-      <CheckBox layoutX="372.0" layoutY="393.0" mnemonicParsing="false" text="View Password" />
+      <CheckBox fx:id="showPassword_CB" layoutX="372.0" layoutY="393.0" mnemonicParsing="false" onAction="#showPassword_OA" text="View Password" />
       <Line endX="100.00001525878906" endY="355.4000244140625" layoutX="-97.0" layoutY="162.0" startX="100.0" startY="-66.4000015258789" />
       <Line endX="100.00001525878906" endY="355.4000244140625" layoutX="435.0" layoutY="161.0" startX="100.0" startY="-66.4000015258789" />
       <Button layoutX="-12.0" layoutY="-20.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="90.0" prefWidth="102.0" style="-fx-background-color: transparent;" text="←" textFill="#669c2c">
@@ -45,5 +45,6 @@
             <Font name="System Bold" size="41.0" />
          </font>
       </Button>
+      <Label fx:id="showPassword_L" layoutX="154.0" layoutY="392.0" prefHeight="18.0" prefWidth="148.0" textAlignment="CENTER" />
    </children>
 </AnchorPane>
