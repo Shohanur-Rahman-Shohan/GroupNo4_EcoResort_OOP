@@ -12,6 +12,10 @@ import java.io.IOException;
 
 public class DashboardController {
 
+    public static Stage getPrimaryStage() {
+        return null;
+    }
+
     @FXML
     void initialize() {
 

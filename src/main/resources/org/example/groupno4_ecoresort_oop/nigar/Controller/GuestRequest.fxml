@@ -8,20 +8,20 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="538.0" prefWidth="652.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.nigar.GuestRequestController">
-   <children>
-      <Label layoutX="234.0" layoutY="35.0" text="Guest Request" textFill="#d431c4">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Button layoutX="477.0" layoutY="408.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="Clear" />
-      <Button layoutX="171.0" layoutY="408.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="Submit Request" />
-      <TableView layoutX="149.0" layoutY="123.0" prefHeight="246.0" prefWidth="364.0">
-        <columns>
-          <TableColumn prefWidth="92.79998779296875" text="Date " />
-            <TableColumn prefWidth="109.5999755859375" text="Priority " />
-            <TableColumn prefWidth="160.80001831054688" text="Request" />
-        </columns>
-      </TableView>
-   </children>
+    <children>
+        <Label layoutX="234.0" layoutY="35.0" text="Guest Request" textFill="#d431c4">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Button fx:id="clearButton" layoutX="477.0" layoutY="408.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="Clear"  />
+        <Button fx:id="submitButton" layoutX="171.0" layoutY="408.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="Submit Request"/>
+        <TableView fx:id="requestTable" layoutX="149.0" layoutY="123.0" prefHeight="246.0" prefWidth="364.0">
+            <columns>
+                <TableColumn fx:id="dateColumn" prefWidth="92.8" text="Date " />
+                <TableColumn fx:id="priorityColumn" prefWidth="109.6" text="Priority " />
+                <TableColumn fx:id="requestColumn" prefWidth="160.8" text="Request" />
+            </columns>
+        </TableView>
+    </children>
 </AnchorPane>

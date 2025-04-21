@@ -20,7 +20,6 @@ public class MTDashboardController
             e.printStackTrace();
         }
     }
-
     @javafx.fxml.FXML
     public void repairRequestButtonONClick(Event event) {
         try {
@@ -56,7 +55,6 @@ public class MTDashboardController
             e.printStackTrace();
         }
     }
-
     @javafx.fxml.FXML
     public void emergencyMaintenanceButtonOnClick(Event event) {
         try {

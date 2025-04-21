@@ -1,7 +1,9 @@
 package org.example.groupno4_ecoresort_oop.nigar;
 
-public class Report {
+import java.io.Serializable;
+import java.util.List;
 
+public class Report implements Serializable {
     private String date;
     private double revenue;
     private int sales;
@@ -10,6 +12,10 @@ public class Report {
         this.date = date;
         this.revenue = revenue;
         this.sales = sales;
+    }
+
+    public static List<Report> getReportList() {
+        return List.of();
     }
 
     public String getDate() {

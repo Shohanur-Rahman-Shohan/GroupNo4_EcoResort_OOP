@@ -12,18 +12,15 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import org.example.groupno4_ecoresort_oop.HelloApplication;
 
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DailyReportsController {
 
-    private final Stage stage = HelloApplication.getPrimaryStage();
-
-
     @FXML
-    private Button generatereport;
-
+    private Button generatereports;
 
     @FXML
     private TableView<TaskStatus> taskTable;
@@ -46,29 +43,10 @@ public class DailyReportsController {
     @FXML
     private TableColumn<TaskStatus, String> colFeedback;
 
-
-    @FXML
-    public void switchScene(String fxml) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
-            Parent root = loader.load();
-            Scene scene = new Scene(root, 1280, 720);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-    }
-
-    @FXML
-    private void switch1(ActionEvent event) {
-        switchScene("nigar.controller/DashBoardController.fxml");
-    }
-
+    private Stage stage = DashboardController.getPrimaryStage();
 
     @FXML
     public void initialize() {
-
         colStaffId.setCellValueFactory(new PropertyValueFactory<>("staffId"));
         colRoomNumber.setCellValueFactory(new PropertyValueFactory<>("roomNumber"));
         colCompletedTask.setCellValueFactory(new PropertyValueFactory<>("completedTask"));
@@ -76,15 +54,62 @@ public class DailyReportsController {
         colTimeSchedule.setCellValueFactory(new PropertyValueFactory<>("timeSchedule"));
         colFeedback.setCellValueFactory(new PropertyValueFactory<>("feedback"));
 
+        List<TaskStatus> taskList = loadDailyReportsFromTextFile("daily_reports.txt");
+        ObservableList<TaskStatus> data = FXCollections.observableArrayList(taskList);
+        taskTable.setItems(data);
+    }
 
-        ObservableList<TaskStatus> reportData = FXCollections.observableArrayList(
-                new TaskStatus("S001", "101", "Cleaned", "None", "08:00 - 09:00", "Excellent"),
-                new TaskStatus("S002", "102", "Checked", "Restock pending", "09:00 - 10:00", "Needs improvement")
-        );
+    private List<TaskStatus> loadDailyReportsFromTextFile(String filename) {
+        List<TaskStatus> tasks = new ArrayList<>();
 
-        taskTable.setItems(reportData);
+        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+            String line;
+
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.trim().split("\\|"); // Using '|' as a delimiter
+                if (parts.length == 6) {
+                    String staffId = parts[0];
+                    String roomNumber = parts[1];
+                    String completedTask = parts[2];
+                    String incompleteTask = parts[3];
+                    String timeSchedule = parts[4];
+                    String feedback = parts[5];
+
+                    tasks.add(new TaskStatus(staffId, roomNumber, completedTask, incompleteTask, timeSchedule, feedback));
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return tasks;
+    }
+
+
+    private void switchScene(String fxml) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
+            Parent root = loader.load();
+            Scene scene = new Scene(root, 1280, 720);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void setNotification(javafx.event.ActionEvent event) {
+        System.out.println("generate reports");
+    }
+
+    @FXML
+    private void switchSceneA(ActionEvent event) {
+        switchScene("dashboard.fxml");
     }
 }
+
+
+
 
 
 

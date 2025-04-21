@@ -13,38 +13,25 @@ import java.io.IOException;
 import java.util.List;
 
 public class HelloApplication extends Application {
-    public static Stage getPrimaryStage() {
-        return null;
-    }
+    private static Stage stage;
 
     @Override
-    public void start(Stage stage) throws IOException {
-        SceneSwitcher.stage = stage;
-
-
+    public void start(Stage stage1) throws IOException {
+        SceneSwitcher.stage = stage1;
+        stage=stage1;
 
 
         File file = new File("Data/users.bin");
-        File guestFile = new File("Data/guests.bin");
-        File allUserFile= new File("Data/allTypeUsers.bin");
 
 
 //        // Delete previous data if the file exists
 //        if (file.exists()) {
 //            file.delete();
 //        }
-//        if (guestFile.exists()) {
-//            guestFile.delete();
-//        }
-//        if (allUserFile.exists()) {
-//            allUserFile.delete();
-//        }
-
-
-
 
         // Add default managers (........)
         Managers.addDefaultManagers();
+
 
         FXMLLoader fxmlLoader = new FXMLLoader(
 //                HelloApplication.class.getResource("user/LoginView.fxml"));   // Main
@@ -59,22 +46,18 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         stage.show();
 
-
-
-
-
-        List<User> users = BinaryFileHelper.readAllObjects(allUserFile);
-        System.out.println("======= Loaded Users from allUserFile.bin =======");
+        // Print current user data from the binary file
+        List<User> users = BinaryFileHelper.readAllObjects(file);
+        System.out.println("======= Loaded Users from users.bin =======");
         for (User user : users) {
             System.out.println(user);
         }
         System.out.println("===========================================");
     }
 
-
-
-
-
+    public static Stage getPrimaryStage() {
+        return stage;
+    }
 
 
 

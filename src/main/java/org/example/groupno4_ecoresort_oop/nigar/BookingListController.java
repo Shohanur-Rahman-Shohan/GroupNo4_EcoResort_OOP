@@ -14,17 +14,12 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import org.example.groupno4_ecoresort_oop.HelloApplication;
 
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class BookingListController {
-
-    private final Stage stage = HelloApplication.getPrimaryStage();
-
-    @FXML
-    private Button createschedule;
-
-    @FXML
-    private Button updatebookinglist;
 
     @FXML
     private TableView<Booking> tableView;
@@ -42,38 +37,63 @@ public class BookingListController {
     private TableColumn<Booking, String> colCheckInOut;
 
     @FXML
-    public void initialize() {
+    private Button updatebookinglist;
 
+    private final Stage stage = HelloApplication.getPrimaryStage();
+    private static final String FILENAME = "bookings.bin";
+    private static List<Booking> bookingList = new ArrayList<>();
+
+    @FXML
+    public void initialize() {
         colGuestName.setCellValueFactory(new PropertyValueFactory<>("guestName"));
         colRoomNo.setCellValueFactory(new PropertyValueFactory<>("roomNo"));
         colBookingId.setCellValueFactory(new PropertyValueFactory<>("bookingId"));
         colCheckInOut.setCellValueFactory(new PropertyValueFactory<>("checkInOut"));
 
-        ObservableList<Booking> bookings = FXCollections.observableArrayList(
-                new Booking("Nigar", "106", "BKG006", "2025-04-20 to 2025-04-22"),
-                new Booking("Diba", "203", "BKG002", "2025-04-19 to 2025-04-21")
-        );
 
+        ObservableList<Booking> bookings = FXCollections.observableArrayList(bookingList);
         tableView.setItems(bookings);
+    }
+
+    private void loadBookingsFromFile() {
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(FILENAME))) {
+            bookingList = (List<Booking>) inputStream.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            initializeDefaultBookings();
+        }
+    }
+
+    private void initializeDefaultBookings() {
+        bookingList.add(new Booking("Nigar", "106", "BKG006", "2025-04-20 to 2025-04-22"));
+        bookingList.add(new Booking("Diba", "203", "BKG002", "2025-04-19 to 2025-04-21"));
     }
 
     @FXML
     private void switch1(ActionEvent event) {
-        switchScene("nigar.controller/DashBoardController.fxml");
+        switchScene("/org/example/groupno4_ecoresort_oop/nigar/DashBoardController.fxml");
     }
 
-    public void switchScene(String fxml) {
+    private void switchScene(String fxml) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
             Parent root = loader.load();
             Scene scene = new Scene(root, 1280, 720);
             stage.setScene(scene);
             stage.show();
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
-}
 
+    @FXML
+    private void setNotification(ActionEvent event) {
+        System.out.println("notification");
+    }
+
+    @FXML
+    private void switchSceneA(ActionEvent event) {
+        switchScene("dashboard.fxml");
+    }
+}
 
 

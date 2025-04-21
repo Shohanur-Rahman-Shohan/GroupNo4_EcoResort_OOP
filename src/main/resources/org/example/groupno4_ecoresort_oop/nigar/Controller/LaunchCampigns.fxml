@@ -15,12 +15,13 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <TextArea layoutX="70.0" layoutY="307.0" prefHeight="129.0" prefWidth="431.0" text="Description&#10;" />
-      <TextField layoutX="37.0" layoutY="109.0" prefHeight="35.0" prefWidth="226.0" text="Campign Name" />
-      <Button layoutX="528.0" layoutY="424.0" mnemonicParsing="false" text="Lauch Campign" />
-      <TextField layoutX="37.0" layoutY="162.0" prefHeight="35.0" prefWidth="226.0" text="Budget" />
-      <DatePicker layoutX="464.0" layoutY="110.0" promptText="Date " />
-      <TextField layoutX="467.0" layoutY="171.0" prefHeight="35.0" prefWidth="160.0" text="Status" />
-      <TextField layoutX="37.0" layoutY="212.0" prefHeight="35.0" prefWidth="226.0" text="Category" />
+
+      <TextField fx:id="campaignNameField" layoutX="37.0" layoutY="109.0" prefHeight="35.0" prefWidth="226.0" promptText="Campaign Name" />
+      <TextField fx:id="budgetField" layoutX="37.0" layoutY="162.0" prefHeight="35.0" prefWidth="226.0" promptText="Budget" />
+      <TextField fx:id="categoryField" layoutX="37.0" layoutY="212.0" prefHeight="35.0" prefWidth="226.0" promptText="Category" />
+      <DatePicker fx:id="datePicker" layoutX="464.0" layoutY="110.0" promptText="Date" />
+      <TextField fx:id="statusField" layoutX="467.0" layoutY="171.0" prefHeight="35.0" prefWidth="160.0" promptText="Status" />
+      <TextArea fx:id="descriptionArea" layoutX="70.0" layoutY="307.0" prefHeight="129.0" prefWidth="431.0" promptText="Description" />
+      <Button fx:id="launchButton" layoutX="528.0" layoutY="424.0" mnemonicParsing="false" text="Launch Campaign"  />
    </children>
 </AnchorPane>
