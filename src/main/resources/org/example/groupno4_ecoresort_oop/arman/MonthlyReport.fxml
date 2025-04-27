@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -8,6 +9,7 @@
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.arman.controller.MonthlyReportController">
    <children>
@@ -32,11 +34,23 @@
             </LinearGradient>
          </textFill>
       </Label>
+
       <Label layoutX="24.0" layoutY="63.0" text="Select Month:" />
       <ComboBox fx:id="selectMonthComboBox" layoutX="114.0" layoutY="59.0" prefWidth="150.0" />
+
       <Label layoutX="294.0" layoutY="64.0" text="Select Year:" />
       <ComboBox fx:id="selectYearComboBox" layoutX="367.0" layoutY="60.0" prefWidth="150.0" />
+
       <Button layoutX="24.0" layoutY="15.0" mnemonicParsing="false" onAction="#backButtonOnAction" style="-fx-background-color: lightBlue;" text="Back" />
-      <Label fx:id="outputLabel" layoutX="83.0" layoutY="127.0" prefHeight="241.0" prefWidth="415.0" text="Label" />
+
+
+      <PieChart fx:id="outputLabelMonthly" layoutX="24.0" layoutY="185.0" prefHeight="184.0" prefWidth="250.0"/>
+      <PieChart fx:id="outputLabelyerly" layoutX="327.0" layoutY="185.0" prefHeight="184.0" prefWidth="250.0" />
+
+      <Button layoutX="114.0" layoutY="100.0" mnemonicParsing="false" onAction="#onActionMonthly" prefHeight="26.0" prefWidth="150.0" text="See The Monthly" />
+      <Button layoutX="367.0" layoutY="100.0" mnemonicParsing="false" onAction="#onActionYearly" prefHeight="26.0" prefWidth="150.0" text="See The Yearly" />
+
+      <Text layoutX="50.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly Maintenance" />
+      <Text layoutX="334.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yearly Maintenance" />
    </children>
 </AnchorPane>

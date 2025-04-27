@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="626.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.shohan.controllers.AppointUserController">
+   <children>
+      <AnchorPane layoutX="23.0" layoutY="90.0" prefHeight="490.0" prefWidth="530.0" style="-fx-background-color: cyan;">
+         <children>
+            <Line endX="414.99993896484375" endY="1.1444091796875E-5" layoutX="113.0" startX="-111.00001525878906" />
+            <Line endX="413.39996337890625" endY="1.52587890625E-5" layoutX="113.0" layoutY="519.0" startX="-111.00001525878906" />
+            <TextField fx:id="lastName_TF" layoutX="307.0" layoutY="62.0" />
+            <TextField fx:id="firstName_TF" layoutX="72.0" layoutY="62.0" />
+            <TextField fx:id="email_TF" layoutX="72.0" layoutY="254.0" prefHeight="34.0" prefWidth="386.0" promptText="\@gmail.com" />
+            <TextField fx:id="phoneNumber_TF" layoutX="72.0" layoutY="320.0" prefHeight="34.0" prefWidth="386.0" promptText="+8801xxxxxxxxx" />
+            <Button layoutX="164.0" layoutY="441.0" mnemonicParsing="false" onAction="#addUser_OA" prefHeight="42.0" prefWidth="175.0" text="Add User">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="gender_CB" layoutX="71.0" layoutY="126.0" prefWidth="150.0" />
+            <Label layoutX="72.0" layoutY="37.0" prefHeight="26.0" prefWidth="66.0" text="First Name" />
+            <Label layoutX="72.0" layoutY="101.0" prefHeight="26.0" prefWidth="50.0" text="Gender" />
+            <Label layoutX="73.0" layoutY="227.0" prefHeight="26.0" prefWidth="33.0" text="Email" />
+            <Label layoutX="70.0" layoutY="295.0" prefHeight="26.0" prefWidth="82.0" text="Phone Number" />
+            <Label layoutX="75.0" layoutY="369.0" prefHeight="18.0" prefWidth="66.0" text="Password:" />
+            <Label layoutX="308.0" layoutY="37.0" prefHeight="26.0" prefWidth="73.0" text="Last Name" />
+            <Label layoutX="309.0" layoutY="100.0" prefHeight="26.0" prefWidth="66.0" text="User Type" />
+            <ComboBox fx:id="userType_CB" layoutX="308.0" layoutY="124.0" prefWidth="150.0" />
+            <PasswordField fx:id="password_TF" layoutX="72.0" layoutY="389.0" prefHeight="34.0" prefWidth="386.0" promptText="At least 5 digit and must contain a number" />
+            <CheckBox fx:id="showPassword_CB" layoutX="356.0" layoutY="369.0" mnemonicParsing="false" onAction="#showPassword_OA" text="View Password" />
+            <Label layoutX="71.0" layoutY="163.0" prefHeight="26.0" prefWidth="88.0" text="Date Of Joining" />
+            <Label layoutX="308.0" layoutY="162.0" prefHeight="26.0" prefWidth="66.0" text="Salary" />
+            <DatePicker fx:id="joiningDate_DP" layoutX="71.0" layoutY="189.0" prefHeight="26.0" prefWidth="150.0" />
+            <TextField fx:id="salary_TF" layoutX="308.0" layoutY="189.0" />
+            <Label fx:id="showPassword_L" alignment="CENTER" layoutX="138.0" layoutY="368.0" prefHeight="18.0" prefWidth="148.0" textAlignment="CENTER" />
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="181.0" layoutY="16.0" prefHeight="42.0" prefWidth="238.0" style="-fx-background-color: cyan;" text="Appoint New Users">
+         <font>
+            <Font name="Arial Bold" size="21.0" />
+         </font>
+      </Label>
+      <Button layoutX="10.0" mnemonicParsing="false" onAction="#backButton_OA" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: transparent;" text="←" textFill="#669c2c">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

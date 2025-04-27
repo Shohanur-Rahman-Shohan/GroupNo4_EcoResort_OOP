@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="474.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.nigar.StaffSchedulesController">
+   <children>
+      <Label layoutX="245.0" layoutY="43.0" text="Staff Schedules" textFill="#8c0d87">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <TableView layoutX="123.0" layoutY="111.0" prefHeight="221.0" prefWidth="386.0">
+        <columns>
+          <TableColumn prefWidth="80.800048828125" text="staff id" />
+          <TableColumn prefWidth="97.5999755859375" text="assigned room" />
+            <TableColumn prefWidth="96.0" text="shift" />
+            <TableColumn prefWidth="112.0" text="time schedules" />
+        </columns>
+      </TableView>
+      <Button layoutX="441.0" layoutY="386.0" mnemonicParsing="false" text="Refresh" />
+   </children>
+</AnchorPane>

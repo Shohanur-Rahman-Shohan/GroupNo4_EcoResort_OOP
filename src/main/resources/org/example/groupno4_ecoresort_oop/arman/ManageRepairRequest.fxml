@@ -47,16 +47,16 @@
       <ComboBox fx:id="statusComboBox" layoutX="365.0" layoutY="55.0" prefWidth="150.0" />
       <DatePicker fx:id="requestDateDatePicker" layoutX="365.0" layoutY="84.0" prefHeight="26.0" prefWidth="150.0" />
       <TableView fx:id="outputTableView" layoutX="14.0" layoutY="171.0" prefHeight="200.0" prefWidth="581.0">
-        <columns>
-          <TableColumn fx:id="RequestIdTC" prefWidth="63.0" text="RequestID" />
-          <TableColumn fx:id="locationTC" prefWidth="74.0" text="Location" />
+         <columns>
+            <TableColumn fx:id="RequestIdTC" prefWidth="63.0" text="RequestID" />
+            <TableColumn fx:id="locationTC" prefWidth="74.0" text="Location" />
             <TableColumn fx:id="typeTC" prefWidth="87.0" text="Type" />
             <TableColumn fx:id="statusTC" prefWidth="95.0" text="Status" />
             <TableColumn fx:id="requestDateTC" prefWidth="111.0" text="RequestDate" />
             <TableColumn fx:id="emergencyTC" prefWidth="147.0" text="Emergency" />
-        </columns>
+         </columns>
       </TableView>
-      <Button layoutX="545.0" layoutY="139.0" mnemonicParsing="false" text="Add" />
+      <Button layoutX="545.0" layoutY="139.0" mnemonicParsing="false" onAction="#addRequestButtonOnAction" text="Add" />
       <Button layoutX="293.0" layoutY="379.0" mnemonicParsing="false" onAction="#updateStatusButtonOnAction" text="update Status" />
       <Button layoutX="394.0" layoutY="379.0" mnemonicParsing="false" onAction="#deleteRequestButtonOnAction" text="Delete Request" />
       <Label layoutX="24.0" layoutY="384.0" text="RequestID:" />
@@ -64,5 +64,9 @@
       <ComboBox fx:id="emergencyComboBox" layoutX="369.0" layoutY="117.0" prefWidth="150.0" />
       <Label layoutX="291.0" layoutY="121.0" text="Emergency" />
       <Button layoutX="32.0" layoutY="16.0" mnemonicParsing="false" onAction="#backButtonOnAction" style="-fx-background-color: lightBlue;" text="Back" />
+      <Label layoutX="38.0" layoutY="430.0" text="Status:" />
+      <Label layoutX="17.0" layoutY="474.0" text="Emergency:" />
+      <ComboBox fx:id="updatestatusComboBox" layoutX="92.0" layoutY="426.0" prefHeight="26.0" prefWidth="186.0" />
+      <ComboBox fx:id="updateemergencyComboBox" layoutX="92.0" layoutY="470.0" prefHeight="26.0" prefWidth="186.0" />
    </children>
 </AnchorPane>

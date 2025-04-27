@@ -10,9 +10,9 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="564.0" prefWidth="589.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.shohan.controllers.ManageEventController">
+<AnchorPane prefHeight="571.0" prefWidth="589.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.shohan.controllers.ManageEventController">
    <children>
-      <TableView layoutX="3.0" layoutY="260.0" prefHeight="203.0" prefWidth="581.0" style="-fx-background-color: cyan;">
+      <TableView layoutX="3.0" layoutY="263.0" prefHeight="203.0" prefWidth="581.0" style="-fx-background-color: cyan;">
          <columns>
             <TableColumn prefWidth="71.1999831199646" text="Serial No." />
             <TableColumn prefWidth="131.20000457763672" text="Guest Name" />
@@ -26,7 +26,7 @@
             <Font name="Arial Bold" size="18.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="4.0" layoutY="65.0" prefHeight="178.0" prefWidth="542.0" style="-fx-background-color: cyan;">
+      <AnchorPane layoutX="4.0" layoutY="68.0" prefHeight="178.0" prefWidth="542.0" style="-fx-background-color: cyan;">
          <children>
             <ComboBox layoutX="32.0" layoutY="39.0" prefHeight="26.0" prefWidth="122.0" />
             <Label layoutX="32.0" layoutY="15.0" prefHeight="26.0" prefWidth="64.0" text="Select Event" />
@@ -64,10 +64,15 @@
             </Button>
          </children>
       </AnchorPane>
-      <Label alignment="CENTER" layoutX="9.0" layoutY="479.0" prefHeight="74.0" prefWidth="574.0" style="-fx-background-color: black;" text="Overview" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="9.0" layoutY="482.0" prefHeight="74.0" prefWidth="574.0" style="-fx-background-color: black;" text="Overview" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
+      <Button layoutY="-13.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: transparent;" text="←" textFill="#669c2c">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

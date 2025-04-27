@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="454.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.nigar.QualityControlController">
+   <children>
+      <Label layoutX="224.0" layoutY="31.0" text="Quality Control" textFill="#861258">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView layoutX="48.0" layoutY="126.0" prefHeight="222.0" prefWidth="530.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Room No" />
+          <TableColumn prefWidth="89.5999755859375" text="Time Schedule" />
+            <TableColumn prefWidth="78.4000244140625" text="Progress " />
+            <TableColumn prefWidth="89.5999755859375" text="maintance " />
+            <TableColumn prefWidth="85.5999755859375" text="Feedback" />
+            <TableColumn prefWidth="113.60003662109375" text="Notification" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

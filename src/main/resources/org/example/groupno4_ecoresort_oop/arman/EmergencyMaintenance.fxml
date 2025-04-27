@@ -36,20 +36,20 @@
          </textFill>
       </Label>
       <TableView fx:id="outputTableView" layoutX="12.0" layoutY="43.0" prefHeight="200.0" prefWidth="583.0">
-        <columns>
-          <TableColumn fx:id="requestIdTC" prefWidth="121.0" text="Request ID" />
-          <TableColumn fx:id="statusTC" prefWidth="208.0" text="Status" />
+         <columns>
+            <TableColumn fx:id="requestIdTC" prefWidth="121.0" text="Request ID" />
+            <TableColumn fx:id="statusTC" prefWidth="208.0" text="Status" />
             <TableColumn fx:id="emergencyTC" prefWidth="249.0" text="Emergency" />
-        </columns>
+         </columns>
       </TableView>
-      <Label layoutX="53.0" layoutY="270.0" text="Status:" />
-      <ComboBox fx:id="statusComboBox" layoutX="102.0" layoutY="266.0" prefWidth="150.0" />
-      <Button layoutX="287.0" layoutY="292.0" mnemonicParsing="false" onAction="#filterButtonOnAction" prefWidth="76.0" style="-fx-background-color: lightblue;" text="Filter" />
-      <Label layoutX="28.0" layoutY="361.0" text="Request ID:" />
-      <TextField fx:id="requestIdTextField" layoutX="97.0" layoutY="357.0" />
-      <Button layoutX="290.0" layoutY="358.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: lightblue;" text="Update" />
-      <Label layoutX="40.0" layoutY="316.0" prefHeight="17.0" prefWidth="65.0" text="Emergency:" />
-      <ComboBox fx:id="emergencyComboBox" layoutX="107.0" layoutY="312.0" prefWidth="150.0" />
+      <Label layoutX="49.0" layoutY="333.0" text="Status:" />
+      <ComboBox fx:id="statusComboBox" layoutX="98.0" layoutY="329.0" prefHeight="26.0" prefWidth="160.0" />
+      <Button layoutX="269.0" layoutY="279.0" mnemonicParsing="false" onAction="#filterButtonOnAction" prefWidth="76.0" style="-fx-background-color: lightblue;" text="Filter" />
+      <Label layoutX="27.0" layoutY="283.0" text="Request ID:" />
+      <TextField fx:id="requestIdTextField" layoutX="96.0" layoutY="279.0" />
+      <Button layoutX="359.0" layoutY="279.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: lightblue;" text="Update" />
+      <Label layoutX="26.0" layoutY="379.0" prefHeight="17.0" prefWidth="65.0" text="Emergency:" />
+      <ComboBox fx:id="emergencyComboBox" layoutX="97.0" layoutY="375.0" prefHeight="26.0" prefWidth="160.0" />
       <Button layoutX="15.0" layoutY="5.0" mnemonicParsing="false" onAction="#backButtonOnAction" style="-fx-background-color: LightBlue;" text="BACK" />
    </children>
 </AnchorPane>

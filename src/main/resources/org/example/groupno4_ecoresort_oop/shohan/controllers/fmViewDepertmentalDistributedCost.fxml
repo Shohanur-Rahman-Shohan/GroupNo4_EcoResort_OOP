@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="379.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.shohan.controllers.FmViewDepertmentalDistributedCostController">
+   <children>
+      <Button layoutX="-9.0" layoutY="-3.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: transparent;" text="←" textFill="#669c2c">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Button>
+      <TableView fx:id="table_T" layoutX="11.0" layoutY="96.0" prefHeight="266.0" prefWidth="582.0" style="-fx-background-color: cyan;">
+         <columns>
+            <TableColumn fx:id="gm_TV" prefWidth="96.79998779296875" text="General Manager" />
+            <TableColumn fx:id="ac_TV" prefWidth="103.20001220703125" text="ActivityCoordinator" />
+            <TableColumn fx:id="mt_TV" prefWidth="116.0" text="MaintenanceTechnician" />
+            <TableColumn fx:id="hs_TV" prefWidth="127.2000732421875" text="HousekeepingSupervisor" />
+            <TableColumn fx:id="ms_TV" prefWidth="131.199951171875" text="marketingAndSalesManagement" />
+         </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="94.0" layoutY="22.0" prefHeight="38.0" prefWidth="417.0" style="-fx-background-color: cyan;" text="View Depertmental Cost Distribution History">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -38,12 +38,12 @@
       <Label layoutX="115.0" layoutY="360.0" />
       <TableView fx:id="outputTableView" layoutX="29.0" layoutY="101.0" prefHeight="200.0" prefWidth="661.0">
         <columns>
-          <TableColumn fx:id="tourIdTC" prefWidth="75.0" text="TourID" />
+          <TableColumn fx:id="guestIdTC" prefWidth="75.0" text="Guest ID" />
           <TableColumn fx:id="tourDayTC" prefWidth="357.15171813964844" text="TourDay" />
             <TableColumn fx:id="tourGuideTC" prefWidth="225.34828186035156" text="TourGuide" />
         </columns>
       </TableView>
-      <Label layoutX="123.0" layoutY="324.0" text="Tour ID:" />
+      <Label layoutX="123.0" layoutY="324.0" text="Guest ID" />
       <TextField fx:id="tourIdTextField" layoutX="205.0" layoutY="317.0" />
       <Button layoutX="377.0" layoutY="318.0" mnemonicParsing="false" onAction="#loadAvailableGuideOnAction" style="-fx-background-color: lightBlue;" text="Load Available Guide" />
       <Label layoutX="272.0" layoutY="381.0" prefHeight="31.0" prefWidth="115.0" text="Available Guides:">

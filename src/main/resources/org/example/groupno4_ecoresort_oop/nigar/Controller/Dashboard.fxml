@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.user.DashBoardController">
+    <children>
+        <BorderPane layoutX="-9.0" layoutY="-2.0" prefHeight="500.0" prefWidth="709.0">
+            <top>
+                <MenuBar BorderPane.alignment="CENTER">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="Dashboard">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="menu" />
+                            </items>
+
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Housekeeping Supervisor">
+                            <items>
+
+                                <MenuItem mnemonicParsing="false" text="room efficiency " />
+                            </items>
+                            <MenuItem mnemonicParsing="false" text="housekeeping inventory" />
+
+                            <MenuItem mnemonicParsing="false" text="staff schedule" />
+
+                            <MenuItem mnemonicParsing="false" text="guest request" />
+
+                            <MenuItem mnemonicParsing="false" text="assign task" />
+
+                            <MenuItem mnemonicParsing="false" text="quality control" />
+
+                            <MenuItem mnemonicParsing="false" text="reair issues" />
+
+                            <MenuItem mnemonicParsing="false" text="cleaning reports" />
+
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Marketing and Sales Manager">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="launch campign" />
+                                <MenuItem mnemonicParsing="false" text="online presence" />
+                                <MenuItem mnemonicParsing="false" text="occupancy rate" />
+                                <MenuItem mnemonicParsing="false" text="booking list" />
+                                <MenuItem mnemonicParsing="false" text="promote package and offers" />
+                                <MenuItem mnemonicParsing="false" text="collaborate with agencies and platform" />
+                                <MenuItem mnemonicParsing="false" text="track online review and feedback" />
+                                <MenuItem mnemonicParsing="false" text="analyzing sales and data" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="sign up">
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="sign out">
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </top>
+        </BorderPane>
+    </children>
+</AnchorPane>

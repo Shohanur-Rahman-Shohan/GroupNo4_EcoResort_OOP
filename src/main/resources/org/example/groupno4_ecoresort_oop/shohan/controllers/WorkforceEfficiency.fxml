@@ -9,9 +9,9 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.shohan.controllers.WorkforceEfficiencyController">
+<AnchorPane prefHeight="542.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.shohan.controllers.WorkforceEfficiencyController">
    <children>
-      <TableView layoutX="11.0" layoutY="174.0" prefHeight="203.0" prefWidth="581.0" style="-fx-background-color: cyan;">
+      <TableView layoutX="10.0" layoutY="180.0" prefHeight="203.0" prefWidth="581.0" style="-fx-background-color: cyan;">
          <columns>
             <TableColumn prefWidth="64.800048828125" text="Serial No." />
             <TableColumn prefWidth="71.99993896484375" text="Staff ID" />
@@ -27,7 +27,7 @@
             <Font name="Arial Bold" size="18.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="10.0" layoutY="65.0" prefHeight="97.0" prefWidth="582.0" style="-fx-background-color: cyan;">
+      <AnchorPane layoutX="9.0" layoutY="71.0" prefHeight="97.0" prefWidth="582.0" style="-fx-background-color: cyan;">
          <children>
             <ComboBox layoutX="131.0" layoutY="42.0" prefHeight="26.0" prefWidth="178.0" />
             <Label layoutX="187.0" layoutY="16.0" prefHeight="26.0" prefWidth="57.0" text="Staff ID">
@@ -44,14 +44,19 @@
             </Button>
          </children>
       </AnchorPane>
-      <Label alignment="CENTER" layoutX="15.0" layoutY="447.0" prefHeight="74.0" prefWidth="574.0" style="-fx-background-color: black;" text="Overview" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="14.0" layoutY="453.0" prefHeight="74.0" prefWidth="574.0" style="-fx-background-color: black;" text="Overview" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Button layoutX="55.0" layoutY="386.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="494.0" style="-fx-background-color: pink;" text="Reset" textAlignment="CENTER" textFill="#533a78">
+      <Button layoutX="54.0" layoutY="392.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="494.0" style="-fx-background-color: pink;" text="Reset" textAlignment="CENTER" textFill="#533a78">
          <font>
             <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button layoutY="-6.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: transparent;" text="←" textFill="#669c2c">
+         <font>
+            <Font name="System Bold" size="35.0" />
          </font>
       </Button>
    </children>

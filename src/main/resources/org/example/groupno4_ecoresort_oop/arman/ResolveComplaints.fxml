@@ -38,17 +38,16 @@
       <TableView fx:id="outputTableView" layoutY="74.0" prefHeight="200.0" prefWidth="635.0">
         <columns>
             <TableColumn fx:id="complaintIdTC" prefWidth="157.0" text="Complaint ID" />
-            <TableColumn fx:id="complaintListTC" prefWidth="145.0" text="Complaint List" />
-            <TableColumn fx:id="complaintTypeTC" prefWidth="145.0" text="Complaint Type" />
-            <TableColumn fx:id="statusTC" prefWidth="187.0" text="Status" />
+            <TableColumn fx:id="complaintTypeTC" prefWidth="248.0" text="Complaint Type" />
+            <TableColumn fx:id="statusTC" prefWidth="229.0" text="Status" />
         </columns>
       </TableView>
       <Label layoutX="43.0" layoutY="293.0" text="Complaint ID:" />
       <TextField fx:id="checkComplaintIdTextField" layoutX="136.0" layoutY="289.0" />
       <Button layoutX="318.0" layoutY="445.0" mnemonicParsing="false" onAction="#updateButtonOnAction" text="Update" />
-      <TextArea fx:id="messageGMTextAArea" layoutX="164.0" layoutY="324.0" prefHeight="83.0" prefWidth="383.0" text="NOTIFY IF THE PROBLEM IS RESOLVED OR NOT" />
+      <TextArea fx:id="messageGMTextAArea" layoutX="164.0" layoutY="348.0" prefHeight="38.0" prefWidth="383.0" text="NOTIFY IF THE PROBLEM IS RESOLVED OR NOT" />
       <Label layoutX="31.0" layoutY="357.0" text="Send Message to GM:" />
-      <Button layoutX="480.0" layoutY="419.0" mnemonicParsing="false" onAction="#messageButtonOnAction" text="Message" />
+      <Button layoutX="480.0" layoutY="387.0" mnemonicParsing="false" onAction="#messageButtonOnAction" text="Message" />
       <TextField fx:id="confirmationTextField" layoutX="136.0" layoutY="445.0" />
       <Label layoutX="43.0" layoutY="450.0" text="Confirmation:" />
       <Button layoutX="320.0" layoutY="289.0" mnemonicParsing="false" onAction="#checkButtonOnAction" text="Check" />

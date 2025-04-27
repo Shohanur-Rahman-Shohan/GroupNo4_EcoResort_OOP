@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="603.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.nigar.DailyReportsController">
+    <children>
+        <Label layoutX="272.0" layoutY="52.0" text="Daily Reports" textFill="#c419c7">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="dailyReportsTable" layoutX="138.0" layoutY="137.0" prefHeight="223.0" prefWidth="444.0">
+            <columns>
+                <TableColumn fx:id="staffIdColumn" prefWidth="75.0" text="staff id" />
+                <TableColumn fx:id="roomNumberColumn" prefWidth="75.0" text="room number" />
+                <TableColumn fx:id="completeTaskColumn" prefWidth="75.0" text="complete task" />
+                <TableColumn fx:id="incompleteTaskColumn" prefWidth="75.0" text="incomplete task" />
+                <TableColumn fx:id="timeSchedulesColumn" prefWidth="75.0" text="time schedules" />
+                <TableColumn fx:id="feedbackColumn" prefWidth="75.0" text="feedback" />
+            </columns>
+        </TableView>
+
+        <Button fx:id="generateReportButton" layoutX="512.0" layoutY="417.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="generate reports"/>
+    </children>
+</AnchorPane>

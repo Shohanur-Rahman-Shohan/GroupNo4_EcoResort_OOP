@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="481.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.nigar.OccupancyRateController">
+   <children>
+      <Label layoutX="244.0" layoutY="24.0" text="Occupancy Rate" textFill="#a1307b">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="105.0" text="From" />
+      <Label layoutX="331.0" layoutY="105.0" text="To" />
+      <Button layoutX="385.0" layoutY="415.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="106.0" text="Track" />
+      <TextField layoutX="122.0" layoutY="101.0" />
+      <TextField layoutX="385.0" layoutY="101.0" />
+      <TableView layoutX="82.0" layoutY="159.0" prefHeight="230.0" prefWidth="434.0">
+        <columns>
+          <TableColumn prefWidth="128.0" text="Room Type" />
+          <TableColumn prefWidth="139.20008850097656" text="Date" />
+            <TableColumn prefWidth="168.7999267578125" text="Occupancy" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

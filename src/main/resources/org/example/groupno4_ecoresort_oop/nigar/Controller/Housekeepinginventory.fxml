@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="576.0" prefWidth="763.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.nigar.HousekeepingInventoryController">
+    <children>
+        <Label layoutX="292.0" layoutY="28.0" text="housekeeping inventory" textFill="#8e1376">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+
+        <TableView fx:id="inventoryTable" layoutX="162.0" layoutY="102.0" prefHeight="291.0" prefWidth="453.0">
+            <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="105.6" text="name " />
+                <TableColumn fx:id="stockColumn" prefWidth="91.2" text="stock" />
+                <TableColumn fx:id="statusColumn" prefWidth="143.2" text="status" />
+                <TableColumn fx:id="requestColumn" prefWidth="112.0" text="request" />
+            </columns>
+        </TableView>
+
+        <Button fx:id="reportButton" layoutX="515.0" layoutY="432.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="report" />
+    </children>
+</AnchorPane>

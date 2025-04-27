@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="622.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.shohan.controllers.VipServiceController">
    <children>
-      <TableView layoutX="10.0" layoutY="177.0" prefHeight="203.0" prefWidth="581.0" style="-fx-background-color: cyan;">
+      <TableView layoutX="7.0" layoutY="194.0" prefHeight="203.0" prefWidth="581.0" style="-fx-background-color: cyan;">
          <columns>
             <TableColumn prefWidth="64.800048828125" text="Serial No." />
             <TableColumn prefWidth="71.99993896484375" text="VIP ID" />
@@ -26,7 +26,7 @@
             <Font name="Arial Bold" size="18.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="9.0" layoutY="395.0" prefHeight="97.0" prefWidth="582.0" style="-fx-background-color: cyan;">
+      <AnchorPane layoutX="6.0" layoutY="412.0" prefHeight="97.0" prefWidth="582.0" style="-fx-background-color: cyan;">
          <children>
             <ComboBox layoutX="44.0" layoutY="39.0" prefHeight="26.0" prefWidth="114.0" />
             <Label layoutX="54.0" layoutY="14.0" prefHeight="26.0" prefWidth="94.0" text="Service Type">
@@ -55,12 +55,12 @@
             </Label>
          </children>
       </AnchorPane>
-      <Label alignment="CENTER" layoutX="14.0" layoutY="516.0" prefHeight="74.0" prefWidth="574.0" style="-fx-background-color: black;" text="Overview" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="11.0" layoutY="533.0" prefHeight="74.0" prefWidth="574.0" style="-fx-background-color: black;" text="Overview" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="14.0" layoutY="69.0" prefHeight="97.0" prefWidth="582.0" style="-fx-background-color: cyan;">
+      <AnchorPane layoutX="11.0" layoutY="86.0" prefHeight="97.0" prefWidth="582.0" style="-fx-background-color: cyan;">
          <children>
             <ComboBox layoutX="14.0" layoutY="39.0" prefHeight="26.0" prefWidth="114.0" />
             <Label layoutX="42.0" layoutY="14.0" prefHeight="26.0" prefWidth="58.0" text="VIP ID">
@@ -78,5 +78,10 @@
             <TextArea layoutX="146.0" layoutY="6.0" prefHeight="81.0" prefWidth="271.0" promptText="Welcome/ Announcement Text" />
          </children>
       </AnchorPane>
+      <Button layoutY="-7.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: transparent;" text="←" textFill="#669c2c">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
