@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: rgb(230, 230, 250);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.groupno4_ecoresort_oop.Sadman.AvailableRoomController">
+   <children>
+      <Label contentDisplay="CENTER" layoutX="307.0" layoutY="14.0" prefHeight="48.0" prefWidth="187.0" text="Available Room" textFill="#030101">
+         <font>
+            <Font name="Britannic Bold" size="26.0" />
+         </font>
+         <effect>
+            <DropShadow height="3.5" offsetX="1.5" offsetY="0.5" radius="1.375" width="4.0" />
+         </effect>
+      </Label>
+      <Label layoutX="30.0" layoutY="82.0" prefHeight="27.0" prefWidth="102.0" text="Check-In Date">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="417.0" layoutY="82.0" prefHeight="27.0" prefWidth="115.0" text="Check-Out Date">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="checkInDatePicker" layoutX="156.0" layoutY="82.0" />
+      <DatePicker fx:id="checkOutDatePicker" layoutX="545.0" layoutY="82.0" />
+      <Label layoutX="33.0" layoutY="138.0" prefHeight="27.0" prefWidth="102.0" text="Bed Preference">
+         <font>
+            <Font name="Century Gothic Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="428.0" layoutY="138.0" prefHeight="27.0" prefWidth="108.0" text="View Preference">
+         <font>
+            <Font name="Century Gothic Bold" size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="bedTypeCombo" layoutX="153.0" layoutY="138.0" prefHeight="27.0" prefWidth="189.0" />
+      <TableView fx:id="roomsTable" layoutY="379.0" prefHeight="214.0" prefWidth="800.0" style="-fx-background-color: white;">
+         <columns>
+            <TableColumn fx:id="roomNumberCol" prefWidth="139.0" text="Room No" />
+            <TableColumn fx:id="roomTypeCol" prefWidth="132.0" text="Room Type" />
+            <TableColumn fx:id="bedTypeCol" prefWidth="155.0" text="Bed Preference" />
+            <TableColumn fx:id="viewTypeCol" prefWidth="123.0" text="View Preference" />
+            <TableColumn fx:id="priceCol" prefWidth="115.0" text="Price" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="viewTypeCombo" layoutX="545.0" layoutY="138.0" prefHeight="27.0" prefWidth="189.0" />
+      <Button fx:id="searchButton" layoutX="317.0" layoutY="226.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="18.0" prefWidth="137.0" text="Search Room">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="makeReservationButton" layoutX="640.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleMakeReservation" prefHeight="41.0" prefWidth="149.0" style="-fx-background-color: #6619ff;" text="Make Reservation" textFill="#f0eef5">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="439.0" layoutY="192.0" prefHeight="27.0" prefWidth="73.0" text="Room Type">
+         <font>
+            <Font name="Century Gothic Bold" size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="roomTypeCombo" layoutX="547.0" layoutY="192.0" prefHeight="27.0" prefWidth="187.0" />
+      <Label layoutX="17.0" layoutY="284.0" prefHeight="27.0" prefWidth="73.0" text="Room Type">
+         <font>
+            <Font name="Century Gothic Bold" size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="FilterRmCB" layoutX="128.0" layoutY="284.0" prefHeight="27.0" prefWidth="126.0" />
+      <Button fx:id="filt" layoutX="373.0" layoutY="330.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="102.0" text="Filter">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="496.0" layoutY="329.0" mnemonicParsing="false" onAction="#handleClear" prefHeight="27.0" prefWidth="102.0" text="Clear filter">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="17.0" layoutY="329.0" prefHeight="27.0" prefWidth="102.0" text="Check-In Date">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="FilterCheckInDatePicker" layoutX="128.0" layoutY="329.0" prefHeight="27.0" prefWidth="126.0" />
+      <Label layoutX="284.0" layoutY="284.0" prefHeight="27.0" prefWidth="115.0" text="Check-Out Date">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="FiltercheckOutDatepicker" layoutX="413.0" layoutY="284.0" prefHeight="27.0" prefWidth="115.0" />
+      <Button fx:id="backButton" layoutX="25.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleBack" text="Back" />
+   </children>
+</AnchorPane>

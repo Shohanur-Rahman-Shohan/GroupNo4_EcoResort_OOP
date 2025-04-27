@@ -1,12 +1,8 @@
 package org.example.groupno4_ecoresort_oop.Sadman;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
-import javax.swing.table.TableColumn;
-import javax.swing.text.TableView;
 
 public class CheckOutManagementController
 {
